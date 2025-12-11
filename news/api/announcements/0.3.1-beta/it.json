@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Avviso importante",
+    "content": "🎮 Benvenuto in %@ Beta!\n\nQuesta è una versione beta di %@. Mentre ci sforziamo di fornire un'esperienza stabile, si prega di notare le seguenti informazioni importanti:\n\n🔒 Sicurezza dei dati: Esegui regolarmente il backup dei tuoi salvataggi Minecraft e dei dati del launcher\n🐛 Segnalazione bug: Se riscontri problemi, segnalali nel nostro repository GitHub\n⚠️ Funzionalità limitate: Le seguenti funzionalità sono attualmente non disponibili:\n  - Importazione di dati di salvataggio da altri launcher\n  - Impostazioni avanzate del launcher\n🖥️ Compatibilità: I dispositivi Apple Silicon che eseguono versioni di Minecraft inferiori alla 1.13 non sono ancora supportati\n\n🙏 Grazie per testare %@ e aiutarci a migliorare!",
+    "author": "Team Swift Craft Launcher"
+  }
+}

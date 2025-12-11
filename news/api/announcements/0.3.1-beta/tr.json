@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Önemli duyuru",
+    "content": "🎮 %@ Beta'ya hoş geldiniz!\n\nBu, %@'ın beta sürümüdür. Kararlı bir deneyim sunmaya çalışsak da, lütfen aşağıdaki önemli bilgileri not edin:\n\n🔒 Veri Güvenliği: Minecraft kayıtlarınızı ve launcher verilerinizi düzenli olarak yedekleyin\n🐛 Hata Raporları: Herhangi bir sorunla karşılaşırsanız, lütfen GitHub repository'mizde bildirin\n⚠️ Sınırlı Özellikler: Aşağıdaki özellikler şu anda kullanılamaz:\n  - Diğer launcher'lardan kayıt verisi içe aktarma\n  - Gelişmiş launcher ayarları\n🖥️ Uyumluluk: Minecraft 1.13'un altındaki sürümleri çalıştıran Apple Silicon cihazları henüz desteklenmiyor\n\n🙏 %@'ı test ettiğiniz ve geliştirmemize yardım ettiğiniz için teşekkürler!",
+    "author": "Swift Craft Launcher Ekibi"
+  }
+}

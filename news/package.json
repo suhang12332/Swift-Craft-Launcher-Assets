@@ -1,0 +1,9 @@
+{
+  "name": "swift-craft-launcher-news",
+  "version": "1.0.0",
+  "description": "Static API for Swift Craft Launcher announcements",
+  "scripts": {
+    "generate": "node scripts/generate-api.js"
+  }
+}
+

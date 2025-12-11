@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Cập nhật mới - 0.3.3-beta",
+    "content": "🎮 Chào mừng đến với %@ 0.3.3-beta!\n\nChúng tôi rất vui mừng được chia sẻ các cập nhật mới trong phiên bản này:\n\n✨ Tính năng mới:\n  - ⚙️ Cài đặt nâng cao của trò chơi: Bây giờ bạn có thể tùy chỉnh cài đặt nâng cao của Minecraft trực tiếp từ launcher\n  - 📚 Trang trợ giúp tích hợp: Truy cập nhanh vào hướng dẫn và tài liệu trong ứng dụng\n\n🔒 An toàn dữ liệu: Vui lòng thường xuyên sao lưu các file save Minecraft và dữ liệu launcher\n🐛 Báo cáo lỗi: Nếu gặp vấn đề, vui lòng báo cáo trên GitHub repository của chúng tôi\n⚠️ Tính năng hạn chế: Các tính năng sau hiện chưa khả dụng:\n  - Nhập dữ liệu save từ launcher khác\n\n🙏 Cảm ơn bạn đã thử nghiệm %@ và giúp chúng tôi cải thiện!",
+    "author": "Đội ngũ Swift Craft Launcher"
+  }
+}

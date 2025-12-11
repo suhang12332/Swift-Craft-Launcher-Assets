@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Belangrijke mededeling",
+    "content": "🎮 Welkom bij %@ Beta!\n\nDit is een bètaversie van %@. Hoewel we streven naar een stabiele ervaring, let op de volgende belangrijke informatie:\n\n🔒 Gegevensveiligheid: Maak regelmatig back-ups van je Minecraft-saves en launcher-gegevens\n🐛 Bugrapporten: Als je problemen tegenkomt, meld ze dan in onze GitHub-repository\n⚠️ Beperkte functies: De volgende functies zijn momenteel niet beschikbaar:\n  - Save-gegevens importeren van andere launchers\n  - Geavanceerde launcher-instellingen\n🖥️ Compatibiliteit: Apple Silicon-apparaten met Minecraft-versies onder 1.13 worden nog niet ondersteund\n\n🙏 Bedankt voor het testen van %@ en het helpen verbeteren!",
+    "author": "Swift Craft Launcher Team"
+  }
+}

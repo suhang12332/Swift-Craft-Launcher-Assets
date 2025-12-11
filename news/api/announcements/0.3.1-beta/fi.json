@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Tärkeä ilmoitus",
+    "content": "🎮 Tervetuloa %@ Betaan!\n\nTämä on %@in beta-versio. Vaikka pyrimme tarjoamaan vakaan kokemuksen, huomioi seuraavat tärkeät tiedot:\n\n🔒 Tietoturva: Varmuuskopioi säännöllisesti Minecraft-tallennuksesi ja launcherin tiedot\n🐛 Virheraportointi: Jos kohtaat ongelmia, raportoi ne GitHub-repositoriossämme\n⚠️ Rajoitetut ominaisuudet: Seuraavat ominaisuudet eivät ole tällä hetkellä käytettävissä:\n  - Tallennustietojen tuonti muista launchereista\n  - Launcherin edistyneet asetukset\n🖥️ Yhteensopivuus: Apple Silicon -laitteet, joissa käytetään Minecraft-versioita alle 1.13, eivät ole vielä tuettuja\n\n🙏 Kiitos %@in testaamisesta ja auttamisesta parantamisessa!",
+    "author": "Swift Craft Launcher -tiimi"
+  }
+}

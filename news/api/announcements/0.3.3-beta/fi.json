@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Uusi päivitys - 0.3.3-beta",
+    "content": "🎮 Tervetuloa %@ 0.3.3-betaan!\n\nOlemme innoissamme jakamassa uusia päivityksiä tässä julkaisussa:\n\n✨ Uudet ominaisuudet:\n  - ⚙️ Pelin edistyneet asetukset: Voit nyt mukauttaa Minecraftin edistyneet asetukset suoraan launcherista\n  - 📚 Integroitu ohjesivu: Nopea pääsy oppaisiin ja dokumentaatioon sovelluksen sisällä\n\n🔒 Tietoturva: Varmuuskopioi säännöllisesti Minecraft-tallennuksesi ja launcherin tiedot\n🐛 Virheraportointi: Jos kohtaat ongelmia, raportoi ne GitHub-repositoriossämme\n⚠️ Rajoitetut ominaisuudet: Seuraavat ominaisuudet eivät ole tällä hetkellä käytettävissä:\n  - Tallennustietojen tuonti muista launchereista\n\n🙏 Kiitos %@in testaamisesta ja auttamisesta parantamisessa!",
+    "author": "Swift Craft Launcher -tiimi"
+  }
+}

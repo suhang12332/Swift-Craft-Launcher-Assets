@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Yeni güncelleme - 0.3.3-beta",
+    "content": "🎮 %@ 0.3.3-beta'ya hoş geldiniz!\n\nBu sürümdeki yeni güncellemeleri paylaşmaktan heyecan duyuyoruz:\n\n✨ Yeni özellikler:\n  - ⚙️ Oyun Gelişmiş Ayarları: Artık Minecraft'ın gelişmiş ayarlarını doğrudan launcher'dan özelleştirebilirsiniz\n  - 📚 Entegre Yardım Sayfası: Uygulama içindeki kılavuzlara ve dokümantasyona hızlı erişim\n\n🔒 Veri Güvenliği: Minecraft kayıtlarınızı ve launcher verilerinizi düzenli olarak yedekleyin\n🐛 Hata Raporları: Herhangi bir sorunla karşılaşırsanız, lütfen GitHub repository'mizde bildirin\n⚠️ Sınırlı Özellikler: Aşağıdaki özellikler şu anda kullanılamaz:\n  - Diğer launcher'lardan kayıt verisi içe aktarma\n\n🙏 %@'ı test ettiğiniz ve geliştirmemize yardım ettiğiniz için teşekkürler!",
+    "author": "Swift Craft Launcher Ekibi"
+  }
+}

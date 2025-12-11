@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift Craft Launcher - A Minecraft Launcher for macOS</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="shortcut icon"
+    href="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+    type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-gray-50: #f5f5f7;
+        --color-gray-600: #1d1d1f;
+        --color-gray-700: #333338;
+        --color-gray-800: #86868b;
+        --color-gray-900: #141414;
+        --color-gray-950: #000000;
+        --color-blue-500: #2997ff;
+        --color-button-blue: #0071e3;
+        --color-button-blue-hover: #0076df;
+        --color-button-blue-active: #006edb;
+        --color-header: rgba(22, 22, 23, 0.8);
+        --color-header-border: rgba(255, 255, 255, 0.24);
+        --color-header-border-active: rgba(255, 255, 255, 0.76);
+        --color-hover:var(--color-blue-500);
+        --color-footer-text: #d2d2d7;
+        --color-footer: var(--color-footer-text);
+        --color-link: #0070c9;
+        --color-button-gray-hover: var(--color-white);
+        --color-button-gray-text: #f5f5f7;
+        --color-button-gray-active: #1f1f22;
+        --color-button-gray-text-hover: var(--color-black);
+      }
+    </style>
+</head>
+
+<body class="bg-gray-950">
+  <header
+    class="flex items-center px-5 text-gray-50 h-[52px] sticky w-full z-1 top-0 bg-header border-b-1 border-b-header-border backdrop-blur-xl lg:justify-center lg:px-30">
+    <div class="w-full h-full max-w-[1280px] flex justify-between items-center transition-all">
+      <h1 class="font-bold text-xl">Swift Craft Launcher</h1>
+      <div class="flex gap-8 items-center text-xs h-full">
+        <p class="items-center border-b-1 border-b-header-border-active h-full mt-[2px] hidden lg:flex">
+          Overview
+        </p>
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+          class="opacity-80 hover:opacity-90 after:content-['􀄯'] after:text-[10px] after:ml-1">More on
+          Github</a>
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
+          class="py-1.25 px-3 rounded-full bg-button-blue hover:bg-button-blue-hover active:bg-button-blue-active text-white hidden lg:flex">Download</a>
+      </div>
+    </div>
+  </header>
+  <main class="min-h-lvh">
+    <section class="flex flex-col items-center text-gray-50 max-h-[100svh] px-5 text-center pt-15 md:pt-27.5 overflow-hidden">
+      <div class="relative w-32 h-32 lg:w-48 lg:h-48">
+        <img
+          src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+          alt class="w-24 h-24 absolute top-4 left-4 blur-2xl lg:w-40 lg:h-40" />
+        <img
+          src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+          alt class="z-0 relative" />
+      </div>
+      <h1 class="title text-3xl font-bold mb-5 lg:text-5xl mt-2">
+        Swift Craft Launcher
+      </h1>
+      <p class="subtitle font-semibold text-lg max-w-xl lg:text-2xl lg:max-w-2xl text-gray-800">
+        Swift Craft Launcher is a SwiftUI-based native macOS Minecraft launcher, offering smooth performance, full mod loader support, Microsoft account login, and intuitive game management.
+      </p>
+      <p class="mt-5 text-gray-800">
+        Requires macOS 14.0 or later
+      </p>
+      <div class="flex gap-3 mt-6">
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+          class="py-4.25 px-7.5 rounded-full hover:bg-button-gray-hover hover:text-button-gray-text-hover active:bg-button-blue-active text-button-gray-text border-1 border-button-gray-text">
+          Learn More
+        </a>
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
+          class="py-4.25 px-7.5 rounded-full hover:bg-button-gray-hover hover:text-button-gray-text-hover active:bg-button-blue-active text-button-gray-text border-1 border-button-gray-text">
+          Download
+        </a>
+      </div>
+      <img src="Slice.png" alt="Swift Craft Launcher Interface Showcase" class="max-w-lvw sm:px-20 lg:max-w-7xl xl:px-0 relative">
+    </section>
+    <!-- Contributors List -->
+    <section class="text-gray-50 flex mb-[52px] px-10 sm:px-20 md:px-25 lg:px-10 pt-27.5 justify-center">
+      <div class="flex flex-col max-w-[1280px] w-full">
+        <h1 class="text-2xl mb-7 lg:text-3xl">Contributors</h1>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <img
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
+              src="https://avatars.githubusercontent.com/u/48873455?v=4" alt=""></img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/suhang12332" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">suhang12332</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Code, Design</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              🎨</img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="" target="_blank" rel="noopener noreferrer"
+                  class="text-link hover:underline">喵凹条</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Design</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👨‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">CarnonLee</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Code</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👨‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/jiangyin14" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">jiangyin14</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Code</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              🔧</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">逗趣狂想</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Infra</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">Nzcorz</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Code</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">桜子ちゃん</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Code</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              🎨</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/chencomcdyun" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">ZeroSnow</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Design</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <img
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
+              src="https://s2.loli.net/2025/08/31/KLGzDOtQ3A9qFxE.jpg" alt="🎨"></img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://space.bilibili.com/508878020" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">猫白GAF</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Design</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">小希Lusiey_</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Test</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">骑老奶奶过马路</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Test</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👩‍💻</p>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold">laiTM</h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Test</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <img
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl"
+              src="https://youke1.picui.cn/s1/2025/09/09/68c01b15df421.png"></img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://github.com/rayanceking" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">RayanceKing</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Code</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex gap-3 pb-5 border-b-1 border-b-gray-700 md:border-0">
+            <p
+              class="text-4xl w-18 h-18 min-w-18 rounded-full overflow-hidden flex justify-center items-center bg-gray-900 lg:w-24 lg:min-w-24 lg:h-24 lg:text-6xl">
+              👨‍💻</img>
+            <div class="flex flex-col gap-1 justify-center items-center w-full md:items-start md:w-auto">
+              <h3 class="text-xl font-semibold"><a href="https://space.bilibili.com/582129140" target="_blank"
+                  rel="noopener noreferrer" class="text-link hover:underline">iCold</a></h3>
+              <span class="flex gap-1">
+                <p class="text-sm text-50 lg:text-lg">Web</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="text-gray-50 flex flex-col justify-center items-center px-5 bg-gray-900 py-5 lg:px-30">
+    <div class="w-full max-w-[1920px]">
+      <div class="flex flex-col h-full">
+        <!-- Logo -->
+        <div class="pb-7 items-center hidden md:flex lg:pb-13.5">
+          <img class="w-20 h-20 mr-5"
+            src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+            alt />
+          <h1 class="text-5xl font-bold">Swift Craft Launcher</h1>
+        </div>
+        <!-- Links -->
+        <div class="mb-10 hidden md:grid grid-flow-col">
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Project</h3>
+            <p class="opacity-56 text-sm"><a href>Overview</a></p>
+          </div>
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Support</h3>
+            <p class="opacity-56 text-sm">
+              <a href="https://imreak.github.io/">User Guide</a>
+            </p>
+            <p class="opacity-56 text-sm">
+              <a href="https://github.com/suhang12332/Swift-Craft-Launcher/issues">Report
+                Issues</a>
+            </p>
+          </div>
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Development</h3>
+            <p class="opacity-56 text-sm">
+              <a href="https://github.com/suhang12332/Swift-Craft-Launcher/">Github</a>
+            </p>
+          </div>
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Community</h3>
+            <p class="opacity-56 text-sm"><a href>BiliBili</a></p>
+            <p class="opacity-56 text-sm"><a href>QQ Group</a></p>
+          </div>
+        </div>
+        <!-- Mobile Version -->
+        <div class="md:hidden">
+          <div class="border-b-1 border-gray-700 relative">
+            <input type="checkbox" id="support-toggle" class="hidden peer" />
+            <label class="support" for="support-toggle">
+              <h3
+                class="bg-gray-900 relative z-2 py-2.5 text-sm after:content-['+'] after:transition-transform after:duration-300 after:float-right after:mr-2">
+                Support</h3>
+            </label>
+            <ul
+              class="pt-1.25 pb-4 -z-1 overflow-hidden absolute top-1/2 -translate-y-12 ease-out peer-checked:static peer-checked:z-1 peer-checked:transition-all peer-checked:duration-300 peer-checked:top-full peer-checked:visible peer-checked:translate-y-0">
+              <li class="py-1.5 px-3.5 text-xs"><a href="https://imreak.github.io/" class="text-footer">User Guide</a>
+              </li>
+              <li class="py-1.5 px-3.5 text-xs"><a href="https://github.com/suhang12332/Swift-Craft-Launcher/issues"
+                  class="text-footer">Report Issues</a></li>
+            </ul>
+          </div>
+          <div class="border-b-1 border-gray-700 relative">
+            <input type="checkbox" id="community-toggle" class="hidden peer" />
+            <label class="community" for="community-toggle">
+              <h3
+                class="bg-gray-900 relative z-2 py-2.5 text-sm after:content-['+'] after:transition-transform after:duration-300 after:float-right after:mr-2">
+                Community</h3>
+            </label>
+            <ul
+              class="pt-1.25 pb-4 -z-1 overflow-hidden absolute top-1/2 -translate-y-12 ease-out peer-checked:static peer-checked:z-1 peer-checked:transition-all peer-checked:duration-300 peer-checked:top-full peer-checked:visible peer-checked:translate-y-0">
+              <li class="py-1.5 px-3.5 text-xs"><a href="" class="text-footer">BiliBili</a>
+              </li>
+              <li class="py-1.5 px-3.5 text-xs"><a href="" class="text-footer">QQ Group</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Theme and Language and Copyright -->
+      <section class="pt-5">
+        <div class="flex md:justify-end">
+          <div class="flex p-0.25 rounded-full border-1 border-button-blue text-xs text-blue-500 mb-3"
+            id="themeSelector">
+            <p class="px-2 py-0.75 cursor-pointer rounded-full" data-theme="light">
+              Light
+            </p>
+            <p class="px-2 py-0.75 cursor-pointer rounded-full" data-theme="dark">
+              Dark
+            </p>
+            <p class="px-2 py-0.75 cursor-pointer rounded-full" data-theme="auto">
+              Auto
+            </p>
+          </div>
+        </div>
+        <div class="flex md:border-t-1 border-gray-700 md:py-2 flex-col gap-1">
+          <div class="text-xs text-gray-800">
+            <p class="hidden md:flex">Swift Craft Launcher is an open-source project released under the AGPLv3
+              license.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Minecraft is a registered trademark of Mojang Studios.</span>
+            </p>
+          </div>
+          <div class="flex justify-between text-xs text-gray-800">
+            <p>
+              Copyright © 2025 Swift Craft Launcher. All rights reserved.
+            </p>
+            <div class="group relative hover:text-hover">
+              <select
+                class="text-blue-500 appearance-none cursor-pointer group-hover:underline group-hover:text-hover pr-3.5 z-2 relative"
+                id="languageSelector">
+                <option value="">English</option>
+                <option value="zh-cn">简体中文</option>
+                <option value="zh-tw">繁體中文</option>
+              </select>
+              <span
+                class="after:content-['􀆈'] after:font-semibold after:text-[7px] absolute right-0.25 flex top-0.75"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+
+
+</html>
+

@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Important Notice",
+    "content": "🎮 Welcome to %@ Beta!\n\nThis is a beta version of %@. While we strive to provide a stable experience, please note the following important information:\n\n🔒 Data Safety: Please regularly back up your Minecraft saves and launcher data\n🐛 Bug Reports: If you encounter any issues, please report them on our GitHub repository\n⚠️ Limited Features: The following features are currently unavailable:\n  - Save data import from other launchers\n  - Advanced launcher settings\n🖥️ Compatibility: Apple Silicon devices running Minecraft versions below 1.13 are not yet supported\n\n🙏 Thank you for testing %@ and helping us improve!",
+    "author": "Swift Craft Launcher Team"
+  }
+}

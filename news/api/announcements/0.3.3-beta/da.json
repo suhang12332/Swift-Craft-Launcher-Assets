@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Ny opdatering - 0.3.3-beta",
+    "content": "🎮 Velkommen til %@ 0.3.3-beta!\n\nVi er glade for at dele de nye opdateringer i denne udgivelse:\n\n✨ Nye funktioner:\n  - ⚙️ Avancerede spilindstillinger: Du kan nu tilpasse avancerede Minecraft-indstillinger direkte fra launcher'en\n  - 📚 Integreret hjælpeside: Hurtig adgang til guider og dokumentation inde i appen\n\n🔒 Datasikkerhed: Lav regelmæssigt backup af dine Minecraft-gemmer og launcher-data\n🐛 Fejlrapporter: Hvis du støder på problemer, så rapportér dem venligst på vores GitHub-repository\n⚠️ Begrænsede funktioner: Følgende funktioner er i øjeblikket utilgængelige:\n  - Import af gemmedata fra andre launchere\n\n🙏 Tak fordi du tester %@ og hjælper os med at forbedre det!",
+    "author": "Swift Craft Launcher Team"
+  }
+}
