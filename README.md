@@ -81,7 +81,7 @@ ar, da, de, en, es, fi, fr, hi, it, ja, ko, nb, nl, pl, pt, ru, sv, th, tr, vi, 
 - 用于存储 macOS 应用帮助文档的图片资源
 - 按功能模块分类存储（注册、添加游戏、添加资源、设置、编辑皮肤等）
 
-### 🌐 web/
+### 🌐 docs/
 **Swift-Craft-Launcher-Web** - 前端代码
 - 项目官网前端代码
 - 包含多语言支持（英文、简体中文、繁体中文）
