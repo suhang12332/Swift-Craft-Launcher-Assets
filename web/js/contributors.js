@@ -108,7 +108,7 @@ async function loadGitHubContributors(container) {
 async function loadCoreContributors(container) {
     try {
         // 根据当前页面路径确定 contributors.json 的相对路径
-        const isSubDir = window.location.pathname.includes('/zh-Hans/') || window.location.pathname.includes('/zh-Hant/');
+        const isSubDir = window.location.pathname.includes('/zh-Hans/') || window.location.pathname.includes('/zh-Hant/') || window.location.pathname.includes('/en/');
         const jsonPath = isSubDir ? '../../contributors/contributors.json' : '../contributors/contributors.json';
         const response = await fetch(jsonPath);
         if (!response.ok) {
