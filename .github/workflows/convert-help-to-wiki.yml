@@ -169,8 +169,18 @@ jobs:
         run: |
           cd wiki-repo
           
+          # 清除任何缓存的凭据
+          git config --unset credential.helper || true
+          git config --global --unset credential.helper || true
+          
+          # 构建带 token 的 URL
+          WIKI_URL="https://x-access-token:${WIKI_TOKEN}@github.com/suhang12332/Swift-Craft-Launcher.wiki.git"
+          
           # 确保远程 URL 使用 token
-          git remote set-url origin https://x-access-token:${WIKI_TOKEN}@github.com/suhang12332/Swift-Craft-Launcher.wiki.git
+          git remote set-url origin "$WIKI_URL"
+          
+          # 验证远程 URL 已更新
+          echo "Remote URL configured: $(git remote get-url origin | sed 's/:[^@]*@/:***@/')"
           
           git add -A
           
@@ -194,23 +204,40 @@ jobs:
             current_branch="master"
           fi
           
+          # 使用 credential helper 来提供 token
+          git config credential.helper "!f() { echo 'username=x-access-token'; echo 'password=${WIKI_TOKEN}'; }; f"
+          
           # 尝试推送到当前分支
           echo "Pushing to branch: $current_branch"
-          if git push -u origin $current_branch; then
+          echo "Using token authentication..."
+          
+          # 直接使用 URL 推送，确保使用 token
+          if git push "$WIKI_URL" $current_branch:$current_branch; then
             echo "Successfully pushed to wiki repository"
+            # 更新远程跟踪分支
+            git branch --set-upstream-to=origin/$current_branch $current_branch || true
           else
             # 如果失败，尝试推送到 master 或 main
             echo "Failed to push to $current_branch, trying master..."
-            if git push -u origin master 2>/dev/null; then
+            if git push "$WIKI_URL" master:master 2>/dev/null; then
               echo "Successfully pushed to master branch"
-            elif git push -u origin main 2>/dev/null; then
+              git checkout master 2>/dev/null || true
+            elif git push "$WIKI_URL" main:main 2>/dev/null; then
               echo "Successfully pushed to main branch"
+              git checkout main 2>/dev/null || true
             else
               echo "Error: Failed to push to wiki repository"
+              echo ""
+              echo "Debug information:"
+              echo "Token present: $([ -n "${WIKI_TOKEN}" ] && echo 'Yes' || echo 'No')"
+              echo "Token length: ${#WIKI_TOKEN}"
+              echo "Remote URL: $(git remote get-url origin | sed 's/:[^@]*@/:***@/')"
+              echo ""
               echo "Please check:"
               echo "1. The wiki repository exists and is accessible"
-              echo "2. You have set up a Personal Access Token (PAT) with repo permissions in repository secrets as WIKI_PAT"
-              echo "3. The PAT has write access to the wiki repository"
+              echo "2. You have set up a Personal Access Token (PAT) with 'repo' scope in repository secrets as 'WIKI_PAT'"
+              echo "3. The PAT must have write access to the wiki repository"
+              echo "4. To create a PAT: https://github.com/settings/tokens (select 'repo' scope)"
               exit 1
             fi
           fi
