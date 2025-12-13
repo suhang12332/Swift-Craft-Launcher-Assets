@@ -1,0 +1,191 @@
+name: Convert Help HTML to Wiki
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'help/**'
+  workflow_dispatch:
+
+jobs:
+  convert-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Install html-to-markdown converter
+        run: |
+          npm install turndown
+
+      - name: Convert HTML to Markdown
+        run: |
+          mkdir -p wiki-output
+          
+          # 创建转换脚本
+          cat > convert.js << 'EOF'
+          const TurndownService = require('turndown');
+          const fs = require('fs');
+          const path = require('path');
+          const { execSync } = require('child_process');
+          
+          const turndownService = new TurndownService({
+            headingStyle: 'atx',
+            codeBlockStyle: 'fenced',
+            bulletListMarker: '-'
+          });
+          
+          // 自定义规则：保留图片
+          turndownService.addRule('images', {
+            filter: 'img',
+            replacement: function (content, node) {
+              const alt = node.getAttribute('alt') || '';
+              const src = node.getAttribute('src') || '';
+              if (src) {
+                return `![${alt}](${src})`;
+              }
+              return '';
+            }
+          });
+          
+          function convertHtmlToMarkdown(htmlFile, mdFile) {
+            try {
+              // 先尝试使用 pandoc
+              try {
+                execSync(`pandoc "${htmlFile}" -f html -t markdown --wrap=none -o "${mdFile}"`, { stdio: 'ignore' });
+                console.log(`Converted ${htmlFile} using pandoc`);
+                return;
+              } catch (e) {
+                // pandoc 失败，使用 turndown
+              }
+              
+              // 使用 turndown 转换
+              const html = fs.readFileSync(htmlFile, 'utf8');
+              let markdown = turndownService.turndown(html);
+              
+              // 清理 Markdown
+              // 移除空链接
+              markdown = markdown.replace(/\[([^\]]+)\]\(\)/g, '$1');
+              // 移除多余的空白行
+              markdown = markdown.replace(/\n{3,}/g, '\n\n');
+              
+              fs.writeFileSync(mdFile, markdown, 'utf8');
+              console.log(`Converted ${htmlFile} using turndown`);
+            } catch (error) {
+              console.error(`Error converting ${htmlFile}:`, error.message);
+            }
+          }
+          
+          // 转换所有语言的 HTML 文件
+          const helpDir = 'help/SwiftCraftLauncher.help/Contents/Resources';
+          const langDirs = fs.readdirSync(helpDir).filter(dir => dir.endsWith('.lproj'));
+          
+          langDirs.forEach(langDir => {
+            const lang = langDir.replace('.lproj', '');
+            const langPath = path.join(helpDir, langDir);
+            const outputDir = path.join('wiki-output', lang);
+            
+            if (!fs.existsSync(outputDir)) {
+              fs.mkdirSync(outputDir, { recursive: true });
+            }
+            
+            const htmlFiles = fs.readdirSync(langPath).filter(file => file.endsWith('.html'));
+            
+            htmlFiles.forEach(htmlFile => {
+              const htmlPath = path.join(langPath, htmlFile);
+              const mdFile = path.basename(htmlFile, '.html') + '.md';
+              const mdPath = path.join(outputDir, mdFile);
+              
+              convertHtmlToMarkdown(htmlPath, mdPath);
+            });
+          });
+          EOF
+          
+          # 运行转换脚本
+          node convert.js
+
+      - name: Clone wiki repository
+        run: |
+          # 尝试克隆 wiki 仓库，如果不存在则创建
+          if git clone https://github.com/suhang12332/Swift-Craft-Launcher.wiki.git wiki-repo 2>/dev/null; then
+            echo "Wiki repository cloned successfully"
+          else
+            echo "Wiki repository does not exist or is empty, creating new one"
+            mkdir -p wiki-repo
+            cd wiki-repo
+            git init
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git remote add origin https://github.com/suhang12332/Swift-Craft-Launcher.wiki.git
+            cd ..
+          fi
+          
+          cd wiki-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Copy converted files to wiki repository
+        run: |
+          # 清空 wiki 仓库（保留 .git）
+          cd wiki-repo
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          
+          # 复制转换后的文件
+          cp -r ../wiki-output/* .
+          
+          # 创建或更新 README.md
+          if [ ! -f README.md ]; then
+            echo "# Swift Craft Launcher Wiki" > README.md
+            echo "" >> README.md
+            echo "This wiki is automatically generated from the help documentation." >> README.md
+          fi
+
+      - name: Commit and push to wiki repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd wiki-repo
+          git add -A
+          
+          if git diff --staged --quiet && [ -n "$(git ls-files)" ]; then
+            echo "No changes to commit"
+          else
+            # 检查是否有文件需要提交
+            if [ -z "$(git ls-files)" ]; then
+              echo "No files to commit, skipping"
+              exit 0
+            fi
+            
+            git commit -m "Auto-update: Convert help HTML to Markdown [skip ci]" || echo "Nothing to commit"
+            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/suhang12332/Swift-Craft-Launcher.wiki.git
+            
+            # 尝试推送到 master 或 main 分支
+            if git push origin master 2>/dev/null || git push origin main 2>/dev/null; then
+              echo "Successfully pushed to wiki repository"
+            else
+              # 如果是新仓库，可能需要设置上游分支
+              current_branch=$(git branch --show-current || echo "master")
+              if [ -z "$current_branch" ]; then
+                git checkout -b master
+                current_branch="master"
+              fi
+              git push -u origin $current_branch || git push -u origin master || git push -u origin main
+            fi
+          fi
+
