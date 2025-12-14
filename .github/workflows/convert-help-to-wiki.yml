@@ -166,8 +166,24 @@ jobs:
         env:
           # 优先使用 PAT，如果没有则使用 GITHUB_TOKEN
           WIKI_TOKEN: ${{ secrets.WIKI_PAT || secrets.GITHUB_TOKEN }}
+          HAS_PAT: ${{ secrets.WIKI_PAT != '' }}
         run: |
           cd wiki-repo
+          
+          # 调试信息
+          echo "=== Debug Information ==="
+          echo "Using PAT: $([ -n "${{ secrets.WIKI_PAT }}" ] && echo 'Yes' || echo 'No (using GITHUB_TOKEN)')"
+          echo "Token present: $([ -n "${WIKI_TOKEN}" ] && echo 'Yes' || echo 'No')"
+          echo "Token length: ${#WIKI_TOKEN}"
+          echo "Token prefix: ${WIKI_TOKEN:0:10}..."
+          echo "========================"
+          
+          # 如果使用的是 GITHUB_TOKEN，给出警告
+          if [ -z "${{ secrets.WIKI_PAT }}" ]; then
+            echo "⚠️  WARNING: Using GITHUB_TOKEN which may not have permission to push to wiki."
+            echo "⚠️  Please set up a Personal Access Token (PAT) in repository secrets as 'WIKI_PAT'"
+            echo "⚠️  See: https://github.com/settings/tokens"
+          fi
           
           # 清除任何缓存的凭据
           git config --unset credential.helper || true
@@ -204,41 +220,61 @@ jobs:
             current_branch="master"
           fi
           
-          # 使用 credential helper 来提供 token
+          # 方法1: 使用 credential store
+          echo "Attempting push method 1: Using credential store..."
+          echo "https://x-access-token:${WIKI_TOKEN}@github.com" > ~/.git-credentials
+          git config credential.helper store
+          git config --global credential.helper store
+          
+          if git push origin $current_branch 2>&1; then
+            echo "✅ Successfully pushed using credential store method"
+            exit 0
+          fi
+          
+          # 方法2: 直接使用 URL 推送
+          echo "Attempting push method 2: Direct URL push..."
+          if git push "$WIKI_URL" $current_branch:$current_branch 2>&1; then
+            echo "✅ Successfully pushed using direct URL method"
+            git branch --set-upstream-to=origin/$current_branch $current_branch || true
+            exit 0
+          fi
+          
+          # 方法3: 使用 credential helper 函数
+          echo "Attempting push method 3: Using credential helper function..."
+          git config --unset credential.helper || true
           git config credential.helper "!f() { echo 'username=x-access-token'; echo 'password=${WIKI_TOKEN}'; }; f"
           
-          # 尝试推送到当前分支
-          echo "Pushing to branch: $current_branch"
-          echo "Using token authentication..."
-          
-          # 直接使用 URL 推送，确保使用 token
-          if git push "$WIKI_URL" $current_branch:$current_branch; then
-            echo "Successfully pushed to wiki repository"
-            # 更新远程跟踪分支
-            git branch --set-upstream-to=origin/$current_branch $current_branch || true
-          else
-            # 如果失败，尝试推送到 master 或 main
-            echo "Failed to push to $current_branch, trying master..."
-            if git push "$WIKI_URL" master:master 2>/dev/null; then
-              echo "Successfully pushed to master branch"
-              git checkout master 2>/dev/null || true
-            elif git push "$WIKI_URL" main:main 2>/dev/null; then
-              echo "Successfully pushed to main branch"
-              git checkout main 2>/dev/null || true
-            else
-              echo "Error: Failed to push to wiki repository"
-              echo ""
-              echo "Debug information:"
-              echo "Token present: $([ -n "${WIKI_TOKEN}" ] && echo 'Yes' || echo 'No')"
-              echo "Token length: ${#WIKI_TOKEN}"
-              echo "Remote URL: $(git remote get-url origin | sed 's/:[^@]*@/:***@/')"
-              echo ""
-              echo "Please check:"
-              echo "1. The wiki repository exists and is accessible"
-              echo "2. You have set up a Personal Access Token (PAT) with 'repo' scope in repository secrets as 'WIKI_PAT'"
-              echo "3. The PAT must have write access to the wiki repository"
-              echo "4. To create a PAT: https://github.com/settings/tokens (select 'repo' scope)"
-              exit 1
-            fi
+          if git push origin $current_branch 2>&1; then
+            echo "✅ Successfully pushed using credential helper method"
+            exit 0
           fi
+          
+          # 所有方法都失败了
+          echo ""
+          echo "❌ Error: All push methods failed"
+          echo ""
+          echo "=== Troubleshooting ==="
+          echo "1. Token type: $([ -n "${{ secrets.WIKI_PAT }}" ] && echo 'PAT' || echo 'GITHUB_TOKEN (may not work)')"
+          echo "2. Token length: ${#WIKI_TOKEN}"
+          echo "3. Remote URL: $(git remote get-url origin | sed 's/:[^@]*@/:***@/')"
+          echo ""
+          echo "=== Solution ==="
+          echo "GITHUB_TOKEN typically cannot push to wiki repositories."
+          echo "You MUST create a Personal Access Token (PAT):"
+          echo ""
+          echo "1. Go to: https://github.com/settings/tokens"
+          echo "2. Click 'Generate new token' → 'Generate new token (classic)'"
+          echo "3. Name: 'Wiki Push Token'"
+          echo "4. Expiration: Choose your preference"
+          echo "5. Scopes: Check 'repo' (Full control of private repositories)"
+          echo "6. Click 'Generate token'"
+          echo "7. Copy the token immediately (you won't see it again)"
+          echo "8. Go to your repository: Settings → Secrets and variables → Actions"
+          echo "9. Click 'New repository secret'"
+          echo "10. Name: WIKI_PAT"
+          echo "11. Value: Paste your token"
+          echo "12. Click 'Add secret'"
+          echo ""
+          echo "After adding WIKI_PAT, the workflow will automatically use it."
+          exit 1
 
