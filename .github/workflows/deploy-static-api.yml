@@ -28,8 +28,9 @@ jobs:
           node-version: '20'
 
       - name: Generate API
-        working-directory: news
-        run: node news/scripts/generate-api.js
+        run: |
+          cd news
+          node scripts/generate-api.js
 
       - name: Commit and push API files
         run: |
