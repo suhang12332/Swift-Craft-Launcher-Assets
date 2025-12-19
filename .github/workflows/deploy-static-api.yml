@@ -29,7 +29,7 @@ jobs:
 
       - name: Generate API
         working-directory: news
-        run: node scripts/generate-api.js
+        run: node news/scripts/generate-api.js
 
       - name: Commit and push API files
         run: |
