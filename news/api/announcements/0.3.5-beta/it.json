@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Nuovo aggiornamento - 0.3.5-beta",
+    "content": "🎮 Benvenuto in %@ 0.3.5-beta!\n\nSiamo entusiasti di condividere i nuovi aggiornamenti in questa versione:\n\n✨ Nuove funzionalità:\n  - 🔔 Sistema di notifiche: Supporto per la modalità banner\n  - 🤖 Funzionalità AI: Finestra di chat AI con avatar personalizzati, analisi dei log di crash del gioco, interruttore di attivazione AI (richiede accesso utente)\n  - 📦 Gestione delle risorse: Scorrimento infinito, visualizzazione del caricamento\n  - 🎮 Gestione del gioco: Meccanismo di cache delle icone del gioco, miglioramenti del layout\n  - 👤 Gestione dei giocatori: Marcatori di stato del giocatore (originale scaduto/non scaduto, offline)\n\n🔒 Sicurezza dei dati: Esegui regolarmente il backup dei tuoi salvataggi Minecraft e dei dati del launcher\n🐛 Segnalazione bug: Se riscontri problemi, segnalali nel nostro repository GitHub\n⚠️ Funzionalità limitate: Le seguenti funzionalità sono attualmente non disponibili:\n  - Importazione di dati di salvataggio da altri launcher\n\n🙏 Grazie per testare %@ e aiutarci a migliorare!",
+    "author": "Team Swift Craft Launcher"
+  }
+}

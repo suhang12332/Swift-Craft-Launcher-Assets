@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Ny oppdatering - 0.3.5-beta",
+    "content": "🎮 Velkommen til %@ 0.3.5-beta!\n\nVi er glade for å dele de nye oppdateringene i denne utgivelsen:\n\n✨ Nye funksjoner:\n  - 🔔 Varslingssystem: Støtte for banner-modus\n  - 🤖 AI-funksjoner: AI-chatvindu med tilpassede avatarer, analyse av spillkrasjlogger, AI-aktiveringsbryter (krever brukerinnlogging)\n  - 📦 Ressursforvaltning: Uendelig scrolling, lasting-visning\n  - 🎮 Spillforvaltning: Spillikon-cache-mekanisme, layoutforbedringer\n  - 👤 Spillerforvaltning: Spillerstatusmarkører (original utløpt/ikke utløpt, offline)\n\n🔒 Datasikkerhet: Ta regelmessig sikkerhetskopi av dine Minecraft-lagringer og launcher-data\n🐛 Feilrapporter: Hvis du støter på problemer, rapporter dem i vårt GitHub-repository\n⚠️ Begrensede funksjoner: Følgende funksjoner er for øyeblikket utilgjengelige:\n  - Import av lagringsdata fra andre launchere\n\n🙏 Takk for at du tester %@ og hjelper oss å forbedre det!",
+    "author": "Swift Craft Launcher Team"
+  }
+}

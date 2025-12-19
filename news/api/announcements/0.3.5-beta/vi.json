@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Cập nhật mới - 0.3.5-beta",
+    "content": "🎮 Chào mừng đến với %@ 0.3.5-beta!\n\nChúng tôi rất vui mừng được chia sẻ các cập nhật mới trong phiên bản này:\n\n✨ Tính năng mới:\n  - 🔔 Hệ thống thông báo: Hỗ trợ chế độ banner\n  - 🤖 Tính năng AI: Cửa sổ trò chuyện AI với avatar tùy chỉnh, phân tích nhật ký sự cố trò chơi, công tắc kích hoạt AI (yêu cầu đăng nhập người dùng)\n  - 📦 Quản lý tài nguyên: Cuộn vô hạn, hiển thị tải\n  - 🎮 Quản lý trò chơi: Cơ chế lưu trữ biểu tượng trò chơi, cải thiện bố cục\n  - 👤 Quản lý người chơi: Đánh dấu trạng thái người chơi (bản gốc hết hạn/chưa hết hạn, ngoại tuyến)\n\n🔒 An toàn dữ liệu: Vui lòng thường xuyên sao lưu các file save Minecraft và dữ liệu launcher\n🐛 Báo cáo lỗi: Nếu gặp vấn đề, vui lòng báo cáo trên GitHub repository của chúng tôi\n⚠️ Tính năng hạn chế: Các tính năng sau hiện chưa khả dụng:\n  - Nhập dữ liệu save từ launcher khác\n\n🙏 Cảm ơn bạn đã thử nghiệm %@ và giúp chúng tôi cải thiện!",
+    "author": "Đội ngũ Swift Craft Launcher"
+  }
+}

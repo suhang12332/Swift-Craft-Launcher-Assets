@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "New Update - 0.3.5-beta",
+    "content": "🎮 Welcome to %@ 0.3.5-beta!\n\nWe're excited to share the new updates in this release:\n\n✨ New Features:\n  - 🔔 Notification System: Support for banner mode\n  - 🤖 AI Features: AI chat window with custom avatars, game crash log analysis, AI activation toggle (requires user login)\n  - 📦 Resource Management: Infinite scrolling, loading display\n  - 🎮 Game Management: Game icon caching mechanism, layout improvements\n  - 👤 Player Management: Player status markers (original expired/not expired, offline)\n\n🔒 Data Safety: Please regularly back up your Minecraft saves and launcher data\n🐛 Bug Reports: If you encounter any issues, please report them on our GitHub repository\n⚠️ Limited Features: The following features are currently unavailable:\n  - Save data import from other launchers\n\n🙏 Thank you for testing %@ and helping us improve!",
+    "author": "Swift Craft Launcher Team"
+  }
+}

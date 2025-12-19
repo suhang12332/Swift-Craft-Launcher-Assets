@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Uusi päivitys - 0.3.5-beta",
+    "content": "🎮 Tervetuloa %@ 0.3.5-betaan!\n\nOlemme innoissamme jakamassa uusia päivityksiä tässä julkaisussa:\n\n✨ Uudet ominaisuudet:\n  - 🔔 Ilmoitusjärjestelmä: Tuki bannereille\n  - 🤖 AI-ominaisuudet: AI-chatikkuna mukautettavilla avatareilla, pelin kaatumislokien analyysi, AI-aktivointikytkin (vaatii käyttäjän kirjautumisen)\n  - 📦 Resurssien hallinta: Ääretön vieritys, latausnäyttö\n  - 🎮 Pelinhallinta: Pelikuvakkeiden välimuistimekanismi, asettelun parannukset\n  - 👤 Pelaajien hallinta: Pelaajan tilamerkinnät (alkuperäinen vanhentunut/ei vanhentunut, offline)\n\n🔒 Tietoturva: Varmuuskopioi säännöllisesti Minecraft-tallennuksesi ja launcherin tiedot\n🐛 Virheraportointi: Jos kohtaat ongelmia, raportoi ne GitHub-repositoriossämme\n⚠️ Rajoitetut ominaisuudet: Seuraavat ominaisuudet eivät ole tällä hetkellä käytettävissä:\n  - Tallennustietojen tuonti muista launchereista\n\n🙏 Kiitos %@in testaamisesta ja auttamisesta parantamisessa!",
+    "author": "Swift Craft Launcher -tiimi"
+  }
+}

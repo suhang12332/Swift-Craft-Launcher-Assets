@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Yeni güncelleme - 0.3.5-beta",
+    "content": "🎮 %@ 0.3.5-beta'ya hoş geldiniz!\n\nBu sürümdeki yeni güncellemeleri paylaşmaktan heyecan duyuyoruz:\n\n✨ Yeni özellikler:\n  - 🔔 Bildirim Sistemi: Banner modu desteği\n  - 🤖 AI Özellikleri: Özel avatarlarla AI sohbet penceresi, oyun çökme log analizi, AI aktivasyon anahtarı (kullanıcı girişi gerektirir)\n  - 📦 Kaynak Yönetimi: Sonsuz kaydırma, yükleme görüntüleme\n  - 🎮 Oyun Yönetimi: Oyun simgesi önbellek mekanizması, düzen iyileştirmeleri\n  - 👤 Oyuncu Yönetimi: Oyuncu durum işaretleri (orijinal süresi dolmuş/dolmamış, çevrimdışı)\n\n🔒 Veri Güvenliği: Minecraft kayıtlarınızı ve launcher verilerinizi düzenli olarak yedekleyin\n🐛 Hata Raporları: Herhangi bir sorunla karşılaşırsanız, lütfen GitHub repository'mizde bildirin\n⚠️ Sınırlı Özellikler: Aşağıdaki özellikler şu anda kullanılamaz:\n  - Diğer launcher'lardan kayıt verisi içe aktarma\n\n🙏 %@'ı test ettiğiniz ve geliştirmemize yardım ettiğiniz için teşekkürler!",
+    "author": "Swift Craft Launcher Ekibi"
+  }
+}
