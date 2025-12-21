@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Yeni güncelleme - 0.3.7-beta",
+    "content": "🎮 %@ 0.3.7-beta'ya hoş geldiniz!\n\n⚠️ **Önemli değişiklik bildirimi:**\n\nBu güncelleme, 0.3.6-beta veya daha eski sürümlerden oyunların taranamamasına neden olacaktır. İşlevselliği geri yüklemek için lütfen migrate_data.applescript'i çalıştırın (herhangi bir yoldan).\n\nTerminal'de çalıştırın:\n```\nosascript migrate_data.applescript\n```\n\nVeri dönüşümünden sonra, 0.3.6-beta oyunları taramak için normal şekilde çalışacaktır.\n\n🔒 Veri Güvenliği: Minecraft kayıtlarınızı ve launcher verilerinizi düzenli olarak yedekleyin\n🐛 Hata Raporları: Herhangi bir sorunla karşılaşırsanız, lütfen GitHub repository'mizde bildirin\n\n🙏 %@'ı test ettiğiniz ve geliştirmemize yardım ettiğiniz için teşekkürler!",
+    "author": "Swift Craft Launcher Ekibi"
+  }
+}

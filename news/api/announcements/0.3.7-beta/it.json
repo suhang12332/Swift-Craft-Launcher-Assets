@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Nuovo aggiornamento - 0.3.7-beta",
+    "content": "🎮 Benvenuto in %@ 0.3.7-beta!\n\n⚠️ **Avviso di modifica importante:**\n\nQuesto aggiornamento impedirà la scansione dei giochi dalla versione 0.3.6-beta o precedente. Per ripristinare la funzionalità, esegui migrate_data.applescript (da qualsiasi percorso).\n\nNel Terminal, esegui:\n```\nosascript migrate_data.applescript\n```\n\nDopo la conversione dei dati, 0.3.6-beta funzionerà normalmente per scansionare i giochi.\n\n🔒 Sicurezza dei dati: Esegui regolarmente il backup dei tuoi salvataggi Minecraft e dei dati del launcher\n🐛 Segnalazione bug: Se riscontri problemi, segnalali nel nostro repository GitHub\n\n🙏 Grazie per testare %@ e aiutarci a migliorare!",
+    "author": "Team Swift Craft Launcher"
+  }
+}

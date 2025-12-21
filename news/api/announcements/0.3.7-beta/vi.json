@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Cập nhật mới - 0.3.7-beta",
+    "content": "🎮 Chào mừng đến với %@ 0.3.7-beta!\n\n⚠️ **Thông báo thay đổi quan trọng:**\n\nBản cập nhật này sẽ khiến các trò chơi từ phiên bản 0.3.6-beta trở về trước không thể quét được. Để khôi phục chức năng, vui lòng thực thi migrate_data.applescript (từ bất kỳ đường dẫn nào).\n\nTrong Terminal, thực thi:\n```\nosascript migrate_data.applescript\n```\n\nSau khi chuyển đổi dữ liệu, 0.3.6-beta sẽ hoạt động bình thường để quét trò chơi.\n\n🔒 An toàn dữ liệu: Vui lòng thường xuyên sao lưu các file save Minecraft và dữ liệu launcher\n🐛 Báo cáo lỗi: Nếu gặp vấn đề, vui lòng báo cáo trên GitHub repository của chúng tôi\n\n🙏 Cảm ơn bạn đã thử nghiệm %@ và giúp chúng tôi cải thiện!",
+    "author": "Đội ngũ Swift Craft Launcher"
+  }
+}

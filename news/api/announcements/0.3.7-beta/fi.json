@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Uusi päivitys - 0.3.7-beta",
+    "content": "🎮 Tervetuloa %@ 0.3.7-betaan!\n\n⚠️ **Tärkeä muutosilmoitus:**\n\nTämä päivitys estää versiosta 0.3.6-beta tai vanhemmista peleistä skannauksen. Palauttaaksesi toiminnallisuuden, suorita migrate_data.applescript (mistä tahansa polusta).\n\nTerminaalissa suorita:\n```\nosascript migrate_data.applescript\n```\n\nTietojen muunnoksen jälkeen 0.3.6-beta toimii normaalisti pelien skannauksessa.\n\n🔒 Tietoturva: Varmuuskopioi säännöllisesti Minecraft-tallennuksesi ja launcherin tiedot\n🐛 Virheraportointi: Jos kohtaat ongelmia, raportoi ne GitHub-repositoriossämme\n\n🙏 Kiitos %@in testaamisesta ja auttamisesta parantamisessa!",
+    "author": "Swift Craft Launcher -tiimi"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "新しいアップデート - 0.3.7-beta",
+    "content": "🎮 %@ 0.3.7-betaへようこそ！\n\n⚠️ **重要な変更通知:**\n\nこのアップデートにより、バージョン0.3.6-beta以前のゲームがスキャンできなくなります。機能を復元するには、migrate_data.applescriptを実行してください（任意のパスから）。\n\nTerminalで実行:\n```\nosascript migrate_data.applescript\n```\n\nデータ変換後、0.3.6-betaはゲームをスキャンするために正常に動作します。\n\n🔒 データ安全性: Minecraftのセーブデータとランチャーデータを定期的にバックアップしてください\n🐛 バグ報告: 問題が発生した場合は、GitHubリポジトリで報告してください\n\n🙏 %@のテストと改善にご協力いただき、ありがとうございます！",
+    "author": "Swift Craft Launcher チーム"
+  }
+}
