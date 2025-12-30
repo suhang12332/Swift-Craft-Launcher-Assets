@@ -1,0 +1,113 @@
+{
+  "ar": {
+    "title": "تحديث جديد - 0.4.0-beta",
+    "content": "🎮 مرحباً بك في %@ 0.4.0-beta!\n\n⚠️ **إعلان تغيير مهم:**\n\nهذا التحديث سيؤدي إلى عدم إمكانية فحص الألعاب من إصدار 0.4.0-beta أو الأقدم. لاستعادة الوظيفة، يرجى تنفيذ migrate_game_data.applescript (من أي مسار).\n\nفي Terminal، قم بتنفيذ:\n```\nosascript migrate_game_data.applescript\n```\n\nثم قم بتنفيذ:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nبعد تحويل البيانات، ستعمل 0.4.0-beta بشكل طبيعي في فحص الألعاب.\n\n🔒 أمان البيانات: يرجى عمل نسخ احتياطية منتظمة لحفظات Minecraft وبيانات المشغل\n🐛 تقارير الأخطاء: إذا واجهت أي مشاكل، يرجى الإبلاغ عنها في مستودع GitHub الخاص بنا\n\n🙏 شكراً لك لاختبار %@ ومساعدتنا في التحسين!",
+    "author": "فريق Swift Craft Launcher"
+  },
+  "da": {
+    "title": "Ny opdatering - 0.4.0-beta",
+    "content": "🎮 Velkommen til %@ 0.4.0-beta!\n\n⚠️ **Vigtig ændringsmeddelelse:**\n\nDenne opdatering vil forhindre scanning af spil fra version 0.4.0-beta eller ældre. For at gendanne funktionaliteten, skal du udføre migrate_game_data.applescript (fra enhver sti).\n\nI Terminal, udfør:\n```\nosascript migrate_game_data.applescript\n```\n\nDerefter udfør:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nEfter datakonvertering vil 0.4.0-beta fungere normalt til at scanne spil.\n\n🔒 Datasikkerhed: Lav regelmæssigt backup af dine Minecraft-gemmer og launcher-data\n🐛 Fejlrapporter: Hvis du støder på problemer, så rapportér dem venligst på vores GitHub-repository\n\n🙏 Tak fordi du tester %@ og hjælper os med at forbedre det!",
+    "author": "Swift Craft Launcher Team"
+  },
+  "de": {
+    "title": "Neues Update - 0.4.0-beta",
+    "content": "🎮 Willkommen bei %@ 0.4.0-beta!\n\n⚠️ **Wichtige Änderungsmitteilung:**\n\nDieses Update führt dazu, dass Spiele von Version 0.4.0-beta oder älter nicht mehr gescannt werden können. Um die Funktionalität wiederherzustellen, führen Sie bitte migrate_game_data.applescript aus (von jedem Pfad).\n\nIm Terminal ausführen:\n```\nosascript migrate_game_data.applescript\n```\n\nDann ausführen:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nNach der Datenkonvertierung funktioniert 0.4.0-beta normal beim Scannen von Spielen.\n\n🔒 Datensicherheit: Erstellen Sie regelmäßig Backups Ihrer Minecraft-Spielstände und Launcher-Daten\n🐛 Fehlerberichte: Wenn Sie Probleme feststellen, melden Sie diese bitte in unserem GitHub-Repository\n\n🙏 Vielen Dank, dass Sie %@ testen und uns bei der Verbesserung helfen!",
+    "author": "Swift Craft Launcher Team"
+  },
+  "en": {
+    "title": "New Update - 0.4.0-beta",
+    "content": "🎮 Welcome to %@ 0.4.0-beta!\n\n⚠️ **Important Change Notice:**\n\nThis update will cause games from version 0.4.0-beta or earlier to be unable to scan. To restore functionality, please execute migrate_game_data.applescript (from any path).\n\nIn Terminal, execute:\n```\nosascript migrate_game_data.applescript\n```\n\nThen execute:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nAfter data conversion, 0.4.0-beta will work normally to scan games.\n\n🔒 Data Safety: Please regularly back up your Minecraft saves and launcher data\n🐛 Bug Reports: If you encounter any issues, please report them on our GitHub repository\n\n🙏 Thank you for testing %@ and helping us improve!",
+    "author": "Swift Craft Launcher Team"
+  },
+  "es": {
+    "title": "Nueva actualización - 0.4.0-beta",
+    "content": "🎮 ¡Bienvenido a %@ 0.4.0-beta!\n\n⚠️ **Aviso de cambio importante:**\n\nEsta actualización hará que los juegos de la versión 0.4.0-beta o anteriores no puedan escanearse. Para restaurar la funcionalidad, ejecute migrate_game_data.applescript (desde cualquier ruta).\n\nEn Terminal, ejecute:\n```\nosascript migrate_game_data.applescript\n```\n\nLuego ejecute:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nDespués de la conversión de datos, 0.4.0-beta funcionará normalmente para escanear juegos.\n\n🔒 Seguridad de datos: Haga copias de seguridad regulares de sus partidas de Minecraft y datos del launcher\n🐛 Informes de errores: Si encuentra algún problema, repórtelo en nuestro repositorio de GitHub\n\n🙏 ¡Gracias por probar %@ y ayudarnos a mejorar!",
+    "author": "Equipo Swift Craft Launcher"
+  },
+  "fi": {
+    "title": "Uusi päivitys - 0.4.0-beta",
+    "content": "🎮 Tervetuloa %@ 0.4.0-betaan!\n\n⚠️ **Tärkeä muutosilmoitus:**\n\nTämä päivitys estää versiosta 0.4.0-beta tai vanhemmista peleistä skannauksen. Palauttaaksesi toiminnallisuuden, suorita migrate_game_data.applescript (mistä tahansa polusta).\n\nTerminaalissa suorita:\n```\nosascript migrate_game_data.applescript\n```\n\nSitten suorita:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nTietojen muunnoksen jälkeen 0.4.0-beta toimii normaalisti pelien skannauksessa.\n\n🔒 Tietoturva: Varmuuskopioi säännöllisesti Minecraft-tallennuksesi ja launcherin tiedot\n🐛 Virheraportointi: Jos kohtaat ongelmia, raportoi ne GitHub-repositoriossämme\n\n🙏 Kiitos %@in testaamisesta ja auttamisesta parantamisessa!",
+    "author": "Swift Craft Launcher -tiimi"
+  },
+  "fr": {
+    "title": "Nouvelle mise à jour - 0.4.0-beta",
+    "content": "🎮 Bienvenue dans %@ 0.4.0-beta !\n\n⚠️ **Avis de changement important :**\n\nCette mise à jour empêchera les jeux de la version 0.4.0-beta ou antérieure d'être scannés. Pour restaurer la fonctionnalité, veuillez exécuter migrate_game_data.applescript (depuis n'importe quel chemin).\n\nDans Terminal, exécutez :\n```\nosascript migrate_game_data.applescript\n```\n\nEnsuite exécutez :\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nAprès la conversion des données, 0.4.0-beta fonctionnera normalement pour scanner les jeux.\n\n🔒 Sécurité des données : Sauvegardez régulièrement vos sauvegardes Minecraft et les données du launcher\n🐛 Rapports de bugs : Si vous rencontrez des problèmes, veuillez les signaler sur notre dépôt GitHub\n\n🙏 Merci de tester %@ et de nous aider à l'améliorer !",
+    "author": "Équipe Swift Craft Launcher"
+  },
+  "hi": {
+    "title": "नया अपडेट - 0.4.0-beta",
+    "content": "🎮 %@ 0.4.0-beta में आपका स्वागत है!\n\n⚠️ **महत्वपूर्ण परिवर्तन सूचना:**\n\nयह अपडेट संस्करण 0.4.0-beta या पहले के गेम को स्कैन करने में असमर्थ बना देगा। कार्यक्षमता बहाल करने के लिए, कृपया migrate_game_data.applescript निष्पादित करें (किसी भी पथ से)।\n\nTerminal में, निष्पादित करें:\n```\nosascript migrate_game_data.applescript\n```\n\nफिर निष्पादित करें:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nडेटा रूपांतरण के बाद, 0.4.0-beta गेम स्कैन करने के लिए सामान्य रूप से काम करेगा।\n\n🔒 डेटा सुरक्षा: कृपया नियमित रूप से अपने Minecraft सेव और लॉन्चर डेटा का बैकअप लें\n🐛 बग रिपोर्ट: यदि आपको कोई समस्या आती है, तो कृपया उन्हें हमारे GitHub रिपॉजिटरी पर रिपोर्ट करें\n\n🙏 %@ का परीक्षण करने और हमें सुधारने में मदद करने के लिए धन्यवाद!",
+    "author": "Swift Craft Launcher टीम"
+  },
+  "it": {
+    "title": "Nuovo aggiornamento - 0.4.0-beta",
+    "content": "🎮 Benvenuto in %@ 0.4.0-beta!\n\n⚠️ **Avviso di modifica importante:**\n\nQuesto aggiornamento impedirà la scansione dei giochi dalla versione 0.4.0-beta o precedente. Per ripristinare la funzionalità, esegui migrate_game_data.applescript (da qualsiasi percorso).\n\nNel Terminal, esegui:\n```\nosascript migrate_game_data.applescript\n```\n\nPoi esegui:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nDopo la conversione dei dati, 0.4.0-beta funzionerà normalmente per scansionare i giochi.\n\n🔒 Sicurezza dei dati: Esegui regolarmente il backup dei tuoi salvataggi Minecraft e dei dati del launcher\n🐛 Segnalazione bug: Se riscontri problemi, segnalali nel nostro repository GitHub\n\n🙏 Grazie per testare %@ e aiutarci a migliorare!",
+    "author": "Team Swift Craft Launcher"
+  },
+  "ja": {
+    "title": "新しいアップデート - 0.4.0-beta",
+    "content": "🎮 %@ 0.4.0-betaへようこそ！\n\n⚠️ **重要な変更通知:**\n\nこのアップデートにより、バージョン0.4.0-beta以前のゲームがスキャンできなくなります。機能を復元するには、migrate_game_data.applescriptを実行してください（任意のパスから）。\n\nTerminalで実行:\n```\nosascript migrate_game_data.applescript\n```\n\n次に実行:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nデータ変換後、0.4.0-betaはゲームをスキャンするために正常に動作します。\n\n🔒 データ安全性: Minecraftのセーブデータとランチャーデータを定期的にバックアップしてください\n🐛 バグ報告: 問題が発生した場合は、GitHubリポジトリで報告してください\n\n🙏 %@のテストと改善にご協力いただき、ありがとうございます！",
+    "author": "Swift Craft Launcher チーム"
+  },
+  "ko": {
+    "title": "새 업데이트 - 0.4.0-beta",
+    "content": "🎮 %@ 0.4.0-beta에 오신 것을 환영합니다!\n\n⚠️ **중요한 변경 사항 알림:**\n\n이 업데이트로 인해 버전 0.4.0-beta 이전의 게임은 스캔할 수 없게 됩니다. 기능을 복원하려면 migrate_game_data.applescript를 실행하세요 (어떤 경로에서든).\n\nTerminal에서 실행:\n```\nosascript migrate_game_data.applescript\n```\n\n그 다음 실행:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\n데이터 변환 후, 0.4.0-beta는 게임을 스캔하는 데 정상적으로 작동합니다.\n\n🔒 데이터 안전: Minecraft 세이브 파일과 런처 데이터를 정기적으로 백업해 주세요\n🐛 버그 리포트: 문제가 발생하면 GitHub 저장소에서 신고해 주세요\n\n🙏 %@를 테스트하고 개선에 도움을 주셔서 감사합니다!",
+    "author": "Swift Craft Launcher 팀"
+  },
+  "nb": {
+    "title": "Ny oppdatering - 0.4.0-beta",
+    "content": "🎮 Velkommen til %@ 0.4.0-beta!\n\n⚠️ **Viktig endringsbekjentgjøring:**\n\nDenne oppdateringen vil forhindre at spill fra versjon 0.4.0-beta eller eldre kan skannes. For å gjenopprette funksjonaliteten, vennligst kjør migrate_game_data.applescript (fra hvilken som helst sti).\n\nI Terminal, kjør:\n```\nosascript migrate_game_data.applescript\n```\n\nDeretter kjør:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nEtter datakonvertering vil 0.4.0-beta fungere normalt for å skanne spill.\n\n🔒 Datasikkerhet: Ta regelmessig sikkerhetskopi av dine Minecraft-lagringer og launcher-data\n🐛 Feilrapporter: Hvis du støter på problemer, rapporter dem i vårt GitHub-repository\n\n🙏 Takk for at du tester %@ og hjelper oss å forbedre det!",
+    "author": "Swift Craft Launcher Team"
+  },
+  "nl": {
+    "title": "Nieuwe update - 0.4.0-beta",
+    "content": "🎮 Welkom bij %@ 0.4.0-beta!\n\n⚠️ **Belangrijke wijzigingsmededeling:**\n\nDeze update zorgt ervoor dat games van versie 0.4.0-beta of ouder niet kunnen worden gescand. Om de functionaliteit te herstellen, voer migrate_game_data.applescript uit (vanaf elk pad).\n\nIn Terminal, voer uit:\n```\nosascript migrate_game_data.applescript\n```\n\nVoer dan uit:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nNa gegevensconversie zal 0.4.0-beta normaal werken om games te scannen.\n\n🔒 Gegevensveiligheid: Maak regelmatig back-ups van je Minecraft-saves en launcher-gegevens\n🐛 Bugrapporten: Als je problemen tegenkomt, meld ze dan in onze GitHub-repository\n\n🙏 Bedankt voor het testen van %@ en het helpen verbeteren!",
+    "author": "Swift Craft Launcher Team"
+  },
+  "pl": {
+    "title": "Nowa aktualizacja - 0.4.0-beta",
+    "content": "🎮 Witamy w %@ 0.4.0-beta!\n\n⚠️ **Ważne ogłoszenie o zmianach:**\n\nTa aktualizacja spowoduje, że gry z wersji 0.4.0-beta lub starsze nie będą mogły być skanowane. Aby przywrócić funkcjonalność, wykonaj migrate_game_data.applescript (z dowolnej ścieżki).\n\nW Terminalu wykonaj:\n```\nosascript migrate_game_data.applescript\n```\n\nNastępnie wykonaj:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nPo konwersji danych 0.4.0-beta będzie działać normalnie do skanowania gier.\n\n🔒 Bezpieczeństwo danych: Regularnie twórz kopie zapasowe swoich zapisów Minecraft i danych launchera\n🐛 Zgłaszanie błędów: Jeśli napotkasz jakiekolwiek problemy, zgłoś je w naszym repozytorium GitHub\n\n🙏 Dziękujemy za testowanie %@ i pomoc w ulepszaniu!",
+    "author": "Zespół Swift Craft Launcher"
+  },
+  "pt": {
+    "title": "Nova atualização - 0.4.0-beta",
+    "content": "🎮 Bem-vindo ao %@ 0.4.0-beta!\n\n⚠️ **Aviso de mudança importante:**\n\nEsta atualização impedirá que jogos da versão 0.4.0-beta ou anteriores sejam escaneados. Para restaurar a funcionalidade, execute migrate_game_data.applescript (de qualquer caminho).\n\nNo Terminal, execute:\n```\nosascript migrate_game_data.applescript\n```\n\nEm seguida execute:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nApós a conversão de dados, 0.4.0-beta funcionará normalmente para escanear jogos.\n\n🔒 Segurança de dados: Faça backup regularmente de seus saves do Minecraft e dados do launcher\n🐛 Relatórios de bugs: Se encontrar problemas, relate-os em nosso repositório GitHub\n\n🙏 Obrigado por testar o %@ e nos ajudar a melhorar!",
+    "author": "Equipe Swift Craft Launcher"
+  },
+  "ru": {
+    "title": "Новое обновление - 0.4.0-beta",
+    "content": "🎮 Добро пожаловать в %@ 0.4.0-beta!\n\n⚠️ **Важное уведомление об изменениях:**\n\nЭто обновление приведет к тому, что игры из версии 0.4.0-beta или более ранних версий не смогут быть просканированы. Для восстановления функциональности выполните migrate_game_data.applescript (из любого пути).\n\nВ Terminal выполните:\n```\nosascript migrate_game_data.applescript\n```\n\nЗатем выполните:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nПосле преобразования данных 0.4.0-beta будет нормально работать для сканирования игр.\n\n🔒 Безопасность данных: Регулярно создавайте резервные копии ваших сохранений Minecraft и данных лаунчера\n🐛 Отчеты об ошибках: Если вы столкнулись с проблемами, сообщите о них в нашем GitHub репозитории\n\n🙏 Спасибо за тестирование %@ и помощь в улучшении!",
+    "author": "Команда Swift Craft Launcher"
+  },
+  "sv": {
+    "title": "Ny uppdatering - 0.4.0-beta",
+    "content": "🎮 Välkommen till %@ 0.4.0-beta!\n\n⚠️ **Viktigt ändringsmeddelande:**\n\nDenna uppdatering kommer att göra att spel från version 0.4.0-beta eller tidigare inte kan skannas. För att återställa funktionaliteten, kör migrate_game_data.applescript (från vilken sökväg som helst).\n\nI Terminal, kör:\n```\nosascript migrate_game_data.applescript\n```\n\nSedan kör:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nEfter datakonvertering kommer 0.4.0-beta att fungera normalt för att skanna spel.\n\n🔒 Datasäkerhet: Säkerhetskopiera regelbundet dina Minecraft-sparfiler och launcher-data\n🐛 Felrapporter: Om du stöter på problem, rapportera dem i vårt GitHub-repository\n\n🙏 Tack för att du testar %@ och hjälper oss förbättra!",
+    "author": "Swift Craft Launcher Team"
+  },
+  "th": {
+    "title": "อัปเดตใหม่ - 0.4.0-beta",
+    "content": "🎮 ยินดีต้อนรับสู่ %@ 0.4.0-beta!\n\n⚠️ **ประกาศการเปลี่ยนแปลงที่สำคัญ:**\n\nการอัปเดตนี้จะทำให้เกมจากเวอร์ชัน 0.4.0-beta หรือเก่ากว่าไม่สามารถสแกนได้ เพื่อฟื้นฟูการทำงาน กรุณาดำเนินการ migrate_game_data.applescript (จากเส้นทางใดก็ได้)\n\nใน Terminal ดำเนินการ:\n```\nosascript migrate_game_data.applescript\n```\n\nจากนั้นดำเนินการ:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nหลังจากการแปลงข้อมูล 0.4.0-beta จะทำงานปกติในการสแกนเกม\n\n🔒 ความปลอดภัยของข้อมูล: กรุณาสำรองข้อมูล Minecraft saves และข้อมูล launcher อย่างสม่ำเสมอ\n🐛 รายงานข้อผิดพลาด: หากพบปัญหา กรุณารายงานใน GitHub repository ของเรา\n\n🙏 ขอบคุณสำหรับการทดสอบ %@ และช่วยเราปรับปรุง!",
+    "author": "ทีม Swift Craft Launcher"
+  },
+  "tr": {
+    "title": "Yeni güncelleme - 0.4.0-beta",
+    "content": "🎮 %@ 0.4.0-beta'ya hoş geldiniz!\n\n⚠️ **Önemli değişiklik bildirimi:**\n\nBu güncelleme, 0.4.0-beta veya daha eski sürümlerden oyunların taranamamasına neden olacaktır. İşlevselliği geri yüklemek için lütfen migrate_game_data.applescript'i çalıştırın (herhangi bir yoldan).\n\nTerminal'de çalıştırın:\n```\nosascript migrate_game_data.applescript\n```\n\nSonra çalıştırın:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nVeri dönüşümünden sonra, 0.4.0-beta oyunları taramak için normal şekilde çalışacaktır.\n\n🔒 Veri Güvenliği: Minecraft kayıtlarınızı ve launcher verilerinizi düzenli olarak yedekleyin\n🐛 Hata Raporları: Herhangi bir sorunla karşılaşırsanız, lütfen GitHub repository'mizde bildirin\n\n🙏 %@'ı test ettiğiniz ve geliştirmemize yardım ettiğiniz için teşekkürler!",
+    "author": "Swift Craft Launcher Ekibi"
+  },
+  "vi": {
+    "title": "Cập nhật mới - 0.4.0-beta",
+    "content": "🎮 Chào mừng đến với %@ 0.4.0-beta!\n\n⚠️ **Thông báo thay đổi quan trọng:**\n\nBản cập nhật này sẽ khiến các trò chơi từ phiên bản 0.4.0-beta trở về trước không thể quét được. Để khôi phục chức năng, vui lòng thực thi migrate_game_data.applescript (từ bất kỳ đường dẫn nào).\n\nTrong Terminal, thực thi:\n```\nosascript migrate_game_data.applescript\n```\n\nSau đó thực thi:\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\nSau khi chuyển đổi dữ liệu, 0.4.0-beta sẽ hoạt động bình thường để quét trò chơi.\n\n🔒 An toàn dữ liệu: Vui lòng thường xuyên sao lưu các file save Minecraft và dữ liệu launcher\n🐛 Báo cáo lỗi: Nếu gặp vấn đề, vui lòng báo cáo trên GitHub repository của chúng tôi\n\n🙏 Cảm ơn bạn đã thử nghiệm %@ và giúp chúng tôi cải thiện!",
+    "author": "Đội ngũ Swift Craft Launcher"
+  },
+  "zh-Hans": {
+    "title": "新更新 - 0.4.0-beta",
+    "content": "🎮 欢迎使用 %@ 0.4.0-beta！\n\n⚠️ **重要变更声明：**\n\n本次升级会导致 0.4.0-beta 之前的版本游戏无法扫描，用户无法扫描。执行 migrate_game_data.applescript 即可（任意路径）。\n\n终端执行：\n```\nosascript migrate_game_data.applescript\n```\n\n然后执行：\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\n数据转换后，0.4.0-beta 即可正常扫描游戏。\n\n🔒 数据安全：请定期备份您的 Minecraft 存档和启动器数据\n🐛 问题反馈：如果您遇到任何问题，请在我们的 GitHub 仓库中反馈\n\n🙏 感谢您测试 %@ 并帮助我们改进！",
+    "author": "Swift Craft Launcher 团队"
+  },
+  "zh-Hant": {
+    "title": "新更新 - 0.4.0-beta",
+    "content": "🎮 歡迎使用 %@ 0.4.0-beta！\n\n⚠️ **重要變更聲明：**\n\n本次升級會導致 0.4.0-beta 之前的版本遊戲無法掃描，用戶無法掃描。執行 migrate_game_data.applescript 即可（任意路徑）。\n\n終端執行：\n```\nosascript migrate_game_data.applescript\n```\n\n然後執行：\n```\ndefaults delete com.su.code.SwiftCraftLauncher savedPlayers;\n```\n\n資料轉換後，0.4.0-beta 即可正常掃描遊戲。\n\n🔒 資料安全：請定期備份您的 Minecraft 存檔和啟動器資料\n🐛 問題回饋：如果您遇到任何問題，請在我們的 GitHub 儲存庫中回饋\n\n🙏 感謝您測試 %@ 並幫助我們改進！",
+    "author": "Swift Craft Launcher 團隊"
+  }
+}
+
