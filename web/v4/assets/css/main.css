@@ -1,6 +1,4 @@
-@import "tailwindcss";
-@import url("/assets/fonts/inter/inter.css");
-@import url("/assets/fonts/pingfang/pingfang.css");
+/* @import "tailwindcss"; */
 
 body {
     font-family: "SF Pro Display", "Helvetica Neue", Helvetica, "Inter", Arial, sans-serif;
