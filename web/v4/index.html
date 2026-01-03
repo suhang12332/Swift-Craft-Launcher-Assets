@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift Craft Launcher - A Minecraft Launcher for macOS</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="shortcut icon"
+    href="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+    type="image/x-icon" />
+  <script src="../assets/app.js"></script>
+  <script src="../assets/animation.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-gray-50: #f5f5f7;
+        --color-gray-600: #1d1d1f;
+        --color-gray-700: #333338;
+        --color-gray-800: #86868b;
+        --color-gray-900: #141414;
+        --color-gray-950: #000000;
+        --color-blue-500: #2997ff;
+        --color-button-blue: #0071e3;
+        --color-button-blue-hover: #0076df;
+        --color-button-blue-active: #006edb;
+        --color-header: rgba(22, 22, 23, 0.75);
+        --color-header-border: rgba(255, 255, 255, 0.24);
+        --color-header-border-active: rgba(255, 255, 255, 0.76);
+        --color-hover:var(--color-blue-500);
+        --color-footer-text: #d2d2d7;
+        --color-footer: var(--color-footer-text);
+        --color-link: #0070c9;
+        --color-button-gray-hover: var(--color-white);
+        --color-button-gray-text: #f5f5f7;
+        --color-button-gray-active: #1f1f22;
+        --color-button-gray-text-hover: var(--color-black);
+        --color-gray-white: #090909;
+        --color-box-border: #282828;
+        --color-box-bg: #0f0f0f;
+        --color-box-text: rgb(175, 175, 171);
+      }
+    </style>
+</head>
+
+<body class="bg-gray-950">
+  <header class="header sticky top-0 z-50 w-full text-gray-50 px-6">
+    <!-- 背景层 -->
+    <div
+      class="absolute inset-0 w-full h-full backdrop-blur-xl bg-header transition-[height] duration-500 ease-in-out border-b border-b-header-border delay-235 md:max-h-13"
+      id="header-bg"></div>
+    <!-- 内容层 -->
+    <div class="relative md:flex block items-center justify-between min-h-[52px] max-w-5xl mx-auto">
+      <h1 class="sm:font-semibold sm:text-xl font-medium sm:py-0 py-3 text-lg">
+        Swift Craft Launcher
+      </h1>
+      <nav class="flex items-center gap-8 text-xs md:h-13 relative">
+        <span class="md:flex hidden items-center py-4 mt-0.75 border-b border-header-border-active">
+          Overview
+        </span>
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+          class="md:flex hidden items-center mt-px opacity-80 hover:opacity-90 ">
+          Docs
+        </a>
+        <a href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+          class="md:flex hidden items-center mt-px opacity-80 hover:opacity-90">
+          More on Github
+        </a>
+        <div id="header-link"
+          class="flex gap-6 flex-col md:hidden overflow-hidden absolute top-0 opacity-0 transition-all duration-380 -translate-y-2 delay-0">
+          <ul class="pt-3 pb-8 text-sm">
+            <li>
+              <span class="border-l pl-3 border-header-border-active ">
+                Overview
+              </span>
+            </li>
+            <li class="mt-4">
+              <a href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+                class="opacity-80 hover:opacity-90 pl-3 md:p-0">
+                Docs
+              </a>
+            </li>
+            <li class="mt-4">
+              <a href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+                class="opacity-80 hover:opacity-90 pl-3 md:p-0 pb-8">
+                More on Github
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:static absolute right-0 -top-9.75 flex">
+          <input type="checkbox" id="header-toggle" class="hidden peer" />
+          <label for="header-toggle" class="header mr-4 mt-1.25 md:hidden">
+            <span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 6.01172 3.37109" class="fill-gray-50/70 w-4 h-4 transition-all duration-500">
+                <g>
+                  <path
+                    d="M2.72656 3.37109C2.8125 3.37109 2.89844 3.33984 2.95703 3.27344L5.35547 0.859375C5.41406 0.800781 5.44922 0.722656 5.44922 0.632812C5.44922 0.449219 5.3125 0.308594 5.12891 0.308594C5.04297 0.308594 4.95703 0.347656 4.89844 0.402344L2.54297 2.76562L2.90625 2.76562L0.550781 0.402344C0.492188 0.347656 0.414062 0.308594 0.324219 0.308594C0.140625 0.308594 0 0.449219 0 0.632812C0 0.722656 0.0351562 0.800781 0.09375 0.859375L2.49609 3.27344C2.55859 3.33984 2.63672 3.37109 2.72656 3.37109Z" />
+                </g>
+              </svg>
+            </span>
+          </label>
+          <div class="relative">
+            <input type="checkbox" id="download-toogle" class="hidden peer" />
+            <label for="download-toogle"
+              class="cursor-pointer flex px-3 py-1.25 rounded-full bg-button-blue hover:bg-button-blue-hover hover:underline active:bg-button-blue-active text-white relative z-4">
+              Download<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 6.01172 3.37109" class="fill-white w-2.5 h-2.5 mt-0.75 ml-1">
+                <g>
+                  <path
+                    d="M2.72656 3.37109C2.8125 3.37109 2.89844 3.33984 2.95703 3.27344L5.35547 0.859375C5.41406 0.800781 5.44922 0.722656 5.44922 0.632812C5.44922 0.449219 5.3125 0.308594 5.12891 0.308594C5.04297 0.308594 4.95703 0.347656 4.89844 0.402344L2.54297 2.76562L2.90625 2.76562L0.550781 0.402344C0.492188 0.347656 0.414062 0.308594 0.324219 0.308594C0.140625 0.308594 0 0.449219 0 0.632812C0 0.722656 0.0351562 0.800781 0.09375 0.859375L2.49609 3.27344C2.55859 3.33984 2.63672 3.37109 2.72656 3.37109Z" />
+                </g>
+              </svg>
+            </label>
+            <div
+              class="invisible absolute flex flex-col bg-gray-white rounded-md text-box-text font-normal right-0 mt-1 border-box-border border overflow-hidden w-27 opacity-0 -translate-y-2.5 peer-checked:opacity-100 peer-checked:translate-y-0 peer-checked:visible transition-all duration-300">
+              <a href="#" id="arm64"
+                class="py-1 px-4 hover:bg-box-bg hover:text-[#0066cc] border-b border-b-box-border/50">Apple Silicon</a>
+              <a href="#" id="x86_64" class="py-1 px-4 hover:bg-box-bg hover:text-[#0066cc]">Intel</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <div
+    class="header-mask bg-[rgba(232, 232, 237, 0.4)] md:hidden dark:bg-[rgba(24, 24, 19, 0.4)] transition-all duration-700">
+  </div>
+  <main id="container" class="min-h-svh max-w-5xl mx-auto relative">
+    <section class="flex flex-col items-center text-gray-50 text-center">
+      <div class="fixed flex flex-col justify-center items-center top-36 -z-1 opacity-0 duration-1500 transition-opacity" id="hero">
+        <div class="relative sm:w-32 sm:h-32 w-24 h-24">
+          <img
+            src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+            alt class="sm:w-24 sm:h-24 w-16 h-16 absolute top-4 left-4 blur-2xl" />
+          <img
+            src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+            alt class="z-0 relative" />
+        </div>
+        <h1 class="text-3xl font-semibold mb-5 lg:text-7xl md:text-5xl sm:text-4xl mt-6 flex flex-col">
+          <span>Smooth that stand out.</span><span>Beautiful.</span>
+        </h1>
+      </div>
+
+      <div class="sm:mx-8 sm:pt-88 pt-68">
+        <img src="../assets/image/Slice.png" alt="Swift Craft Launcher Interface Showcase" id="slice"
+          class="sm:px-4 xl:px-0 translate-y-4 duration-750 transition-opacity opacity-0 delay-50">
+        <div class="py-12 pt-18 bg-gray-950 mx-6">
+          <p class="md:text-xl text-md font-normal">Swift Craft Launcher. A native macOS Minecraft launcher built with SwiftUI. Smooth, fast, effortless. Designed for modern macOS, with full mod loader support, Microsoft account login, and intuitive game management.
+          </p>
+          <p class="mt-4 text-button-blue hover:text-button-blue-hover active:text-button-blue-active hover:underline">
+            <a href="https://github.com/suhang12332/Swift-Craft-Launcher/" class="flex items-center justify-center">Learn More
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 3.28125 5.44922" class="fill-button-blue h-3 w-3 ml-1 mt-px">
+                <g>
+                  <rect height="5.44922" opacity="0" width="3.28125" x="0" y="0" />
+                  <path
+                    d="M3.28125 2.72266C3.28125 2.63672 3.25 2.55859 3.18359 2.49219L0.769531 0.09375C0.710938 0.03125 0.632812 0 0.542969 0C0.359375 0 0.21875 0.136719 0.21875 0.320312C0.21875 0.40625 0.257812 0.488281 0.3125 0.550781L2.49609 2.72266L0.3125 4.89453C0.257812 4.95703 0.21875 5.03516 0.21875 5.125C0.21875 5.30859 0.359375 5.44531 0.542969 5.44531C0.632812 5.44531 0.710938 5.41406 0.769531 5.35156L3.18359 2.95312C3.25 2.88672 3.28125 2.80859 3.28125 2.72266Z" />
+                </g>
+              </svg>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="text-gray-50 flex flex-col justify-center items-center px-5 bg-gray-900 py-5 lg:px-30">
+    <div class="w-full max-w-[1920px]">
+      <div class="flex flex-col h-full">
+        <!-- Logo -->
+        <!-- <div class="pb-7 items-center hidden md:flex lg:pb-13.5">
+          <img class="w-20 h-20 mr-5"
+            src="https://github.com/suhang12332/Swift-Craft-Launcher/raw/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+            alt />
+          <h1 class="text-5xl font-bold">Swift Craft Launcher</h1>
+        </div> -->
+        <!-- Links -->
+        <div class="mb-10 hidden md:grid grid-flow-col">
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Project</h3>
+            <p class="opacity-56 text-sm"><a href>Overview</a></p>
+          </div>
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Support</h3>
+            <p class="opacity-56 text-sm">
+              <a href="https://imreak.github.io/">User Guide</a>
+            </p>
+            <p class="opacity-56 text-sm">
+              <a href="https://github.com/suhang12332/Swift-Craft-Launcher/issues">Report
+                Issues</a>
+            </p>
+          </div>
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Development</h3>
+            <p class="opacity-56 text-sm">
+              <a href="https://github.com/suhang12332/Swift-Craft-Launcher/">Github</a>
+            </p>
+          </div>
+          <div class="flex flex-col gap-2.5">
+            <h3 class="opacity-88">Community</h3>
+            <p class="opacity-56 text-sm"><a href>BiliBili</a></p>
+            <p class="opacity-56 text-sm"><a href>QQ Group</a></p>
+          </div>
+        </div>
+        <!-- Mobile Version -->
+        <div class="md:hidden">
+          <div class="border-b border-gray-700 relative">
+            <input type="checkbox" id="support-toggle" class="hidden peer" />
+            <label class="support" for="support-toggle">
+              <h3
+                class="bg-gray-900 relative z-2 py-2.5 text-sm after:content-['+'] after:transition-transform after:duration-300 after:float-right after:mr-2">
+                Support</h3>
+            </label>
+            <ul
+              class="pt-1.25 pb-4 -z-1 overflow-hidden absolute top-1/2 -translate-y-12 ease-out peer-checked:static peer-checked:z-1 peer-checked:transition-all peer-checked:duration-300 peer-checked:top-full peer-checked:visible peer-checked:translate-y-0">
+              <li class="py-1.5 px-3.5 text-xs"><a href="https://imreak.github.io/" class="text-footer">User Guide</a>
+              </li>
+              <li class="py-1.5 px-3.5 text-xs"><a href="https://github.com/suhang12332/Swift-Craft-Launcher/issues"
+                  class="text-footer">Report Issues</a></li>
+            </ul>
+          </div>
+          <div class="border-b border-gray-700 relative">
+            <input type="checkbox" id="community-toggle" class="hidden peer" />
+            <label class="community" for="community-toggle">
+              <h3
+                class="bg-gray-900 relative z-2 py-2.5 text-sm after:content-['+'] after:transition-transform after:duration-300 after:float-right after:mr-2">
+                Community</h3>
+            </label>
+            <ul
+              class="pt-1.25 pb-4 -z-1 overflow-hidden absolute top-1/2 -translate-y-12 ease-out peer-checked:static peer-checked:z-1 peer-checked:transition-all peer-checked:duration-300 peer-checked:top-full peer-checked:visible peer-checked:translate-y-0">
+              <li class="py-1.5 px-3.5 text-xs"><a href="" class="text-footer">BiliBili</a>
+              </li>
+              <li class="py-1.5 px-3.5 text-xs"><a href="" class="text-footer">QQ Group</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Theme and Language and Copyright -->
+      <section class="pt-5">
+        <div class="flex md:justify-end">
+          <div class="flex p-px rounded-full border border-button-blue text-xs text-blue-500 mb-3" id="themeSelector">
+            <p class="px-2 py-0.75 cursor-pointer rounded-full" data-theme="light">
+              Light
+            </p>
+            <p class="px-2 py-0.75 cursor-pointer rounded-full" data-theme="dark">
+              Dark
+            </p>
+            <p class="px-2 py-0.75 cursor-pointer rounded-full" data-theme="auto">
+              Auto
+            </p>
+          </div>
+        </div>
+        <div class="flex md:border-t border-gray-700 md:py-2 flex-col gap-1">
+          <div class="text-xs text-gray-800">
+            <p class="hidden md:flex">Swift Craft Launcher is an open-source project released under the AGPLv3
+              license.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Minecraft is a registered trademark of Mojang Studios.
+            </p>
+          </div>
+          <div class="flex justify-between text-xs text-gray-800">
+            <p>
+              Copyright © 2025 Swift Craft Launcher. All rights reserved.
+            </p>
+            <div class="group relative hover:text-hover">
+              <select
+                class="text-blue-500 appearance-none cursor-pointer group-hover:underline group-hover:text-hover pr-3.5 z-2 relative"
+                id="languageSelector">
+                <option value="">English</option>
+                <option value="/zh-cn">简体中文</option>
+                <!-- <option value="zh-tw">繁體中文</option> -->
+              </select>
+              <span class="absolute right-px flex top-0.75"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 6.01172 3.37109"
+                  class="fill-blue-500 h-2 w-2 group-hover:fill-hover">
+                  <g>
+                    <rect height="3.37109" opacity="0" width="6.01172" x="0" y="0" />
+                    <path
+                      d="M2.72656 3.37109C2.8125 3.37109 2.89844 3.33984 2.95703 3.27344L5.35547 0.859375C5.41406 0.800781 5.44922 0.722656 5.44922 0.632812C5.44922 0.449219 5.3125 0.308594 5.12891 0.308594C5.04297 0.308594 4.95703 0.347656 4.89844 0.402344L2.54297 2.76562L2.90625 2.76562L0.550781 0.402344C0.492188 0.347656 0.414062 0.308594 0.324219 0.308594C0.140625 0.308594 0 0.449219 0 0.632812C0 0.722656 0.0351562 0.800781 0.09375 0.859375L2.49609 3.27344C2.55859 3.33984 2.63672 3.37109 2.72656 3.37109Z" />
+                  </g>
+                </svg></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
