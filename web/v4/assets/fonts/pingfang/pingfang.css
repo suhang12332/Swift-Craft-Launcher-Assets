@@ -1,0 +1,50 @@
+/* 苹方-简体 */
+@font-face {
+    font-family: 'PingFang SC';
+    src: url('./PingFangSC-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'PingFang SC';
+    src: url('./PingFangSC-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PingFang SC';
+    src: url('./PingFangSC-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'PingFang SC';
+    src: url('./PingFangSC-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+
+/* 苹方-繁体 */
+@font-face {
+    font-family: 'PingFang TC';
+    src: url('./PingFangTC-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'PingFang TC';
+    src: url('./PingFangTC-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PingFang TC';
+    src: url('./PingFangTC-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'PingFang TC';
+    src: url('./PingFangTC-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
