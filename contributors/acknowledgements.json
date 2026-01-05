@@ -77,5 +77,11 @@
     "avatar": "https://mc.sjtu.cn/sjmcl/_next/static/media/Logo_128x128.0027c7a0.png",
     "description": "Another open-source Minecraft launcher designed by SJTU Minecraft Club"
   },
+  {
+    "name": "Easytier",
+    "url": "https://github.com/EasyTier/Easytier",
+    "avatar": "https://easytier.cn/easytier.png",
+    "description": "✨ A simple, secure, decentralized virtual private network solution powered by Rust and Tokio"
+  },
 ]
 
