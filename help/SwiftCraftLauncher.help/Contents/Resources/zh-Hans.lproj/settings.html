@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>启动器设置</title>
-    <meta name="description" content="配置 Swift Craft Launcher 设置，包括语言、外观、工作目录、下载设置和游戏选项">
-    <meta name="keywords" content="设置, 配置, 语言, 外观, java, 内存, 下载">
+    <meta name="description" content="配置 Swift Craft Launcher 设置，包括通用设置、游戏设置、游戏高级设置和AI设置">
+    <meta name="keywords" content="设置, 配置, 语言, 外观, java, 内存, AI, 垃圾回收器">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="../css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -15,42 +15,31 @@
     <h1>启动器设置</h1>
     <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 提供了多种配置选项，让您自定义使用体验。</p>
     
-    <h1 class="Name" style="margin-top: 0.8em;">常规设置</h1>
+    <h1 class="Name" style="margin-top: 0.8em;">通用设置</h1>
     
     <figure>
-        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/settings/4-1_1.png" alt="常规设置">
+        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/settings/4-1_1.png" alt="通用设置">
     </figure>
     
     <div id="settings-language" class="Task">
-        <h2 aria-controls="aria-settings-language" class="Name">语言</h2>
+        <h2 aria-controls="aria-settings-language" class="Name">语言选择</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-language">
-            <p>您可以设置启动器界面语言。更改将在重启启动器后生效。</p>
+            <p>选择应用语言。更改后需要重启应用才能生效。</p>
+            <p>支持的语言：阿拉伯语 (ar)、丹麦语 (da)、德语 (de)、英语 (en)、西班牙语 (es)、芬兰语 (fi)、法语 (fr)、印地语 (hi)、意大利语 (it)、日语 (ja)、韩语 (ko)、挪威语 (nb)、荷兰语 (nl)、波兰语 (pl)、葡萄牙语 (pt)、俄语 (ru)、瑞典语 (sv)、泰语 (th)、土耳其语 (tr)、越南语 (vi)、简体中文 (zh-Hans)、繁体中文 (zh-Hant)。</p>
         </div>
     </div>
     
     <div id="settings-appearance" class="Task">
-        <h2 aria-controls="aria-settings-appearance" class="Name">外观</h2>
+        <h2 aria-controls="aria-settings-appearance" class="Name">主题选择</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-appearance">
-            <p>您可以将启动器外观设置为浅色、深色或跟随系统。效果如下所示。</p>
-            <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/settings/4-1-2_1.png" alt="浅色外观">
-            </figure>
-            <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/settings/4-1-2_2.png" alt="深色外观">
-            </figure>
+            <p>选择主题模式：系统、浅色或深色。</p>
         </div>
     </div>
     
     <div id="settings-workdir" class="Task">
-        <h2 aria-controls="aria-settings-workdir" class="Name">工作目录</h2>
+        <h2 aria-controls="aria-settings-workdir" class="Name">启动器工作目录</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-workdir">
-            <p>您可以设置启动器的工作目录。启动器管理的所有游戏文件都将放在此文件夹中，如下所示。</p>
-            <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/settings/4-1-3_1.png" alt="工作目录设置">
-            </figure>
-            <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/settings/4-1-3_2.png" alt="工作目录效果">
-            </figure>
+            <p>设置启动器工作目录。启动器管理的所有游戏文件都将放在此文件夹中。可以重置为默认值。</p>
             <div class="Alert">
                 <p class="Important"><em>【重要】</em>更改工作目录后，原始路径中的游戏将不再出现在"游戏列表"中。建议转移或重新下载它们。最好在首次打开启动器时更改工作目录。</p>
             </div>
@@ -58,45 +47,56 @@
     </div>
     
     <div id="settings-download" class="Task">
-        <h2 aria-controls="aria-settings-download" class="Name">下载设置</h2>
+        <h2 aria-controls="aria-settings-download" class="Name">并发下载数量</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-download">
-            <p>并行下载数量在很大程度上决定了您的下载速度，但更高的并发性也会带来更大的性能开销。</p>
-            <p>如果您不熟悉 Minecraft 版本 URL、Modrinth API URL 和 Git 代理 URL 的含义，请不要修改它们。更改它们可能导致游戏资源下载失败。</p>
-            <p>如果您意外更改了它们，请将它们恢复为默认值：</p>
-            <ul>
-                <li><p><strong>Minecraft 版本 URL</strong>：<code class="CodeLine">https://launchermeta.mojang.com/mc/game/version_manifest.json</code></p></li>
-                <li><p><strong>Modrinth API URL</strong>：<code class="CodeLine">https://api.modrinth.com/v2</code></p></li>
-                <li><p><strong>Git 代理 URL</strong>：<code class="CodeLine">https://ghfast.top</code></p></li>
-            </ul>
+            <p>设置并发下载数量，范围：1-64。更高的并发性可以提高下载速度，但也会带来更大的性能开销。</p>
         </div>
-    </div>
-    
-    <h1 class="Name" style="margin-top: 0.8em;">标签页</h1>
-    
-    <div class="Alert">
-        <p class="Note"><em>【注】</em>数据包功能正在开发中。请关注更新。</p>
     </div>
     
     <h1 class="Name" style="margin-top: 0.8em;">游戏设置</h1>
     
     <figure>
-        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/settings/4-3_1.png" alt="游戏设置">
+        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/settings/4-3_1.png" alt="游戏设置">
     </figure>
     
-    <div id="settings-dependency" class="Task">
-        <h2 aria-controls="aria-settings-dependency" class="Name">自动依赖处理</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-dependency">
-            <p>启用此选项后，下载资源所需的任何依赖项将自动下载，不会弹出通知。以下页面将不会出现。</p>
-            <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/settings/4-3-1_1.png" alt="依赖项弹窗">
-            </figure>
+    <div id="settings-api-source" class="Task">
+        <h2 aria-controls="aria-settings-api-source" class="Name">默认API源</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-source">
+            <p>选择默认的数据源。可用选项：Morinth 和 CurseForge。</p>
         </div>
     </div>
     
-    <div id="settings-java" class="Task">
-        <h2 aria-controls="aria-settings-java" class="Name">Java 路径</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-java">
-            <p>您可以更改此选项以选择不同的 Java 版本来启动游戏。</p>
+    <div id="settings-ai-crash" class="Task">
+        <h2 aria-controls="aria-settings-ai-crash" class="Name">AI崩溃分析</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-crash">
+            <p>启用/禁用AI崩溃分析功能。此功能需要先成功配置AI设置。</p>
+        </div>
+    </div>
+    
+    <div id="settings-default-memory" class="Task">
+        <h2 aria-controls="aria-settings-default-memory" class="Name">默认内存分配</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-default-memory">
+            <p>设置全局默认内存范围（Xms-Xmx）。</p>
+        </div>
+    </div>
+    
+    <div id="settings-resource-info" class="Task">
+        <h2 aria-controls="aria-settings-resource-info" class="Name">游戏资源信息</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-resource-info">
+            <p>显示缓存文件数量和总大小（只读）。</p>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">游戏高级设置</h1>
+    
+    <figure>
+        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/settings/4-4_1.png" alt="游戏高级设置">
+    </figure>
+    
+    <div id="settings-java-path" class="Task">
+        <h2 aria-controls="aria-settings-java-path" class="Name">Java路径</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-java-path">
+            <p>自定义Java可执行文件路径，可重置为默认值。</p>
             <p>以下是 MC 版本及其最低要求的 Java 版本：</p>
             <ul>
                 <li><p><strong>1.12</strong> - Java 8</p></li>
@@ -107,11 +107,93 @@
         </div>
     </div>
     
-    <div id="settings-memory" class="Task">
-        <h2 aria-controls="aria-settings-memory" class="Name">全局内存分配</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-memory">
-            <p>您可以控制分配给游戏的内存量。最小值为 512MB。通常，较大的模组包需要更多内存。</p>
+    <div id="settings-gc" class="Task">
+        <h2 aria-controls="aria-settings-gc" class="Name">垃圾回收器</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-gc">
+            <p>选择垃圾回收器类型，根据Java版本自动过滤可用选项。</p>
+            <p>可用的垃圾回收器选项：</p>
+            <ul>
+                <li><p><strong>G1GC</strong> - Java 7+</p></li>
+                <li><p><strong>ZGC</strong> - Java 11+</p></li>
+                <li><p><strong>Shenandoah</strong> - Java 12+</p></li>
+                <li><p><strong>Parallel</strong> - Java 1.0+</p></li>
+                <li><p><strong>Serial</strong> - Java 1.0+</p></li>
+            </ul>
         </div>
+    </div>
+    
+    <div id="settings-performance" class="Task">
+        <h2 aria-controls="aria-settings-performance" class="Name">性能优化预设</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-performance">
+            <p>选择性能优化级别：</p>
+            <ul>
+                <li><p><strong>禁用</strong> - 不启用任何优化</p></li>
+                <li><p><strong>基础</strong> - 启用基本优化</p></li>
+                <li><p><strong>平衡</strong> - 启用内存和线程优化（推荐）</p></li>
+                <li><p><strong>最大</strong> - 启用所有优化包括Aikar Flags（仅G1GC可用）</p></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="settings-memory-range" class="Task">
+        <h2 aria-controls="aria-settings-memory-range" class="Name">内存范围</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-memory-range">
+            <p>设置Xms-Xmx内存范围（512 MB - 最大内存）。</p>
+        </div>
+    </div>
+    
+    <div id="settings-custom-jvm" class="Task">
+        <h2 aria-controls="aria-settings-custom-jvm" class="Name">自定义JVM参数</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-custom-jvm">
+            <p>手动输入JVM参数（与垃圾回收器和性能优化互斥）。</p>
+        </div>
+    </div>
+    
+    <div id="settings-env-vars" class="Task">
+        <h2 aria-controls="aria-settings-env-vars" class="Name">环境变量</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-env-vars">
+            <p>设置游戏运行时的环境变量。</p>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">AI设置</h1>
+    
+    <figure>
+        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/settings/4-5_1.png" alt="AI设置">
+    </figure>
+    
+    <div id="settings-ai-provider" class="Task">
+        <h2 aria-controls="aria-settings-ai-provider" class="Name">AI提供商选择</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-provider">
+            <p>选择AI服务提供商（支持多个提供商）。</p>
+        </div>
+    </div>
+    
+    <div id="settings-api-key" class="Task">
+        <h2 aria-controls="aria-settings-api-key" class="Name">API密钥</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-key">
+            <p>可显示/隐藏的API密钥输入框。</p>
+        </div>
+    </div>
+    
+    <div id="settings-ollama-url" class="Task">
+        <h2 aria-controls="aria-settings-ollama-url" class="Name">Ollama地址</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ollama-url">
+            <p>仅在选择Ollama时显示，默认：<code class="CodeLine">http://localhost:11434</code></p>
+        </div>
+    </div>
+    
+    <div id="settings-ai-avatar" class="Task">
+        <h2 aria-controls="aria-settings-ai-avatar" class="Name">AI头像URL</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-avatar">
+            <p>设置AI头像的URL地址，支持预览。</p>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">玩家设置</h1>
+    
+    <div class="Alert">
+        <p class="Note"><em>【注】</em>玩家设置功能正在开发中。请关注更新。</p>
     </div>
     
     <div class="LinkUniversal">

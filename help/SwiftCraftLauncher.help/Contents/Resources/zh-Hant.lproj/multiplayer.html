@@ -1,0 +1,254 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>聯機功能</title>
+    <meta name="description" content="了解如何使用 Swift Craft Launcher 的聯機功能，通過房間碼快速創建或加入聯機房間">
+    <meta name="keywords" content="聯機, 多人遊戲, 房間碼, EasyTier, 創建房間, 加入房間, 對等節點">
+    <meta content="light dark" name="color-scheme">
+    <link media="all" href="../css/app.css" type="text/css" rel="stylesheet">
+</head>
+<body dir="ltr" id="multiplayer" class="AppleTopic apd-topic dark-mode-enabled" data-istaskopen="true" data-designversion="2">
+    <a name="multiplayer"></a>
+    <figure class="topicIcon">
+        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac32pt2x.png" alt="" height="30" width="30">
+    </figure>
+    <h1>聯機功能</h1>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 使用 <strong>EasyTier</strong> 作為底層網絡技術，實現了便捷的 Minecraft 聯機功能。該功能允許玩家通過房間碼快速創建或加入聯機房間，無需複雜的網絡配置。</p>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">功能概述</h1>
+    <p>聯機功能的主要特性包括：</p>
+    <ul>
+        <li><p><strong>房間碼系統</strong>：使用 <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code> 格式的房間碼，易於分享和輸入</p></li>
+        <li><p><strong>自動網絡配置</strong>：自動創建虛擬網絡，無需手動配置端口轉發</p></li>
+        <li><p><strong>跨平台兼容</strong>：支持與其他實現 Scaffolding 協議的啟動器（如 HMCL、PCL）互連</p></li>
+        <li><p><strong>對等節點管理</strong>：實時顯示網絡中的其他玩家和設備</p></li>
+        <li><p><strong>自動下載安裝</strong>：首次使用時自動下載並安裝 EasyTier 核心組件</p></li>
+        <li><p><strong>管理員權限管理</strong>：自動請求系統管理員權限以配置網絡</p></li>
+    </ul>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">創建房間</h1>
+    <p>創建房間允許您作為主機，讓其他玩家通過房間碼加入您的聯機網絡。</p>
+    
+    <div id="create-room-step1" class="Task">
+        <h2 aria-controls="aria-create-room-step1" class="Name">步驟 1：打開創建房間窗口</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step1">
+            <p>在菜單欄中選擇"聯機" → "創建房間"，或通過啟動器的聯機功能入口打開創建房間窗口。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_1.png" alt="創建房間窗口">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="create-room-step2" class="Task">
+        <h2 aria-controls="aria-create-room-step2" class="Name">步驟 2：查看房間碼</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step2">
+            <p>窗口會自動生成一個房間碼，格式為 <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code>。您可以點擊刷新按鈕重新生成房間碼，或點擊分享按鈕複製房間碼到剪貼板。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_2.png" alt="房間碼顯示">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>【注意】</em>房間碼使用 34 進制編碼（0-9, A-Z，排除 I 和 O），包含校驗碼以確保有效性。支持字符映射（I→1, O→0）。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="create-room-step3" class="Task">
+        <h2 aria-controls="aria-create-room-step3" class="Name">步驟 3：啟動連接</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step3">
+            <p>點擊"創建"按鈕啟動連接。首次使用時會自動下載並安裝 EasyTier 核心組件，這可能需要一些時間。系統會要求您輸入管理員密碼以配置虛擬網絡。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_3.png" alt="啟動連接">
+            </figure>
+            <div class="Alert">
+                <p class="Important"><em>【重要】</em>EasyTier 需要創建虛擬網絡接口（TUN 設備），這需要系統管理員權限。請確保您有管理員權限並輸入正確的密碼。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="create-room-step4" class="Task">
+        <h2 aria-controls="aria-create-room-step4" class="Name">步驟 4：連接成功</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step4">
+            <p>連接成功後，創建房間窗口會自動關閉，狀態欄會顯示連接狀態。您現在可以分享房間碼給其他玩家，讓他們加入您的房間。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_4.png" alt="連接成功">
+            </figure>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">加入房間</h1>
+    <p>加入房間允許您通過房間碼連接到其他玩家創建的聯機網絡。</p>
+    
+    <div id="join-room-step1" class="Task">
+        <h2 aria-controls="aria-join-room-step1" class="Name">步驟 1：打開加入房間窗口</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step1">
+            <p>在菜單欄中選擇"聯機" → "加入房間"，或通過啟動器的聯機功能入口打開加入房間窗口。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_5.png" alt="加入房間窗口">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="join-room-step2" class="Task">
+        <h2 aria-controls="aria-join-room-step2" class="Name">步驟 2：輸入房間碼</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step2">
+            <p>從創建房間的玩家處獲取房間碼，格式為 <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code>。將房間碼輸入到輸入框中。啟動器會自動驗證房間碼格式，支持字符映射（I→1, O→0）。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_6.png" alt="輸入房間碼">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>【注意】</em>如果房間碼格式無效，啟動器會顯示錯誤提示。請確保房間碼格式正確，所有字符都在有效字符集中（0-9, A-Z，排除 I 和 O）。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="join-room-step3" class="Task">
+        <h2 aria-controls="aria-join-room-step3" class="Name">步驟 3：啟動連接</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step3">
+            <p>點擊"加入"按鈕啟動連接。首次使用時會自動下載並安裝 EasyTier 核心組件。系統會要求您輸入管理員密碼以配置虛擬網絡。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_7.png" alt="啟動連接">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="join-room-step4" class="Task">
+        <h2 aria-controls="aria-join-room-step4" class="Name">步驟 4：連接成功</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step4">
+            <p>連接成功後，加入房間窗口會自動關閉，狀態欄會顯示連接狀態。您現在可以查看網絡中的其他玩家和設備。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_8.png" alt="連接成功">
+            </figure>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">查看對等節點</h1>
+    <p>連接成功後，您可以查看網絡中的其他玩家和設備信息。</p>
+    
+    <div id="peer-list-step1" class="Task">
+        <h2 aria-controls="aria-peer-list-step1" class="Name">步驟 1：打開成員列表</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-peer-list-step1">
+            <p>在菜單欄中選擇"聯機" → "成員列表"，打開對等節點列表窗口。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_9.png" alt="成員列表窗口">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="peer-list-step2" class="Task">
+        <h2 aria-controls="aria-peer-list-step2" class="Name">步驟 2：查看節點信息</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-peer-list-step2">
+            <p>對等節點列表會顯示網絡中的所有設備信息，包括：</p>
+            <ul>
+                <li><p><strong>IPv4 地址</strong>：設備的虛擬網絡 IP 地址</p></li>
+                <li><p><strong>主機名</strong>：設備的主機名</p></li>
+                <li><p><strong>延遲</strong>：網絡延遲（毫秒）</p></li>
+                <li><p><strong>丟包率</strong>：數據包丟失率（百分比）</p></li>
+                <li><p><strong>數據流量</strong>：接收（RX）和發送（TX）的數據量</p></li>
+            </ul>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_10.png" alt="節點信息">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>【注意】</em>對等節點列表每 5 秒自動刷新一次。您也可以點擊刷新按鈕手動刷新列表。</p>
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">關閉連接</h1>
+    <p>當您不再需要聯機時，可以關閉連接。</p>
+    
+    <div id="close-room" class="Task">
+        <h2 aria-controls="aria-close-room" class="Name">關閉創建的房間</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-close-room">
+            <p>如果您是房間創建者，在菜單欄中選擇"聯機" → "關閉房間"來關閉您創建的房間。關閉後，所有玩家都會斷開連接。</p>
+        </div>
+    </div>
+    
+    <div id="leave-room" class="Task">
+        <h2 aria-controls="aria-leave-room" class="Name">離開加入的房間</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-leave-room">
+            <p>如果您是加入房間的玩家，在菜單欄中選擇"聯機" → "離開房間"來離開當前房間。離開後，您將斷開與網絡的連接。</p>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">常見問題</h1>
+    
+    <div id="faq-roomcode" class="Task">
+        <h2 aria-controls="aria-faq-roomcode" class="Name">房間碼是什麼格式？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-roomcode">
+            <p>房間碼格式為 <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code>，其中 X 為 0-9 或 A-Z（排除 I 和 O）。房間碼包含校驗碼以確保有效性。</p>
+        </div>
+    </div>
+    
+    <div id="faq-permission" class="Task">
+        <h2 aria-controls="aria-faq-permission" class="Name">為什麼需要管理員權限？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-permission">
+            <p>EasyTier 需要創建虛擬網絡接口（TUN 設備），這需要系統管理員權限。這是 macOS 系統的安全要求。</p>
+        </div>
+    </div>
+    
+    <div id="faq-compatibility" class="Task">
+        <h2 aria-controls="aria-faq-compatibility" class="Name">可以與其他啟動器聯機嗎？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-compatibility">
+            <p>可以。只要其他啟動器實現了 Scaffolding 協議，就可以通過房間碼聯機。已知兼容的啟動器包括 HMCL（Hello Minecraft Launcher）和 PCL（PCL2）。</p>
+        </div>
+    </div>
+    
+    <div id="faq-view-players" class="Task">
+        <h2 aria-controls="aria-faq-view-players" class="Name">如何查看網絡中的其他玩家？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-view-players">
+            <p>連接成功後，可以通過菜單欄 → 聯機 → 成員列表查看對等節點列表。列表每 5 秒自動刷新一次，也可以手動刷新。</p>
+        </div>
+    </div>
+    
+    <div id="faq-connection-failed" class="Task">
+        <h2 aria-controls="aria-faq-connection-failed" class="Name">連接失敗怎麼辦？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-connection-failed">
+            <p>如果連接失敗，請嘗試以下步驟：</p>
+            <ol>
+                <li><p>檢查房間碼是否正確</p></li>
+                <li><p>確保網絡連接正常</p></li>
+                <li><p>確認已輸入管理員密碼</p></li>
+                <li><p>查看錯誤消息獲取詳細信息</p></li>
+                <li><p>嘗試重新連接</p></li>
+            </ol>
+        </div>
+    </div>
+    
+    <div id="faq-easytier-location" class="Task">
+        <h2 aria-controls="aria-faq-easytier-location" class="Name">EasyTier 文件存儲在哪裡？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-easytier-location">
+            <p>EasyTier 核心文件存儲在應用支持目錄下的 <code class="CodeLine">easytier/</code> 文件夾中：</p>
+            <ul>
+                <li><p><code class="CodeLine">easytier-core</code>：核心程序</p></li>
+                <li><p><code class="CodeLine">easytier-cli</code>：命令行工具</p></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="faq-update-easytier" class="Task">
+        <h2 aria-controls="aria-faq-update-easytier" class="Name">如何更新 EasyTier？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-update-easytier">
+            <p>每次啟動網絡時會自動檢查並下載最新版本的 EasyTier。如果需要手動更新，可以刪除 <code class="CodeLine">easytier/</code> 文件夾，下次連接時會自動下載最新版本。</p>
+        </div>
+    </div>
+    
+    <div id="faq-multiple-rooms" class="Task">
+        <h2 aria-controls="aria-faq-multiple-rooms" class="Name">可以同時創建多個房間嗎？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-multiple-rooms">
+            <p>不可以。一次只能連接一個房間。如果需要切換到其他房間，需要先關閉當前連接。</p>
+        </div>
+    </div>
+    
+    <div id="faq-roomcode-expire" class="Task">
+        <h2 aria-controls="aria-faq-roomcode-expire" class="Name">房間碼會過期嗎？</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-roomcode-expire">
+            <p>不會。房間碼本身不會過期，但房間的有效性取決於網絡連接狀態。如果所有玩家都斷開連接，房間就會失效。</p>
+        </div>
+    </div>
+    
+    <div class="LinkUniversal">
+        <a href="index.html#index" class="xRef AppleTopic">← 返回目錄</a>
+    </div>
+</body>
+</html>

@@ -29,7 +29,7 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-step1-add-game">
             <p>Click "Add Game" in the launcher.</p>
             <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/addgame/2_1.png" alt="Add Game button">
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/2_1.png" alt="Add Game button">
             </figure>
         </div>
     </div>
@@ -39,7 +39,7 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-step2-config-game">
             <p>Select the mod loader, game version, and game name (the name displayed in the game list). You can also click the "Game Icon" area to select an image as the game icon. When done, click "Confirm".</p>
             <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/addgame/2_2.png" alt="Game configuration">
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/2_2.png" alt="Game configuration">
             </figure>
         </div>
     </div>
@@ -49,8 +49,95 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-step3-wait-install">
             <p>Wait for the download to complete. When the newly installed version appears in the "Game List" on the left, the game has been successfully installed. You can then click "Launch" to start the game, or click "Path" to open the version's folder.</p>
             <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/addgame/2_3.png" alt="Game list">
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/2_3.png" alt="Game list">
             </figure>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">Import Mod Pack</h1>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher supports importing mod packs (ModPack) from local file system, supporting Modrinth and CurseForge format mod packs. Supported formats include <code class="CodeLine">.zip</code> and <code class="CodeLine">.mrpack</code> files.</p>
+    
+    <div id="import-modpack-step1" class="Task">
+        <h2 aria-controls="aria-import-modpack-step1" class="Name">Step 1: Select Mod Pack File</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-modpack-step1">
+            <p>Click the "Import Mod Pack" button in the launcher, then select a local mod pack file (.zip or .mrpack format). You can also drag and drop the mod pack file directly into the launcher.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_1.png" alt="Select mod pack file">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="import-modpack-step2" class="Task">
+        <h2 aria-controls="aria-import-modpack-step2" class="Name">Step 2: View Mod Pack Information</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-modpack-step2">
+            <p>The launcher will automatically parse the mod pack file and display mod pack information, including: mod pack name, version, game version, and Mod Loader type. The game name will be automatically filled (format: mod pack name-version-timestamp), and you can also customize it.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_2.png" alt="Mod pack information">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="import-modpack-step3" class="Task">
+        <h2 aria-controls="aria-import-modpack-step3" class="Name">Step 3: Wait for Installation to Complete</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-modpack-step3">
+            <p>After clicking "Confirm", the launcher will start installing the mod pack. The installation process includes:</p>
+            <ul>
+                <li><p>Create game directory structure</p></li>
+                <li><p>Copy Overrides files (configuration files, etc.)</p></li>
+                <li><p>Download Mod files from Modrinth/CurseForge</p></li>
+                <li><p>Install required dependencies</p></li>
+                <li><p>Install game files and Mod Loader</p></li>
+            </ul>
+            <p>You can view detailed installation progress in the progress interface. After installation is complete, the mod pack will appear in the game list.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_3.png" alt="Mod pack installation progress">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>【Note】</em>Importing mod packs requires a stable network connection, as Mod files and dependencies need to be downloaded from Modrinth or CurseForge. Make sure you have enough disk space to store the mod pack files.</p>
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">Import from Other Launchers</h1>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher supports importing game instances from other Minecraft launchers (such as MultiMC, Prism Launcher, etc.), including Mods, configuration files, saves, etc. Supported launcher types include MultiMC and Prism Launcher (MultiMC fork).</p>
+    
+    <div id="import-launcher-step1" class="Task">
+        <h2 aria-controls="aria-import-launcher-step1" class="Name">Step 1: Select Launcher Type and Instance Folder</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-launcher-step1">
+            <p>Click the "Import from Other Launcher" button in the launcher, then select the launcher type (MultiMC or Prism Launcher), and select the instance folder to import.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_4.png" alt="Select launcher type and instance">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="import-launcher-step2" class="Task">
+        <h2 aria-controls="aria-import-launcher-step2" class="Name">Step 2: View Instance Information</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-launcher-step2">
+            <p>The launcher will automatically parse the instance configuration file and display instance information, including: game name, game version, Mod Loader type and version. The game name will be automatically filled with the instance name, and you can also customize it.</p>
+            <figure>
+            </figure>
+            <div class="Alert">
+                <p class="Important"><em>【Important】</em>Only Fabric, Quilt, Forge, and NeoForge Mod Loaders are supported. If the instance uses an unsupported Mod Loader, the launcher will display a notification.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="import-launcher-step3" class="Task">
+        <h2 aria-controls="aria-import-launcher-step3" class="Name">Step 3: Wait for Import to Complete</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-launcher-step3">
+            <p>After clicking "Confirm", the launcher will start the import process. The import process includes:</p>
+            <ul>
+                <li><p>Copy game directory contents (Mods, configuration files, saves, resource packs, data packs, shader packs, etc.)</p></li>
+                <li><p>Download missing game version files (if needed)</p></li>
+                <li><p>Install Mod Loader (if needed)</p></li>
+            </ul>
+            <p>You can view detailed import progress in the progress interface. After import is complete, the game instance will appear in the game list, and all Mods, configurations, and saves will be preserved.</p>
+            <figure>
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>【Note】</em>Make sure you have read permissions for the source instance folder. The import process will preserve all game data, including saves, Mods, and configuration files, without needing to reconfigure.</p>
+            </div>
         </div>
     </div>
     

@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplayer Features</title>
+    <meta name="description" content="Learn how to use Swift Craft Launcher's multiplayer features to quickly create or join multiplayer rooms via room codes">
+    <meta name="keywords" content="multiplayer, room code, EasyTier, create room, join room, peer nodes">
+    <meta content="light dark" name="color-scheme">
+    <link media="all" href="../css/app.css" type="text/css" rel="stylesheet">
+</head>
+<body dir="ltr" id="multiplayer" class="AppleTopic apd-topic dark-mode-enabled" data-istaskopen="true" data-designversion="2">
+    <a name="multiplayer"></a>
+    <figure class="topicIcon">
+        <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac32pt2x.png" alt="" height="30" width="30">
+    </figure>
+    <h1>Multiplayer Features</h1>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher uses <strong>EasyTier</strong> as the underlying networking technology to provide convenient Minecraft multiplayer functionality. This feature allows players to quickly create or join multiplayer rooms via room codes without complex network configuration.</p>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">Feature Overview</h1>
+    <p>The main features of the multiplayer functionality include:</p>
+    <ul>
+        <li><p><strong>Room Code System</strong>: Uses room codes in the format <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code>, easy to share and enter</p></li>
+        <li><p><strong>Automatic Network Configuration</strong>: Automatically creates virtual networks without manual port forwarding configuration</p></li>
+        <li><p><strong>Cross-Platform Compatibility</strong>: Supports interconnection with other launchers that implement the Scaffolding protocol (such as HMCL, PCL)</p></li>
+        <li><p><strong>Peer Node Management</strong>: Displays other players and devices in the network in real-time</p></li>
+        <li><p><strong>Automatic Download and Installation</strong>: Automatically downloads and installs EasyTier core components on first use</p></li>
+        <li><p><strong>Administrator Permission Management</strong>: Automatically requests system administrator permissions to configure the network</p></li>
+    </ul>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">Create Room</h1>
+    <p>Creating a room allows you to act as the host, letting other players join your multiplayer network via room code.</p>
+    
+    <div id="create-room-step1" class="Task">
+        <h2 aria-controls="aria-create-room-step1" class="Name">Step 1: Open Create Room Window</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step1">
+            <p>Select "Multiplayer" → "Create Room" from the menu bar, or open the create room window through the launcher's multiplayer feature entry.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_1.png" alt="Create Room Window">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="create-room-step2" class="Task">
+        <h2 aria-controls="aria-create-room-step2" class="Name">Step 2: View Room Code</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step2">
+            <p>The window will automatically generate a room code in the format <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code>. You can click the refresh button to regenerate the room code, or click the share button to copy the room code to the clipboard.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_2.png" alt="Room Code Display">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>Note:</em> Room codes use base-34 encoding (0-9, A-Z, excluding I and O) and include a checksum to ensure validity. Character mapping is supported (I→1, O→0).</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="create-room-step3" class="Task">
+        <h2 aria-controls="aria-create-room-step3" class="Name">Step 3: Start Connection</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step3">
+            <p>Click the "Create" button to start the connection. On first use, EasyTier core components will be automatically downloaded and installed, which may take some time. The system will ask you to enter an administrator password to configure the virtual network.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_3.png" alt="Start Connection">
+            </figure>
+            <div class="Alert">
+                <p class="Important"><em>Important:</em> EasyTier needs to create a virtual network interface (TUN device), which requires system administrator privileges. Please ensure you have administrator privileges and enter the correct password.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="create-room-step4" class="Task">
+        <h2 aria-controls="aria-create-room-step4" class="Name">Step 4: Connection Successful</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step4">
+            <p>After a successful connection, the create room window will automatically close, and the status bar will display the connection status. You can now share the room code with other players so they can join your room.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_4.png" alt="Connection Successful">
+            </figure>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">Join Room</h1>
+    <p>Joining a room allows you to connect to a multiplayer network created by other players via room code.</p>
+    
+    <div id="join-room-step1" class="Task">
+        <h2 aria-controls="aria-join-room-step1" class="Name">Step 1: Open Join Room Window</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step1">
+            <p>Select "Multiplayer" → "Join Room" from the menu bar, or open the join room window through the launcher's multiplayer feature entry.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_5.png" alt="Join Room Window">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="join-room-step2" class="Task">
+        <h2 aria-controls="aria-join-room-step2" class="Name">Step 2: Enter Room Code</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step2">
+            <p>Obtain the room code from the player who created the room, in the format <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code>. Enter the room code into the input field. The launcher will automatically validate the room code format and supports character mapping (I→1, O→0).</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_6.png" alt="Enter Room Code">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>Note:</em> If the room code format is invalid, the launcher will display an error message. Please ensure the room code format is correct and all characters are in the valid character set (0-9, A-Z, excluding I and O).</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="join-room-step3" class="Task">
+        <h2 aria-controls="aria-join-room-step3" class="Name">Step 3: Start Connection</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step3">
+            <p>Click the "Join" button to start the connection. On first use, EasyTier core components will be automatically downloaded and installed. The system will ask you to enter an administrator password to configure the virtual network.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_7.png" alt="Start Connection">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="join-room-step4" class="Task">
+        <h2 aria-controls="aria-join-room-step4" class="Name">Step 4: Connection Successful</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step4">
+            <p>After a successful connection, the join room window will automatically close, and the status bar will display the connection status. You can now view other players and devices in the network.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_8.png" alt="Connection Successful">
+            </figure>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">View Peer Nodes</h1>
+    <p>After a successful connection, you can view information about other players and devices in the network.</p>
+    
+    <div id="peer-list-step1" class="Task">
+        <h2 aria-controls="aria-peer-list-step1" class="Name">Step 1: Open Member List</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-peer-list-step1">
+            <p>Select "Multiplayer" → "Member List" from the menu bar to open the peer node list window.</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_9.png" alt="Member List Window">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="peer-list-step2" class="Task">
+        <h2 aria-controls="aria-peer-list-step2" class="Name">Step 2: View Node Information</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-peer-list-step2">
+            <p>The peer node list displays information about all devices in the network, including:</p>
+            <ul>
+                <li><p><strong>IPv4 Address</strong>: The device's virtual network IP address</p></li>
+                <li><p><strong>Hostname</strong>: The device's hostname</p></li>
+                <li><p><strong>Latency</strong>: Network latency (milliseconds)</p></li>
+                <li><p><strong>Packet Loss</strong>: Data packet loss rate (percentage)</p></li>
+                <li><p><strong>Data Traffic</strong>: Amount of data received (RX) and sent (TX)</p></li>
+            </ul>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_10.png" alt="Node Information">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>Note:</em> The peer node list automatically refreshes every 5 seconds. You can also click the refresh button to manually refresh the list.</p>
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">Close Connection</h1>
+    <p>When you no longer need multiplayer, you can close the connection.</p>
+    
+    <div id="close-room" class="Task">
+        <h2 aria-controls="aria-close-room" class="Name">Close Created Room</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-close-room">
+            <p>If you are the room creator, select "Multiplayer" → "Close Room" from the menu bar to close the room you created. After closing, all players will be disconnected.</p>
+        </div>
+    </div>
+    
+    <div id="leave-room" class="Task">
+        <h2 aria-controls="aria-leave-room" class="Name">Leave Joined Room</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-leave-room">
+            <p>If you are a player who joined the room, select "Multiplayer" → "Leave Room" from the menu bar to leave the current room. After leaving, you will be disconnected from the network.</p>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">Frequently Asked Questions</h1>
+    
+    <div id="faq-roomcode" class="Task">
+        <h2 aria-controls="aria-faq-roomcode" class="Name">What is the room code format?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-roomcode">
+            <p>The room code format is <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code>, where X is 0-9 or A-Z (excluding I and O). Room codes include a checksum to ensure validity.</p>
+        </div>
+    </div>
+    
+    <div id="faq-permission" class="Task">
+        <h2 aria-controls="aria-faq-permission" class="Name">Why is administrator permission required?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-permission">
+            <p>EasyTier needs to create a virtual network interface (TUN device), which requires system administrator privileges. This is a macOS system security requirement.</p>
+        </div>
+    </div>
+    
+    <div id="faq-compatibility" class="Task">
+        <h2 aria-controls="aria-faq-compatibility" class="Name">Can I connect with other launchers?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-compatibility">
+            <p>Yes. As long as other launchers implement the Scaffolding protocol, you can connect via room codes. Known compatible launchers include HMCL (Hello Minecraft Launcher) and PCL (PCL2).</p>
+        </div>
+    </div>
+    
+    <div id="faq-view-players" class="Task">
+        <h2 aria-controls="aria-faq-view-players" class="Name">How do I view other players in the network?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-view-players">
+            <p>After a successful connection, you can view the peer node list by selecting Menu Bar → Multiplayer → Member List. The list automatically refreshes every 5 seconds, and you can also manually refresh it.</p>
+        </div>
+    </div>
+    
+    <div id="faq-connection-failed" class="Task">
+        <h2 aria-controls="aria-faq-connection-failed" class="Name">What should I do if the connection fails?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-connection-failed">
+            <p>If the connection fails, try the following steps:</p>
+            <ol>
+                <li><p>Check if the room code is correct</p></li>
+                <li><p>Ensure the network connection is normal</p></li>
+                <li><p>Confirm that you have entered the administrator password</p></li>
+                <li><p>Check the error message for detailed information</p></li>
+                <li><p>Try reconnecting</p></li>
+            </ol>
+        </div>
+    </div>
+    
+    <div id="faq-easytier-location" class="Task">
+        <h2 aria-controls="aria-faq-easytier-location" class="Name">Where are EasyTier files stored?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-easytier-location">
+            <p>EasyTier core files are stored in the <code class="CodeLine">easytier/</code> folder in the application support directory:</p>
+            <ul>
+                <li><p><code class="CodeLine">easytier-core</code>: Core program</p></li>
+                <li><p><code class="CodeLine">easytier-cli</code>: Command-line tool</p></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="faq-update-easytier" class="Task">
+        <h2 aria-controls="aria-faq-update-easytier" class="Name">How do I update EasyTier?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-update-easytier">
+            <p>Each time you start the network, it automatically checks and downloads the latest version of EasyTier. If you need to manually update, you can delete the <code class="CodeLine">easytier/</code> folder, and it will automatically download the latest version on the next connection.</p>
+        </div>
+    </div>
+    
+    <div id="faq-multiple-rooms" class="Task">
+        <h2 aria-controls="aria-faq-multiple-rooms" class="Name">Can I create multiple rooms at the same time?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-multiple-rooms">
+            <p>No. You can only connect to one room at a time. If you need to switch to another room, you need to close the current connection first.</p>
+        </div>
+    </div>
+    
+    <div id="faq-roomcode-expire" class="Task">
+        <h2 aria-controls="aria-faq-roomcode-expire" class="Name">Do room codes expire?</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-roomcode-expire">
+            <p>No. Room codes themselves do not expire, but the validity of the room depends on the network connection status. If all players disconnect, the room will become invalid.</p>
+        </div>
+    </div>
+    
+    <div class="LinkUniversal">
+        <a href="index.html#index" class="xRef AppleTopic">← Back to Index</a>
+    </div>
+</body>
+</html>

@@ -29,7 +29,7 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-step1-add-game">
             <p>在啟動器中點擊「新增遊戲」。</p>
             <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/addgame/2_1.png" alt="新增遊戲按鈕">
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/2_1.png" alt="新增遊戲按鈕">
             </figure>
         </div>
     </div>
@@ -39,7 +39,7 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-step2-config-game">
             <p>選擇模組載入器、遊戲版本和遊戲名稱（顯示在遊戲列表中的名稱）。您也可以點擊「遊戲圖標」區域選擇圖片作為遊戲圖標。完成後，點擊「確認」。</p>
             <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/addgame/2_2.png" alt="遊戲配置">
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/2_2.png" alt="遊戲配置">
             </figure>
         </div>
     </div>
@@ -49,8 +49,95 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-step3-wait-install">
             <p>等待下載完成。當新安裝的版本出現在左側的「遊戲列表」中時，遊戲已成功安裝。然後您可以點擊「啟動」開始遊戲，或點擊「路徑」打開版本的資料夾。</p>
             <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-HelpBook/main/addgame/2_3.png" alt="遊戲列表">
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/2_3.png" alt="遊戲列表">
             </figure>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">匯入整合包</h1>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 支援從本地檔案系統匯入整合包（ModPack），支援 Modrinth 和 CurseForge 格式的整合包。支援的格式包括 <code class="CodeLine">.zip</code> 和 <code class="CodeLine">.mrpack</code> 檔案。</p>
+    
+    <div id="import-modpack-step1" class="Task">
+        <h2 aria-controls="aria-import-modpack-step1" class="Name">步驟 1：選擇整合包檔案</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-modpack-step1">
+            <p>在啟動器中點擊「匯入整合包」按鈕，然後選擇本地的整合包檔案（.zip 或 .mrpack 格式）。您也可以直接將整合包檔案拖拽到啟動器中。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_1.png" alt="選擇整合包檔案">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="import-modpack-step2" class="Task">
+        <h2 aria-controls="aria-import-modpack-step2" class="Name">步驟 2：查看整合包資訊</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-modpack-step2">
+            <p>啟動器會自動解析整合包檔案，並顯示整合包資訊，包括：整合包名稱、版本、遊戲版本和 Mod Loader 類型。遊戲名稱會自動填充（格式：整合包名-版本-時間戳），您也可以自訂修改。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_2.png" alt="整合包資訊">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="import-modpack-step3" class="Task">
+        <h2 aria-controls="aria-import-modpack-step3" class="Name">步驟 3：等待安裝完成</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-modpack-step3">
+            <p>點擊「確認」後，啟動器將開始安裝整合包。安裝過程包括：</p>
+            <ul>
+                <li><p>建立遊戲目錄結構</p></li>
+                <li><p>複製 Overrides 檔案（設定檔等）</p></li>
+                <li><p>從 Modrinth/CurseForge 下載 Mod 檔案</p></li>
+                <li><p>安裝必需的依賴項</p></li>
+                <li><p>安裝遊戲本體和 Mod Loader</p></li>
+            </ul>
+            <p>您可以在進度介面查看詳細的安裝進度。安裝完成後，整合包將出現在遊戲列表中。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_3.png" alt="整合包安裝進度">
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>【注意】</em>匯入整合包需要穩定的網路連線，因為需要從 Modrinth 或 CurseForge 下載 Mod 檔案和依賴項。確保有足夠的磁碟空間儲存整合包檔案。</p>
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="Name" style="margin-top: 0.8em;">從其他啟動器匯入存檔</h1>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 支援從其他 Minecraft 啟動器（如 MultiMC、Prism Launcher 等）匯入遊戲實例，包括 Mod、設定檔、存檔等。支援的啟動器類型包括 MultiMC 和 Prism Launcher（MultiMC 分支）。</p>
+    
+    <div id="import-launcher-step1" class="Task">
+        <h2 aria-controls="aria-import-launcher-step1" class="Name">步驟 1：選擇啟動器類型和實例資料夾</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-launcher-step1">
+            <p>在啟動器中點擊「從其他啟動器匯入」按鈕，然後選擇啟動器類型（MultiMC 或 Prism Launcher），並選擇要匯入的實例資料夾。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/addgame/5_4.png" alt="選擇啟動器類型和實例">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="import-launcher-step2" class="Task">
+        <h2 aria-controls="aria-import-launcher-step2" class="Name">步驟 2：查看實例資訊</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-launcher-step2">
+            <p>啟動器會自動解析實例設定檔，並顯示實例資訊，包括：遊戲名稱、遊戲版本、Mod Loader 類型和版本。遊戲名稱會自動填充為實例名稱，您也可以自訂修改。</p>
+            <figure>
+            </figure>
+            <div class="Alert">
+                <p class="Important"><em>【重要】</em>僅支援 Fabric、Quilt、Forge、NeoForge 這些 Mod Loader。如果實例使用了不支援的 Mod Loader，啟動器會顯示通知。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="import-launcher-step3" class="Task">
+        <h2 aria-controls="aria-import-launcher-step3" class="Name">步驟 3：等待匯入完成</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-import-launcher-step3">
+            <p>點擊「確認」後，啟動器將開始匯入過程。匯入過程包括：</p>
+            <ul>
+                <li><p>複製遊戲目錄內容（Mods、設定檔、存檔、資源包、資料包、著色器包等）</p></li>
+                <li><p>下載缺失的遊戲版本檔案（如果需要）</p></li>
+                <li><p>安裝 Mod Loader（如果需要）</p></li>
+            </ul>
+            <p>您可以在進度介面查看詳細的匯入進度。匯入完成後，遊戲實例將出現在遊戲列表中，所有 Mod、設定和存檔都會被保留。</p>
+            <figure>
+            </figure>
+            <div class="Alert">
+                <p class="Note"><em>【注意】</em>確保您有讀取源實例資料夾的權限。匯入過程會保留所有遊戲資料，包括存檔、Mod 和設定檔，無需重新設定。</p>
+            </div>
         </div>
     </div>
     
