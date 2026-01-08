@@ -1,9 +1,9 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>聯機功能</title>
-    <meta name="description" content="了解如何使用 Swift Craft Launcher 的聯機功能，通過房間碼快速創建或加入聯機房間">
-    <meta name="keywords" content="聯機, 多人遊戲, 房間碼, EasyTier, 創建房間, 加入房間, 對等節點">
+    <title>多人遊戲功能</title>
+    <meta name="description" content="了解如何使用 Swift Craft Launcher 的多人遊戲功能，通過房間碼快速創建或加入多人遊戲房間">
+    <meta name="keywords" content="多人遊戲, 多人遊戲, 房間碼, EasyTier, 創建房間, 加入房間, 對等節點">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="../css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -12,11 +12,11 @@
     <figure class="topicIcon">
         <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac32pt2x.png" alt="" height="30" width="30">
     </figure>
-    <h1>聯機功能</h1>
-    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 使用 <strong>EasyTier</strong> 作為底層網絡技術，實現了便捷的 Minecraft 聯機功能。該功能允許玩家通過房間碼快速創建或加入聯機房間，無需複雜的網絡配置。</p>
+    <h1>多人遊戲功能</h1>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 使用 <strong>EasyTier</strong> 作為底層網絡技術，實現了便捷的 Minecraft 多人遊戲功能。該功能允許玩家通過房間碼快速創建或加入多人遊戲房間，無需複雜的網絡配置。</p>
     
     <h1 class="Name" style="margin-top: 0.8em;">功能概述</h1>
-    <p>聯機功能的主要特性包括：</p>
+    <p>多人遊戲功能的主要特性包括：</p>
     <ul>
         <li><p><strong>房間碼系統</strong>：使用 <code class="CodeLine">U/XXXX-XXXX-XXXX-XXXX</code> 格式的房間碼，易於分享和輸入</p></li>
         <li><p><strong>自動網絡配置</strong>：自動創建虛擬網絡，無需手動配置端口轉發</p></li>
@@ -27,12 +27,12 @@
     </ul>
     
     <h1 class="Name" style="margin-top: 0.8em;">創建房間</h1>
-    <p>創建房間允許您作為主機，讓其他玩家通過房間碼加入您的聯機網絡。</p>
+    <p>創建房間允許您作為主機，讓其他玩家通過房間碼加入您的多人遊戲網絡。</p>
     
     <div id="create-room-step1" class="Task">
         <h2 aria-controls="aria-create-room-step1" class="Name">步驟 1：打開創建房間窗口</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-create-room-step1">
-            <p>在菜單欄中選擇"聯機" → "創建房間"，或通過啟動器的聯機功能入口打開創建房間窗口。</p>
+            <p>在菜單欄中選擇"多人遊戲" → "創建房間"，或通過啟動器的多人遊戲功能入口打開創建房間窗口。</p>
             <figure>
                 <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_1.png" alt="創建房間窗口">
             </figure>
@@ -76,12 +76,12 @@
     </div>
     
     <h1 class="Name" style="margin-top: 0.8em;">加入房間</h1>
-    <p>加入房間允許您通過房間碼連接到其他玩家創建的聯機網絡。</p>
+    <p>加入房間允許您通過房間碼連接到其他玩家創建的多人遊戲網絡。</p>
     
     <div id="join-room-step1" class="Task">
         <h2 aria-controls="aria-join-room-step1" class="Name">步驟 1：打開加入房間窗口</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-join-room-step1">
-            <p>在菜單欄中選擇"聯機" → "加入房間"，或通過啟動器的聯機功能入口打開加入房間窗口。</p>
+            <p>在菜單欄中選擇"多人遊戲" → "加入房間"，或通過啟動器的多人遊戲功能入口打開加入房間窗口。</p>
             <figure>
                 <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_5.png" alt="加入房間窗口">
             </figure>
@@ -125,11 +125,11 @@
     <p>連接成功後，您可以查看網絡中的其他玩家和設備信息。</p>
     
     <div id="peer-list-step1" class="Task">
-        <h2 aria-controls="aria-peer-list-step1" class="Name">步驟 1：打開成員列表</h2>
+        <h2 aria-controls="aria-peer-list-step1" class="Name">步驟 1：打開查看詳情</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-peer-list-step1">
-            <p>在菜單欄中選擇"聯機" → "成員列表"，打開對等節點列表窗口。</p>
+            <p>在創建房間或加入房間窗口中，點擊「查看詳情」按鈕，打開對等節點列表窗口。</p>
             <figure>
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_9.png" alt="成員列表窗口">
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/multiplayer/6_9.png" alt="查看詳情窗口">
             </figure>
         </div>
     </div>
@@ -155,19 +155,19 @@
     </div>
     
     <h1 class="Name" style="margin-top: 0.8em;">關閉連接</h1>
-    <p>當您不再需要聯機時，可以關閉連接。</p>
+    <p>當您不再需要多人遊戲時，可以關閉連接。</p>
     
     <div id="close-room" class="Task">
         <h2 aria-controls="aria-close-room" class="Name">關閉創建的房間</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-close-room">
-            <p>如果您是房間創建者，在菜單欄中選擇"聯機" → "關閉房間"來關閉您創建的房間。關閉後，所有玩家都會斷開連接。</p>
+            <p>如果您是房間創建者，在菜單欄中選擇"多人遊戲" → "關閉房間"來關閉您創建的房間。關閉後，所有玩家都會斷開連接。</p>
         </div>
     </div>
     
     <div id="leave-room" class="Task">
         <h2 aria-controls="aria-leave-room" class="Name">離開加入的房間</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-leave-room">
-            <p>如果您是加入房間的玩家，在菜單欄中選擇"聯機" → "離開房間"來離開當前房間。離開後，您將斷開與網絡的連接。</p>
+            <p>如果您是加入房間的玩家，在菜單欄中選擇"多人遊戲" → "離開房間"來離開當前房間。離開後，您將斷開與網絡的連接。</p>
         </div>
     </div>
     
@@ -188,16 +188,16 @@
     </div>
     
     <div id="faq-compatibility" class="Task">
-        <h2 aria-controls="aria-faq-compatibility" class="Name">可以與其他啟動器聯機嗎？</h2>
+        <h2 aria-controls="aria-faq-compatibility" class="Name">可以與其他啟動器多人遊戲嗎？</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-compatibility">
-            <p>可以。只要其他啟動器實現了 Scaffolding 協議，就可以通過房間碼聯機。已知兼容的啟動器包括 HMCL（Hello Minecraft Launcher）和 PCL（PCL2）。</p>
+            <p>可以。只要其他啟動器實現了 Scaffolding 協議，就可以通過房間碼多人遊戲。已知兼容的啟動器包括 HMCL（Hello Minecraft Launcher）和 PCL（PCL2）。</p>
         </div>
     </div>
     
     <div id="faq-view-players" class="Task">
         <h2 aria-controls="aria-faq-view-players" class="Name">如何查看網絡中的其他玩家？</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-faq-view-players">
-            <p>連接成功後，可以通過菜單欄 → 聯機 → 成員列表查看對等節點列表。列表每 5 秒自動刷新一次，也可以手動刷新。</p>
+            <p>連接成功後，可以在創建房間或加入房間窗口中點擊「查看詳情」按鈕查看對等節點列表。列表每 5 秒自動刷新一次，也可以手動刷新。</p>
         </div>
     </div>
     
