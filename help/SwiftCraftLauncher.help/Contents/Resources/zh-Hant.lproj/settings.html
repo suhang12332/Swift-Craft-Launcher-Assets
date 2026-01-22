@@ -53,6 +53,34 @@
         </div>
     </div>
     
+    <div id="settings-github-proxy" class="Task">
+        <h2 aria-controls="aria-settings-github-proxy" class="Name">GitHub 代理設置</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-github-proxy">
+            <p>配置 GitHub 代理設置，自動為 GitHub 相關的 URL 添加代理前綴，幫助解決某些地區訪問 GitHub 資源困難的問題。</p>
+            <p><strong>啟用/停用開關：</strong>控制是否對 GitHub URL 應用代理。預設：啟用。</p>
+            <p><strong>代理 URL：</strong>配置代理伺服器地址。預設：<code class="CodeLine">https://gh-proxy.com</code>。代理 URL 必須是有效的 URL，協定為 <code class="CodeLine">http://</code> 或 <code class="CodeLine">https://</code>。</p>
+            <p><strong>自動應用：</strong>啟動器會自動對以下 GitHub 網域應用代理：</p>
+            <ul>
+                <li><p><code class="CodeLine">github.com</code> - GitHub 倉庫頁面和發布版本</p></li>
+                <li><p><code class="CodeLine">raw.githubusercontent.com</code> - 原始檔案內容</p></li>
+            </ul>
+            <p><strong>排除網域：</strong>以下網域不應用代理：</p>
+            <ul>
+                <li><p><code class="CodeLine">api.github.com</code> - GitHub API 端點（通常無需代理即可訪問）</p></li>
+            </ul>
+            <p><strong>使用場景：</strong></p>
+            <ul>
+                <li><p>GitHub API 調用（最新版本、貢獻者、更新檢查等）</p></li>
+                <li><p>從 GitHub 倉庫下載檔案</p></li>
+                <li><p>整合包依賴下載</p></li>
+                <li><p>Sparkle 更新服務下載</p></li>
+            </ul>
+            <div class="Alert">
+                <p class="Note"><em>【註】</em>啟用後，代理會自動應用，無需手動配置每個 URL。如果預設代理不可用，可以更換為其他 GitHub 代理服務，例如 <code class="CodeLine">https://ghproxy.com</code> 或 <code class="CodeLine">https://mirror.ghproxy.com</code>。</p>
+            </div>
+        </div>
+    </div>
+    
     <h1 class="Name" style="margin-top: 0.8em;">遊戲設置</h1>
     
     <figure>
@@ -162,31 +190,94 @@
         <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/settings/4-5_1.png" alt="AI設置">
     </figure>
     
+    <p style="margin-bottom: 1em;">Swift Craft Launcher 整合了 AI 助手功能，支援多種 AI 提供商，可用於遊戲崩潰分析、問題解答等場景。</p>
+    
     <div id="settings-ai-provider" class="Task">
         <h2 aria-controls="aria-settings-ai-provider" class="Name">AI提供商選擇</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-provider">
-            <p>選擇AI服務提供商（支援多個提供商）。</p>
+            <p>選擇AI服務提供商。啟動器支援多個提供商，提供統一介面：</p>
+            <ul>
+                <li><p><strong>OpenAI</strong> - 預設 API URL：<code class="CodeLine">https://api.openai.com</code>，API 路徑：<code class="CodeLine">/v1/chat/completions</code>。支援自定義 API URL（相容 DeepSeek 等 OpenAI 格式服務）。使用 Bearer Token 認證。</p></li>
+                <li><p><strong>Ollama</strong> - 本地部署選項。預設 API URL：<code class="CodeLine">http://localhost:11434</code>，API 路徑：<code class="CodeLine">/api/chat</code>。支援自定義 Base URL 和遠端 Ollama 伺服器。API Key 可選。</p></li>
+            </ul>
         </div>
     </div>
     
     <div id="settings-api-key" class="Task">
         <h2 aria-controls="aria-settings-api-key" class="Name">API金鑰</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-key">
-            <p>可顯示/隱藏的API金鑰輸入框。</p>
+            <p>輸入所選提供商的 API 金鑰。輸入框支援顯示/隱藏切換（眼睛圖示）以確保安全。這是必填項，發送訊息前會進行驗證。</p>
+            <div class="Alert">
+                <p class="Important"><em>【重要】</em>API 金鑰是 AI 功能的必需項。請確保妥善保管，不要與他人分享。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="settings-openai-url" class="Task">
+        <h2 aria-controls="aria-settings-openai-url" class="Name">API URL（OpenAI 格式）</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-openai-url">
+            <p>僅在選擇 OpenAI 格式提供商時顯示。允許自定義 API URL，以相容 DeepSeek 等 OpenAI 格式相容服務。如果留空，將使用提供商的預設 URL。</p>
         </div>
     </div>
     
     <div id="settings-ollama-url" class="Task">
-        <h2 aria-controls="aria-settings-ollama-url" class="Name">Ollama地址</h2>
+        <h2 aria-controls="aria-settings-ollama-url" class="Name">Ollama Base URL</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ollama-url">
-            <p>僅在選擇Ollama時顯示，預設：<code class="CodeLine">http://localhost:11434</code></p>
+            <p>僅在選擇 Ollama 時顯示。設置 Ollama 服務地址。預設：<code class="CodeLine">http://localhost:11434</code>。如果配置了遠端 Ollama 伺服器，也支援使用。</p>
+        </div>
+    </div>
+    
+    <div id="settings-ai-model" class="Task">
+        <h2 aria-controls="aria-settings-ai-model" class="Name">模型名稱</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-model">
+            <p>輸入要使用的 AI 模型名稱。這是必填項，發送訊息前必須填寫。首尾空白字元會自動去除。</p>
+            <div class="Alert">
+                <p class="Important"><em>【重要】</em>模型名稱必須與所選提供商提供的模型匹配。例如，OpenAI 使用 "gpt-4" 或 "gpt-3.5-turbo" 等模型，而 Ollama 使用您本地安裝的模型名稱。</p>
+            </div>
         </div>
     </div>
     
     <div id="settings-ai-avatar" class="Task">
         <h2 aria-controls="aria-settings-ai-avatar" class="Name">AI頭像URL</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-avatar">
-            <p>設置AI頭像的URL地址，支援預覽。</p>
+            <p>設置 AI 頭像的 URL 地址。支援使用 MinecraftSkinUtils 元件進行即時預覽（預覽尺寸：42x42）。預設：<code class="CodeLine">https://mcskins.top/assets/snippets/download/skin.php?n=7050</code></p>
+        </div>
+    </div>
+    
+    <h2 class="Name" style="margin-top: 1.2em;">AI功能</h2>
+    
+    <div id="settings-ai-crash-analysis" class="Task">
+        <h2 aria-controls="aria-settings-ai-crash-analysis" class="Name">AI崩潰分析</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-crash-analysis">
+            <p>啟用後，當檢測到遊戲崩潰時，啟動器會自動收集崩潰日誌並發送到 AI 視窗進行分析。</p>
+            <p><strong>工作流程：</strong></p>
+            <ol>
+                <li><p>崩潰檢測：啟動器監控遊戲進程退出碼，並檢查最近 5 分鐘內生成的崩潰報告。</p></li>
+                <li><p>日誌收集：優先收集 <code class="CodeLine">crash-reports</code> 資料夾中的所有檔案。如果未找到崩潰報告，則收集 <code class="CodeLine">logs/latest.log</code>。</p></li>
+                <li><p>AI分析：AI 聊天視窗自動打開，並附帶收集的日誌檔案，允許您與 AI 互動以獲取崩潰分析和解決方案建議。</p></li>
+            </ol>
+            <div class="Alert">
+                <p class="Note"><em>【註】</em>此功能需要先成功配置 AI 設置。此功能的開關位於遊戲設置部分。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="settings-ai-chat" class="Task">
+        <h2 aria-controls="aria-settings-ai-chat" class="Name">AI聊天功能</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-chat">
+            <p>AI 聊天功能支援：</p>
+            <ul>
+                <li><p><strong>流式響應：</strong>即時流式輸出（SSE 格式），提供即時回饋</p></li>
+                <li><p><strong>訊息歷史：</strong>在整個會話過程中維護對話上下文</p></li>
+                <li><p><strong>檔案附件：</strong>支援發送文字檔案進行分析（≤100KB 的檔案會被讀取並發送，更大的檔案僅顯示檔案資訊）</p></li>
+                <li><p><strong>文字截斷：</strong>超過 5000 字元的内容會自動截斷</p></li>
+            </ul>
+            <p><strong>使用場景：</strong></p>
+            <ul>
+                <li><p>遊戲崩潰分析（自動或手動）</p></li>
+                <li><p>問題諮詢和故障排除</p></li>
+                <li><p>日誌檔案和配置檔案分析</p></li>
+            </ul>
         </div>
     </div>
     

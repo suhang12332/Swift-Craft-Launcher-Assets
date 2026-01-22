@@ -53,6 +53,34 @@
         </div>
     </div>
     
+    <div id="settings-github-proxy" class="Task">
+        <h2 aria-controls="aria-settings-github-proxy" class="Name">GitHub Proxy Settings</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-github-proxy">
+            <p>Configure GitHub proxy settings to automatically add proxy prefixes to GitHub-related URLs, helping resolve access issues in certain regions.</p>
+            <p><strong>Enable/Disable Toggle:</strong> Control whether to apply proxy to GitHub URLs. Default: Enabled.</p>
+            <p><strong>Proxy URL:</strong> Configure the proxy server address. Default: <code class="CodeLine">https://gh-proxy.com</code>. The proxy URL must be a valid URL with <code class="CodeLine">http://</code> or <code class="CodeLine">https://</code> protocol.</p>
+            <p><strong>Automatic Application:</strong> The launcher automatically applies proxy to the following GitHub domains:</p>
+            <ul>
+                <li><p><code class="CodeLine">github.com</code> - GitHub repository pages and releases</p></li>
+                <li><p><code class="CodeLine">raw.githubusercontent.com</code> - Raw file content</p></li>
+            </ul>
+            <p><strong>Excluded Domains:</strong> The following domains are not proxied:</p>
+            <ul>
+                <li><p><code class="CodeLine">api.github.com</code> - GitHub API endpoints (usually accessible without proxy)</p></li>
+            </ul>
+            <p><strong>Use Cases:</strong></p>
+            <ul>
+                <li><p>GitHub API calls (latest releases, contributors, appcast, etc.)</p></li>
+                <li><p>File downloads from GitHub repositories</p></li>
+                <li><p>Mod pack dependency downloads</p></li>
+                <li><p>Sparkle update service downloads</p></li>
+            </ul>
+            <div class="Alert">
+                <p class="Note"><em>Note:</em> The proxy is automatically applied when enabled. You don't need to manually configure each URL. If the default proxy is unavailable, you can replace it with other GitHub proxy services such as <code class="CodeLine">https://ghproxy.com</code> or <code class="CodeLine">https://mirror.ghproxy.com</code>.</p>
+            </div>
+        </div>
+    </div>
+    
     <h1 class="Name" style="margin-top: 0.8em;">Game Settings</h1>
     
     <figure>
@@ -162,31 +190,94 @@
         <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/settings/4-5_1.png" alt="AI settings">
     </figure>
     
+    <p style="margin-bottom: 1em;">Swift Craft Launcher integrates AI assistant functionality, supporting multiple AI providers for game crash analysis, problem solving, and other scenarios.</p>
+    
     <div id="settings-ai-provider" class="Task">
         <h2 aria-controls="aria-settings-ai-provider" class="Name">AI Provider Selection</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-provider">
-            <p>Select AI service provider (supports multiple providers).</p>
+            <p>Select AI service provider. The launcher supports multiple providers with unified interface:</p>
+            <ul>
+                <li><p><strong>OpenAI</strong> - Default API URL: <code class="CodeLine">https://api.openai.com</code>, API path: <code class="CodeLine">/v1/chat/completions</code>. Supports custom API URL (compatible with DeepSeek and other OpenAI-format services). Uses Bearer Token authentication.</p></li>
+                <li><p><strong>Ollama</strong> - Local deployment option. Default API URL: <code class="CodeLine">http://localhost:11434</code>, API path: <code class="CodeLine">/api/chat</code>. Supports custom Base URL and remote Ollama servers. API Key is optional.</p></li>
+            </ul>
         </div>
     </div>
     
     <div id="settings-api-key" class="Task">
         <h2 aria-controls="aria-settings-api-key" class="Name">API Key</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-key">
-            <p>Showable/hideable API key input field.</p>
+            <p>Enter your API key for the selected provider. The input field supports show/hide toggle (eye icon) for security. This is a required field and will be validated before sending messages.</p>
+            <div class="Alert">
+                <p class="Important"><em>Important:</em> The API key is required for AI functionality. Make sure to keep it secure and do not share it with others.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="settings-openai-url" class="Task">
+        <h2 aria-controls="aria-settings-openai-url" class="Name">API URL (OpenAI Format)</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-openai-url">
+            <p>Only displayed when OpenAI-format provider is selected. Allows customization of the API URL for compatibility with DeepSeek and other OpenAI-format compatible services. If left empty, the provider's default URL will be used.</p>
         </div>
     </div>
     
     <div id="settings-ollama-url" class="Task">
-        <h2 aria-controls="aria-settings-ollama-url" class="Name">Ollama Address</h2>
+        <h2 aria-controls="aria-settings-ollama-url" class="Name">Ollama Base URL</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ollama-url">
-            <p>Only displayed when Ollama is selected, default: <code class="CodeLine">http://localhost:11434</code></p>
+            <p>Only displayed when Ollama is selected. Set the Ollama service address. Default: <code class="CodeLine">http://localhost:11434</code>. Supports remote Ollama servers if configured.</p>
+        </div>
+    </div>
+    
+    <div id="settings-ai-model" class="Task">
+        <h2 aria-controls="aria-settings-ai-model" class="Name">Model Name</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-model">
+            <p>Enter the AI model name to use. This is a required field and must be filled before sending messages. Leading and trailing whitespace will be automatically trimmed.</p>
+            <div class="Alert">
+                <p class="Important"><em>Important:</em> The model name must match the models available from your selected provider. For example, OpenAI uses models like "gpt-4" or "gpt-3.5-turbo", while Ollama uses model names you've installed locally.</p>
+            </div>
         </div>
     </div>
     
     <div id="settings-ai-avatar" class="Task">
         <h2 aria-controls="aria-settings-ai-avatar" class="Name">AI Avatar URL</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-avatar">
-            <p>Set the AI avatar URL address with preview support.</p>
+            <p>Set the AI avatar URL address. Supports real-time preview using MinecraftSkinUtils component (42x42 preview size). Default: <code class="CodeLine">https://mcskins.top/assets/snippets/download/skin.php?n=7050</code></p>
+        </div>
+    </div>
+    
+    <h2 class="Name" style="margin-top: 1.2em;">AI Features</h2>
+    
+    <div id="settings-ai-crash-analysis" class="Task">
+        <h2 aria-controls="aria-settings-ai-crash-analysis" class="Name">AI Crash Analysis</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-crash-analysis">
+            <p>When enabled, the launcher automatically collects crash logs and sends them to the AI window for analysis when a game crash is detected.</p>
+            <p><strong>Workflow:</strong></p>
+            <ol>
+                <li><p>Crash detection: The launcher monitors game process exit codes and checks for crash reports generated within the last 5 minutes.</p></li>
+                <li><p>Log collection: Priority is given to all files in the <code class="CodeLine">crash-reports</code> folder. If no crash reports are found, <code class="CodeLine">logs/latest.log</code> is collected.</p></li>
+                <li><p>AI analysis: The AI chat window automatically opens with collected log files attached, allowing you to interact with the AI to get crash analysis and solution suggestions.</p></li>
+            </ol>
+            <div class="Alert">
+                <p class="Note"><em>Note:</em> This feature requires successful AI settings configuration. The toggle for this feature is located in the Game Settings section.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="settings-ai-chat" class="Task">
+        <h2 aria-controls="aria-settings-ai-chat" class="Name">AI Chat Functionality</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-chat">
+            <p>The AI chat feature supports:</p>
+            <ul>
+                <li><p><strong>Streaming responses:</strong> Real-time streaming output (SSE format) for immediate feedback</p></li>
+                <li><p><strong>Message history:</strong> Maintains conversation context throughout the session</p></li>
+                <li><p><strong>File attachments:</strong> Support for sending text files for analysis (files ≤100KB are read and sent, larger files show file info only)</p></li>
+                <li><p><strong>Text truncation:</strong> Content exceeding 5000 characters is automatically truncated</p></li>
+            </ul>
+            <p><strong>Use cases:</strong></p>
+            <ul>
+                <li><p>Game crash analysis (automatic or manual)</p></li>
+                <li><p>Problem consultation and troubleshooting</p></li>
+                <li><p>Log file and configuration file analysis</p></li>
+            </ul>
         </div>
     </div>
     
