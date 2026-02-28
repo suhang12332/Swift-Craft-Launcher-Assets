@@ -8,7 +8,7 @@ on:
       - ".github/scripts/**"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: publish-help-to-wiki
@@ -114,5 +114,20 @@ jobs:
             exit 0
           fi
           git commit -m "Update help docs (HTML → Markdown)"
+          git push
+
+      - name: Remove HTML files after conversion
+        run: |
+          set -euo pipefail
+          SRC_DIR="help/SwiftCraftLauncher.help/Contents/Resources/en.lproj"
+          rm -f "$SRC_DIR"/*.html
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No HTML files to remove."
+            exit 0
+          fi
+          git commit -m "Remove HTML files (converted to Wiki Markdown)"
           git push
 
