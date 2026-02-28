@@ -68,7 +68,7 @@ jobs:
             perl "$SCRIPT_DIR/help-to-md-postprocess.pl" "$out" "$map_file"
             rm -f "$map_file" "$tmp_preprocessed" 2>/dev/null || true
 
-            # 4. 调整内部链接以适配 GitHub Wiki
+            # 4. 调整内部链接以适配 GitHub Wiki，统一使用 home（不用 index）
             perl -pi -e '
               s/\]\(((?!https?:\/\/)[^)]*?)index\.html(\))/\]\(\1home\2/g;
               s/\]\(((?!https?:\/\/)[^)]*?)index\.html(#)/\]\(\1home\2/g;
@@ -78,6 +78,8 @@ jobs:
               s/\]\(home\)/\](home.md)/g;
               s/href="index\.html"/href="home"/g;
               s/href="index\.html#/href="home#/g;
+              s/href="home#index"/href="home"/g;
+              s/id="index"/id="home"/g;
             ' "$out" 2>/dev/null || true
           done
 
