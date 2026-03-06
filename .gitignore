@@ -32,3 +32,6 @@ yarn-error.log*
 *.tmp
 *.temp
 *.log
+
+# GitHub Wiki working copy (cloned by CI)
+wiki/
