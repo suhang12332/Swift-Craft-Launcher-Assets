@@ -115,6 +115,8 @@ jobs:
           fi
           git commit -m "Update help docs (HTML → Markdown)"
           git push
+          cd ..
+          rm -rf wiki
 
       - name: Remove HTML files after conversion
         run: |
