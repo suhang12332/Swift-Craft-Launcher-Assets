@@ -127,7 +127,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         argv = sys.argv[1:]
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    repo_root = os.path.dirname(script_dir)
+    # script 位于 repo/.github/scripts/，需上溯两层得到 repo 根目录
+    repo_root = os.path.dirname(os.path.dirname(script_dir))
     txt_root_dir = os.path.join(repo_root, "releases-notes")
     html_root_dir = os.path.join(repo_root, "releases")
 
