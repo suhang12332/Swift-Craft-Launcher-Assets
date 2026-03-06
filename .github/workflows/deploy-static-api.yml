@@ -50,3 +50,34 @@ jobs:
             echo "No changes to commit"
           fi
 
+  update-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate release HTML files
+        run: |
+          python .github/scripts/fetch_swift_craft_releases.py
+
+      - name: Commit and push release files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          echo "Checking for changes in releases/"
+          git status releases/
+          git add -A releases/
+          git status
+          if ! git diff --staged --quiet; then
+            git commit -m "Update release HTML files [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "No changes to commit"
+          fi
+
