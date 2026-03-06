@@ -105,6 +105,7 @@ jobs:
 
           # 覆盖 wiki 主仓库根目录（不再使用子目录）
           cp -R "_wiki_help/." "wiki/"
+          rm -rf "_wiki_help"
 
           cd wiki
           git config user.name "github-actions[bot]"
