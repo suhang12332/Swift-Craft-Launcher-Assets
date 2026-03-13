@@ -7,6 +7,9 @@ on:
       - "help/SwiftCraftLauncher.help/Contents/Resources/en.lproj/**"
       - ".github/scripts/**"
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 permissions:
   contents: write
 
@@ -19,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout assets repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
           submodules: false
