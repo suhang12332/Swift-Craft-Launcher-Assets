@@ -30,34 +30,40 @@
     "description": "Modding API for Minecraft"
   },
   {
-    "name": "GzipSwift",
-    "url": "https://github.com/1024jp/GzipSwift",
-    "avatar": "https://github.com/1024jp.png",
-    "description": "Swift framework for gzip compression/decompression"
+    "name": "SwiftLintPlugins",
+    "url": "https://github.com/SimplyDanny/SwiftLintPlugins",
+    "avatar": "https://github.com/SimplyDanny.png",
+    "description": "Binary version of the SwiftLint Swift Package Manager plugins."
   },
   {
-    "name": "NetworkImage",
-    "url": "https://github.com/gonzalezreal/NetworkImage",
-    "avatar": "https://github.com/gonzalezreal.png",
-    "description": "A SwiftUI view that displays images from the network"
+    "name": "ZIPFoundation",
+    "url": "https://github.com/weichsel/ZIPFoundation",
+    "avatar": "https://github.com/weichsel.png",
+    "description": "Effortless ZIP Handling in Swift"
+  },
+  {
+    "name": "NSSkinRender",
+    "url": "https://github.com/irisWirisW/NSSkinRender",
+    "avatar": "https://github.com/irisWirisW.png",
+    "description": "3D Minecraft skin renderer for Swift/SwiftUI with cape support and interactive controls."
+  },
+  {
+    "name": "SwiftMarkDownUI",
+    "url": "https://github.com/suhang12332/SwiftMarkDownUI",
+    "avatar": "https://github.com/suhang12332.png",
+    "description": "Markdown UI for SwiftUI"
+  },
+  {
+    "name": "CFModrinthAdapterKit",
+    "url": "https://github.com/suhang12332/CFModrinthAdapterKit",
+    "avatar": "https://github.com/suhang12332.png",
+    "description": "CurseForge API adapter for Modrinth"
   },
   {
     "name": "Sparkle",
     "url": "https://github.com/sparkle-project/Sparkle",
     "avatar": "https://github.com/sparkle-project.png",
     "description": "A software update framework for macOS applications"
-  },
-  {
-    "name": "swift-cmark",
-    "url": "https://github.com/swiftlang/swift-cmark",
-    "avatar": "https://github.com/swiftlang.png",
-    "description": "Swift bindings for the cmark CommonMark parsing library"
-  },
-  {
-    "name": "swift-collections",
-    "url": "https://github.com/apple/swift-collections",
-    "avatar": "https://github.com/apple.png",
-    "description": "Commonly used data structures for Swift"
   },
   {
     "name": "swift-markdown-ui",
