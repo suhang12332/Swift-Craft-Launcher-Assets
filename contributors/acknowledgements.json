@@ -2,7 +2,7 @@
   {
     "name": "Modrinth",
     "url": "https://modrinth.com/",
-    "avatar": "https://cdn.modrinth.com/logo.svg",
+    "avatar": "https://github.com/modrinth.png",
     "description": "Minecraft mod platform and modpack hosting service"
   },
   {
@@ -14,19 +14,19 @@
   {
     "name": "Quilt",
     "url": "https://quiltmc.org/",
-    "avatar": "https://quiltmc.org/assets/img/logo.svg",
+    "avatar": "https://github.com/QuiltMC.png",
     "description": "A mod loader for Minecraft that aims to be fast, secure, and flexible"
   },
   {
     "name": "Neoforge",
     "url": "https://neoforged.net/",
-    "avatar": "https://neoforged.net/assets/img/logo.png",
+    "avatar": "https://github.com/neoforged.png",
     "description": "A community-driven fork of Minecraft Forge"
   },
   {
     "name": "Minecraft Forge",
     "url": "https://files.minecraftforge.net/",
-    "avatar": "https://files.minecraftforge.net/assets/img/logo.png",
+    "avatar": "https://github.com/MinecraftForge.png",
     "description": "Modding API for Minecraft"
   },
   {
