@@ -66,18 +66,6 @@
     "description": "A software update framework for macOS applications"
   },
   {
-    "name": "swift-markdown-ui",
-    "url": "https://github.com/gonzalezreal/swift-markdown-ui",
-    "avatar": "https://github.com/gonzalezreal.png",
-    "description": "Display and customize Markdown text in SwiftUI"
-  },
-  {
-    "name": "ZIPFoundation",
-    "url": "https://github.com/weichsel/ZIPFoundation",
-    "avatar": "https://github.com/weichsel.png",
-    "description": "Effortless ZIP Handling in Swift"
-  },
-  {
     "name": "SJMCL TEAM",
     "url": "https://github.com/UNIkeEN/SJMCL",
     "avatar": "https://mc.sjtu.cn/sjmcl/logo.png",
