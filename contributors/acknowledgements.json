@@ -82,6 +82,12 @@
     "url": "https://github.com/meza/curseforge-fingerprint",
     "avatar": "https://github.com/meza.png",
     "description": "✨ A simple, secure, decentralized virtual private network solution powered by Rust and Tokio"
+  },
+  {
+    "name": "Archify",
+    "url": "https://github.com/Oct4Pie/archify",
+    "avatar": "https://github.com/Oct4Pie.png",
+    "description": "Universal binary optimization tool for macOS applications"
   }
 ]
 
