@@ -1,5 +1,5 @@
 // Render release notes (Markdown) into the Version History page.
-// Notes are loaded from this repo's `releases-notes/` directory via GitHub raw URLs.
+// Release file list is read from repository directory via GitHub API.
 (function () {
   'use strict';
 
@@ -50,27 +50,53 @@
     return a.localeCompare(b);
   }
 
+  function parseGitHubPagesRepoInfo() {
+    const host = String(window.location.hostname || '');
+    const owner = host.endsWith('.github.io') ? host.slice(0, -'.github.io'.length) : '';
+    const segs = String(window.location.pathname || '').split('/').filter(Boolean);
+    const repo = segs.length > 0 ? segs[0] : '';
+    return { owner, repo };
+  }
+
+  function getRepoRef() {
+    const meta = document.querySelector('meta[name="releases-ref"]');
+    const ref = meta?.getAttribute('content')?.trim();
+    return ref || 'main';
+  }
+
+  function getDirectoryPathFromBaseUrl(baseUrl) {
+    try {
+      const u = new URL(baseUrl, window.location.href);
+      const p = String(u.pathname || '').replace(/^\/+|\/+$/g, '');
+      const segs = p.split('/').filter(Boolean);
+      const i = segs.lastIndexOf('releases-notes');
+      if (i >= 0) return segs.slice(i).join('/');
+      return 'releases-notes';
+    } catch (_) {
+      return 'releases-notes';
+    }
+  }
+
   async function loadReleaseFilesFromDirectory(baseUrl) {
     const parsed = parseReleasesBase(baseUrl);
-    if (!parsed) {
-      const html = await tryFetchText(baseUrl);
-      if (!html) return null;
-      const names = [];
-      const rx = /href\s*=\s*["']([^"']+\.md)["']/gi;
-      let m;
-      while ((m = rx.exec(html))) {
-        const href = m[1];
-        const name = href.split('/').pop() || '';
-        if (name && !names.includes(name)) names.push(name);
-      }
-      names.sort(compareVersionFilesDesc);
-      return names.length ? names : null;
+    let owner = '';
+    let repo = '';
+    let ref = '';
+    if (parsed) {
+      owner = parsed.owner;
+      repo = parsed.repo;
+      ref = parsed.ref;
+    } else {
+      const inferred = parseGitHubPagesRepoInfo();
+      owner = inferred.owner;
+      repo = inferred.repo;
+      ref = getRepoRef();
     }
-
-    const { owner, repo, ref } = parsed;
+    if (!owner || !repo) return null;
+    const releasesPath = parsed ? 'releases-notes' : getDirectoryPathFromBaseUrl(baseUrl);
     const apiUrl = `https://api.github.com/repos/${encodeURIComponent(
       owner
-    )}/${encodeURIComponent(repo)}/contents/releases-notes?ref=${encodeURIComponent(ref)}`;
+    )}/${encodeURIComponent(repo)}/contents/${releasesPath}?ref=${encodeURIComponent(ref)}`;
 
     const data = await tryFetchJson(apiUrl);
     if (!Array.isArray(data)) return null;
@@ -332,7 +358,7 @@
           '<li><p>无法读取 <code>releases-notes/</code> 目录。</p></li>';
         contentEl2.innerHTML =
           '<p class="release-error">无法加载版本列表。</p>' +
-          '<p class="release-error-detail">请确认 <code>meta[name="releases-base"]</code> 是正确的 GitHub raw 地址（公开仓库），并检查网络/速率限制。</p>';
+          '<p class="release-error-detail">请确认仓库公开可访问，且 GitHub API 可以读取 <code>releases-notes</code> 目录。</p>';
         if (titleEl2) titleEl2.textContent = '—';
         return;
       }
