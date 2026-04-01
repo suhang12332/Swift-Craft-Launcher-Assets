@@ -72,6 +72,18 @@
     "description": "Another open-source Minecraft launcher designed by SJTU Minecraft Club"
   },
   {
+    "name": "LittleSkin",
+    "url": "https://littleskin.cn",
+    "avatar": "https://github.com/LittleSkinChina.png",
+    "description": "Established in March 2016, we are the second-largest Minecraft skin hosting server in Mainland China."
+  },
+  {
+    "name": "Mua",
+    "url": "https://skin.mualliance.ltd",
+    "avatar": "https://www.mualliance.cn/wp-content/uploads/2023/01/mua_tm.png",
+    "description": "Minecraft高校联盟（Minecraft University Alliance，简称MUA）是一个旨在联合全国高校MC爱好者，共同推动高校MC生态发展的公益性组织。"
+  },
+  {
     "name": "curseforge-fingerprint",
     "url": "https://github.com/meza/curseforge-fingerprint",
     "avatar": "https://github.com/meza.png",
