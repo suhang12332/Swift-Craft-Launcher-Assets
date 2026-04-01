@@ -33,25 +33,36 @@
         // 根目录默认为简体中文
         return 'zh-Hans';
     }
+
+    // 获取当前页面文件名（用于在语言跳转时尽量保留当前页面）
+    function getCurrentPageName() {
+        const path = window.location.pathname;
+        const last = path.lastIndexOf('/');
+        const name = last >= 0 ? path.slice(last + 1) : path;
+        return name || 'index.html';
+    }
     
     // 获取语言对应的路径
     function getLanguagePath(lang) {
         const currentPath = window.location.pathname;
+        const pageName = getCurrentPageName();
+        const supportedPages = new Set(['index.html', 'history.html']);
+        const targetPage = supportedPages.has(pageName) ? pageName : 'index.html';
+
         let basePath = '';
-        
         // 如果当前在语言子目录中，需要返回到根目录
         if (currentPath.includes('/zh-Hans/') || currentPath.includes('/zh-Hant/') || currentPath.includes('/en/')) {
             basePath = '../';
         }
-        
+
         switch(lang) {
             case 'zh-Hans':
-                // 如果在子目录，返回 ../index.html；如果在根目录，返回 index.html
-                return currentPath.includes('/zh-Hans/') ? '../index.html' : 'index.html';
+                // 根目录即简体中文
+                return basePath + targetPage;
             case 'zh-Hant':
-                return basePath + 'zh-Hant/index.html';
+                return basePath + 'zh-Hant/' + targetPage;
             case 'en':
-                return basePath + 'en/index.html';
+                return basePath + 'en/' + targetPage;
             default:
                 return basePath + 'index.html';
         }

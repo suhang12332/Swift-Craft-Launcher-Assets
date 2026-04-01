@@ -421,3 +421,142 @@ footer.footer a {
     margin: 0;
     text-align: center;
 }
+
+/* Version history page: two-column layout (keep header unchanged) */
+.history-two-col {
+    max-width: 1200px;
+    margin: 4em auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2em;
+    align-items: start;
+}
+
+.history-sidebar {
+    position: sticky;
+    top: 84px;
+}
+
+.history-sidebar .toc-list {
+    border-top: none;
+    padding-top: 0;
+}
+
+.history-detail .HIStrings {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.history-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.history-title-row > a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.history-title-row .back-to-index {
+    font-size: 0.95em;
+    white-space: nowrap;
+}
+
+.history-detail .HIStrings p {
+    margin: 0;
+}
+
+.history-detail #releaseTitle {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.history-detail #releaseTitleLink {
+    color: var(--base-color) !important;
+    text-decoration: none !important;
+}
+
+.history-detail #releaseTitleLink:visited {
+    color: var(--base-color) !important;
+    text-decoration: none !important;
+}
+
+.history-detail #releaseTitleLink * {
+    text-decoration: none !important;
+}
+
+.history-detail #releaseTitleLink:hover {
+    text-decoration: underline !important;
+}
+
+.history-content {
+    border-top: 1px solid var(--border-color);
+    margin-top: 0.4em;
+    padding-top: 0.6em;
+}
+
+.history-content > :first-child {
+    margin-top: 0;
+}
+
+.history-mobile-tasks {
+    display: none;
+}
+
+.toc-list a[aria-current="page"] {
+    font-weight: 700;
+}
+
+@media all and (max-width: 900px) {
+    .history-two-col {
+        grid-template-columns: 1fr;
+        margin: 2em auto;
+        padding: 0 1em;
+    }
+
+    .history-sidebar {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media all and (max-width: 736px) {
+    .history-two-col {
+        margin: 1.25em auto;
+        gap: 1.25em;
+    }
+
+    .history-detail #releaseTitle {
+        font-size: 1.2rem;
+    }
+
+    .history-title-row {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        row-gap: 0.5em;
+    }
+
+    .history-title-row .back-to-index {
+        margin-left: auto;
+        font-size: 0.9em;
+    }
+
+    .history-sidebar {
+        display: none;
+    }
+
+    .history-detail .HIStrings,
+    .history-detail .history-content {
+        display: none;
+    }
+
+    .history-mobile-tasks {
+        display: block;
+    }
+}
