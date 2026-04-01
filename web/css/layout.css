@@ -443,6 +443,21 @@ footer.footer a {
     padding-top: 0;
 }
 
+.history-sidebar .toc-list li p {
+    margin: 0;
+}
+
+.history-sidebar .toc-list li p a {
+    display: block;
+    width: 100%;
+    padding: 0.4em 0.5em;
+    border-radius: 6px;
+}
+
+.history-sidebar .toc-list li p a:hover {
+    background: color-mix(in srgb, var(--link-color) 12%, transparent);
+}
+
 .history-detail .HIStrings {
     margin-top: 0;
     margin-bottom: 0.5em;
@@ -511,6 +526,7 @@ footer.footer a {
 
 .toc-list a[aria-current="page"] {
     font-weight: 700;
+    background: color-mix(in srgb, var(--link-color) 18%, transparent);
 }
 
 @media all and (max-width: 900px) {
