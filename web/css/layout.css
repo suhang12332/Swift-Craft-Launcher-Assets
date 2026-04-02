@@ -528,7 +528,6 @@ footer.footer a {
 
 .toc-list a[aria-current="page"] {
     font-weight: 700;
-    background: color-mix(in srgb, var(--link-color) 18%, transparent);
 }
 
 @media all and (max-width: 900px) {
