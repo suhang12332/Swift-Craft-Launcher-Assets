@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -133,7 +134,7 @@ header.Hero h1 {
     header.Hero h1 {
         font-size: 0;
     }
-    
+
     header.Hero h1::before {
         content: "SCL";
         font-size: 1.5rem;
@@ -192,7 +193,7 @@ header.Hero .nav-links .docs-link {
     .dark-mode-enabled .github-icon-light {
         display: none !important;
     }
-    
+
     .dark-mode-enabled .github-icon-dark {
         display: block !important;
     }
@@ -285,7 +286,6 @@ footer.footer a {
     flex-shrink: 0;
 }
 
-
 .contributor-avatar {
     width: 36px;
     height: 36px;
@@ -293,7 +293,9 @@ footer.footer a {
     object-fit: cover;
     flex-shrink: 0;
     display: block;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .contributor-avatar:hover {
@@ -312,7 +314,9 @@ footer.footer a {
     background: var(--hero-background-start);
     border: 1px solid var(--border-color);
     flex-shrink: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .contributor-avatar-emoji:hover {
@@ -343,7 +347,9 @@ footer.footer a {
     text-decoration: underline;
     flex-shrink: 0;
     border-radius: 50%;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .contributor-more-link:hover {
@@ -452,10 +458,6 @@ footer.footer a {
     width: 100%;
     padding: 0.4em 0.5em;
     border-radius: 6px;
-}
-
-.history-sidebar .toc-list li p a:hover {
-    background: color-mix(in srgb, var(--link-color) 12%, transparent);
 }
 
 .history-detail .HIStrings {
