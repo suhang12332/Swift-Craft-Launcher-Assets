@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>啟動器設置</title>
     <meta name="description" content="配置 Swift Craft Launcher 設置，包括通用設置、遊戲設置、遊戲高級設置和AI設置">
-    <meta name="keywords" content="設置, 配置, 語言, 外觀, java, 記憶體, AI, 垃圾回收器">
+    <meta name="keywords" content="設置, 配置, 語言, 主題, 介面佈局, 工作目錄, 下載, GitHub 代理, 玩家, 離線登入, Yggdrasil, authlib-injector, Modrinth, CurseForge, 快照版, 記憶體, Java, JVM, 環境變數, AI, Keychain, Ollama, OpenAI, 垃圾回收器">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/help/SwiftCraftLauncher.help/Contents/Resources/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -33,6 +33,14 @@
         <h2 aria-controls="aria-settings-appearance" class="Name">主題選擇</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-appearance">
             <p>選擇主題模式：系統、淺色或深色。</p>
+        </div>
+    </div>
+
+    <div id="settings-layout-style" class="Task">
+        <h2 aria-controls="aria-settings-layout-style" class="Name">介面佈局風格</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-layout-style">
+            <p>設定啟動器介面佈局風格。可選項：<strong>classic</strong> 和 <strong>focused</strong>。</p>
+            <p><strong>classic</strong> 適合較傳統的多區域佈局；<strong>focused</strong> 更強調內容聚焦與簡潔體驗。</p>
         </div>
     </div>
 
@@ -81,6 +89,14 @@
         </div>
     </div>
 
+    <div id="settings-sheet-height-limit" class="Task">
+        <h2 aria-controls="aria-settings-sheet-height-limit" class="Name">通用 Sheet 高度限制</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-sheet-height-limit">
+            <p>設定啟動器中通用 Sheet 彈窗的最大高度限制，用於控制彈出面板在不同螢幕尺寸下的顯示高度。</p>
+            <p>如果您希望彈窗顯示更多內容，可以適度提高該值；如果希望介面更緊湊，則可以降低該值。</p>
+        </div>
+    </div>
+
     <h1 class="Name" style="margin-top: 0.8em;">遊戲設置</h1>
 
     <figure>
@@ -90,7 +106,15 @@
     <div id="settings-api-source" class="Task">
         <h2 aria-controls="aria-settings-api-source" class="Name">預設API源</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-source">
-            <p>選擇預設的資料來源。可用選項：Morinth 和 CurseForge。</p>
+            <p>選擇預設的遊戲資源平台資料來源。可用選項：<strong>Modrinth</strong> 和 <strong>CurseForge</strong>。</p>
+        </div>
+    </div>
+
+    <div id="settings-version-snapshot" class="Task">
+        <h2 aria-controls="aria-settings-version-snapshot" class="Name">顯示快照版</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-version-snapshot">
+            <p>控制遊戲版本列表中是否包含快照版。</p>
+            <p>啟用後，建立遊戲或選擇版本時會顯示實驗性快照版本；關閉後，僅顯示一般正式版本。</p>
         </div>
     </div>
 
@@ -108,6 +132,14 @@
         </div>
     </div>
 
+    <div id="settings-sync-language" class="Task">
+        <h2 aria-controls="aria-settings-sync-language" class="Name">同步語言到 options.txt</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-sync-language">
+            <p>控制在建立新遊戲時，是否將啟動器目前語言自動同步到遊戲的 <code class="CodeLine">options.txt</code>。</p>
+            <p>啟用後，新建立的遊戲實例會盡量預設使用與啟動器一致的語言設定。</p>
+        </div>
+    </div>
+
     <div id="settings-resource-info" class="Task">
         <h2 aria-controls="aria-settings-resource-info" class="Name">遊戲資源資訊</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-resource-info">
@@ -115,7 +147,17 @@
         </div>
     </div>
 
+    <div id="settings-clear-cache" class="Task">
+        <h2 aria-controls="aria-settings-clear-cache" class="Name">清理快取</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-clear-cache">
+            <p>用於清理啟動器快取的遊戲資源檔案。</p>
+            <p>執行後可以釋放磁碟空間，但後續再次存取相關資源時，啟動器可能需要重新下載對應內容。</p>
+        </div>
+    </div>
+
     <h1 class="Name" style="margin-top: 0.8em;">遊戲高級設置</h1>
+
+    <p style="margin-bottom: 1em;">遊戲高級設置為<strong>單個遊戲實例</strong>的獨立配置，只有在已選取某個遊戲後，對應標籤頁才會可用。</p>
 
     <figure>
         <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/settings/4-4_1.png" alt="遊戲高級設置">
@@ -166,7 +208,8 @@
     <div id="settings-memory-range" class="Task">
         <h2 aria-controls="aria-settings-memory-range" class="Name">記憶體範圍</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-memory-range">
-            <p>設置Xms-Xmx記憶體範圍（512 MB - 最大記憶體）。</p>
+            <p>為目前遊戲單獨設定 Xms / Xmx 記憶體範圍（512 MB - 最大記憶體）。</p>
+            <p>此設定會覆蓋全域預設記憶體分配，僅對目前選取的遊戲生效。</p>
         </div>
     </div>
 
@@ -207,6 +250,7 @@
         <h2 aria-controls="aria-settings-api-key" class="Name">API金鑰</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-key">
             <p>輸入所選提供商的 API 金鑰。輸入框支援顯示/隱藏切換（眼睛圖示）以確保安全。這是必填項，發送訊息前會進行驗證。</p>
+            <p>為提高安全性，API Key 不儲存在一般設定中，而是保存在系統 Keychain 中。</p>
             <div class="Alert">
                 <p class="Important"><em>【重要】</em>API 金鑰是 AI 功能的必需項。請確保妥善保管，不要與他人分享。</p>
             </div>
@@ -283,8 +327,34 @@
 
     <h1 class="Name" style="margin-top: 0.8em;">玩家設置</h1>
 
-    <div class="Alert">
-        <p class="Note"><em>【註】</em>玩家設置功能正在開發中。請關注更新。</p>
+    <figure>
+        <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/settings/4-6_1.png" alt="玩家設置">
+    </figure>
+
+    <p style="margin-bottom: 1em;">玩家設置用於管理登入方式、皮膚站與認證服務等與帳號相關的行為。</p>
+
+    <div id="settings-offline-login" class="Task">
+        <h2 aria-controls="aria-settings-offline-login" class="Name">離線登入</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-offline-login">
+            <p>控制是否啟用離線登入功能。</p>
+            <p>啟用後，可以在不使用正版帳號登入的情況下建立和使用離線玩家檔案。</p>
+        </div>
+    </div>
+
+    <div id="settings-yggdrasil-server" class="Task">
+        <h2 aria-controls="aria-settings-yggdrasil-server" class="Name">預設皮膚站 / Yggdrasil 伺服器</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-yggdrasil-server">
+            <p>設定預設使用的皮膚站或 Yggdrasil 認證伺服器位址。</p>
+            <p>適用於需要接入第三方認證系統的場景，便於統一管理玩家檔案的登入來源。</p>
+        </div>
+    </div>
+
+    <div id="settings-authlib-injector" class="Task">
+        <h2 aria-controls="aria-settings-authlib-injector" class="Name">authlib-injector</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-authlib-injector">
+            <p>玩家設置頁會顯示 authlib-injector 的下載與狀態資訊。</p>
+            <p>當使用 Yggdrasil 等第三方認證服務時，啟動器可藉由 authlib-injector 提供相容支援。</p>
+        </div>
     </div>
 
     <div class="LinkUniversal">
