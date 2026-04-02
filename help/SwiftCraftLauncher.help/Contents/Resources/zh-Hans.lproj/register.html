@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>登录账户</title>
-    <meta name="description" content="了解如何使用离线模式或 Microsoft 账户登录 Swift Craft Launcher">
-    <meta name="keywords" content="登录, 账户, microsoft, 离线, 认证, 玩家">
+    <meta name="description" content="了解如何使用离线模式、Microsoft 账户或第三方认证服务器登录 Swift Craft Launcher">
+    <meta name="keywords" content="登录, 账户, microsoft, 离线, 第三方, yggdrasil, 认证, 玩家">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/help/SwiftCraftLauncher.help/Contents/Resources/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@
         <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac32pt2x.png" alt="" height="30" width="30">
     </figure>
     <h1>登录账户</h1>
-    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 支持两种主要的登录方式：离线模式和 Microsoft 官方登录。</p>
+    <p style="border-bottom: 1px solid var(--border-color); padding-bottom: 1em;">Swift Craft Launcher 支持三种主要的登录方式：离线模式、Microsoft 官方登录和第三方认证服务器登录。</p>
     
     <h1 class="Name" style="margin-top: 0.8em;">离线模式</h1>
     <p>无需网络验证。输入任意用户名即可开始游戏。仅适用于单人模式或已禁用在线认证的服务器。</p>
@@ -100,8 +100,58 @@
             </figure>
         </div>
     </div>
-    
-    
+
+    <h1 class="Name" style="margin-top: 0.8em;">第三方登录</h1>
+    <p>使用第三方 Minecraft 认证服务器登录，例如 LittleSkin、MUA 或 Ely.By。登录完成后，您可以选择该服务器返回的角色，并在启动游戏时自动接入对应的认证与皮肤服务。</p>
+
+    <div id="thirdparty-step1" class="Task">
+        <h2 aria-controls="aria-thirdparty-step1" class="Name">步骤 1：添加玩家</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-thirdparty-step1">
+            <p>在启动器中点击"添加玩家"。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/register/1-1_1.png" alt="添加玩家按钮">
+            </figure>
+        </div>
+    </div>
+
+    <div id="thirdparty-step2" class="Task">
+        <h2 aria-controls="aria-thirdparty-step2" class="Name">步骤 2：选择第三方服务器</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-thirdparty-step2">
+            <p>切换到"第三方"登录类型，先选择认证服务器预设，再点击"开始登录"。</p>
+            <p>当前内置支持 LittleSkin、MUA 和 Ely.By 三个常见服务。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/register/1-2_6.png" alt="选择第三方认证服务器">
+            </figure>
+        </div>
+    </div>
+
+    <div id="thirdparty-step3" class="Task">
+        <h2 aria-controls="aria-thirdparty-step3" class="Name">步骤 3：浏览器授权</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-thirdparty-step3">
+            <p>启动器会打开浏览器，跳转到对应第三方认证服务器的授权页面。请按网页提示登录并授权 Swift Craft Launcher。</p>
+        </div>
+    </div>
+
+    <div id="thirdparty-step4" class="Task">
+        <h2 aria-controls="aria-thirdparty-step4" class="Name">步骤 4：选择角色</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-thirdparty-step4">
+            <p>授权完成后，启动器会自动读取该账号下的角色列表。</p>
+            <p>如果服务器返回多个角色，您可以在界面中切换并选择当前要添加的角色。</p>
+        </div>
+    </div>
+
+    <div id="thirdparty-step5" class="Task">
+        <h2 aria-controls="aria-thirdparty-step5" class="Name">步骤 5：完成添加</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-thirdparty-step5">
+            <p>当所选角色出现在启动器左下角时，第三方账户已成功添加。</p>
+            <p>启动游戏时，启动器会自动注入所需认证组件，以连接该第三方服务器提供的认证和皮肤服务。</p>
+            <figure>
+                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/imagebed/register/1-2_7.png" alt="第三方登录成功">
+            </figure>
+        </div>
+    </div>
+
+
     <div class="LinkUniversal">
         <a href="index.html#index" class="xRef AppleTopic">← 返回目录</a>
     </div>
