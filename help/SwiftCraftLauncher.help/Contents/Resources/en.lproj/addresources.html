@@ -103,6 +103,37 @@
         </div>
     </div>
 
+    <h1 class="Name" style="margin-top: 0.8em;">Add Servers</h1>
+    <p style="margin-top: 0.6em;">Swift Craft Launcher can add server resources from the Resource List directly into a game instance. After the action completes, the launcher writes the server entry into the standard Minecraft <code class="CodeLine">servers.dat</code> file inside that instance's profile directory.</p>
+
+    <div id="server-step1" class="Task">
+        <h2 aria-controls="aria-server-step1" class="Name">Step 1: Open the Server Resource Dialog</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-server-step1">
+            <p>In the "Resource List", switch to the server resource list, then click "Add" on the target server resource. A detail dialog will open; for server resources, both the dialog title and the primary button will show "Add Server".</p>
+            <figure>
+                <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/addresources/3-6_5.png" alt="Add server">
+            </figure>
+        </div>
+    </div>
+
+    <div id="server-step2" class="Task">
+        <h2 aria-controls="aria-server-step2" class="Name">Step 2: Choose a Game Instance</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-server-step2">
+            <p>The dialog first loads the server details and the list of compatible game instances. The launcher automatically filters out any instances that already contain the same server address, so the list only shows instances where this server can still be added. Select the target instance, then click "Add Server".</p>
+            <figure>
+                <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/addresources/3-6_6.png" alt="Choose instance and add server">
+            </figure>
+        </div>
+    </div>
+
+    <div id="server-step3" class="Task">
+        <h2 aria-controls="aria-server-step3" class="Name">Step 3: Save to the Server List</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-server-step3">
+            <p>The launcher parses the server address from the resource details and uses the resource title as the server name, then writes the result into the target instance's <code class="CodeLine">servers.dat</code>. After that, the server will appear in that instance's server list.</p>
+            <p>This feature depends on the server address being available in the resource details. If the launcher cannot parse a valid address, adding the server will fail and an invalid address error will be shown.</p>
+        </div>
+    </div>
+
     <div class="LinkUniversal">
         <a href="index.html#index" class="xRef AppleTopic">← Back to Index</a>
     </div>

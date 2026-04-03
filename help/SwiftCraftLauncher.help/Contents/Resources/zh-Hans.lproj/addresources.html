@@ -103,6 +103,37 @@
         </div>
     </div>
 
+    <h1 class="Name" style="margin-top: 0.8em;">添加服务器</h1>
+    <p style="margin-top: 0.6em;">Swift Craft Launcher 支持把资源列表中的服务器资源直接添加到游戏实例。添加完成后，启动器会把服务器写入该实例 profile 目录下的 Minecraft 标准 <code class="CodeLine">servers.dat</code> 文件。</p>
+
+    <div id="server-step1" class="Task">
+        <h2 aria-controls="aria-server-step1" class="Name">步骤 1：打开服务器资源详情</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-server-step1">
+            <p>在左侧进入"资源列表"，切换到服务器资源列表后，点击目标服务器资源上的"添加"。此时会弹出详情窗口；对于服务器类型的资源，弹窗标题和底部主按钮都会显示为"添加服务器"。</p>
+            <figure>
+                <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/addresources/3-6_5.png" alt="添加服务器">
+            </figure>
+        </div>
+    </div>
+
+    <div id="server-step2" class="Task">
+        <h2 aria-controls="aria-server-step2" class="Name">步骤 2：选择要添加到的游戏实例</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-server-step2">
+            <p>弹窗会先预加载服务器详情和兼容的游戏实例列表。启动器会自动过滤掉已经包含同一服务器地址的实例，因此列表中只会显示当前还能添加该服务器的游戏实例。选择目标实例后，点击"添加服务器"。</p>
+            <figure>
+                <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/addresources/3-6_6.png" alt="选择游戏实例并添加服务器">
+            </figure>
+        </div>
+    </div>
+
+    <div id="server-step3" class="Task">
+        <h2 aria-controls="aria-server-step3" class="Name">步骤 3：保存到服务器列表</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-server-step3">
+            <p>启动器会从该服务器资源的详情信息中解析服务器地址，并以资源标题作为名称，写入目标实例的 <code class="CodeLine">servers.dat</code>。添加完成后，您可以在对应游戏实例的服务器列表中看到它。</p>
+            <p>此功能依赖服务器资源详情中的地址信息。如果该资源详情里没有可识别的服务器地址，启动器将无法添加，并提示地址无效。</p>
+        </div>
+    </div>
+
     <div class="LinkUniversal">
         <a href="index.html#index" class="xRef AppleTopic">← 返回目录</a>
     </div>
