@@ -558,8 +558,13 @@ footer.footer a {
         row-gap: 0.5em;
     }
 
+    .history-title-row > a:first-child {
+        width: 100%;
+    }
+
     .history-title-row .back-to-index {
-        margin-left: auto;
+        margin-left: 0;
+        align-self: flex-start;
         font-size: 0.9em;
     }
 
@@ -567,7 +572,6 @@ footer.footer a {
         display: none;
     }
 
-    .history-detail .HIStrings,
     .history-detail .history-content {
         display: none;
     }
