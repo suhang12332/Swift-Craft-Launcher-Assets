@@ -352,7 +352,7 @@
       const titleLinkEl2 = document.getElementById('releaseTitleLink');
       const tasksEl = document.getElementById('releaseTasks');
       if (tocEl) {
-        tocEl.innerHTML = `<li>${renderLoadingMarkup('list')}</li>`;
+        tocEl.innerHTML = `<li class="history-loading-item">${renderLoadingMarkup('list')}</li>`;
       }
       if (contentEl2 && !isNarrowScreen) {
         contentEl2.innerHTML = renderLoadingMarkup('content');

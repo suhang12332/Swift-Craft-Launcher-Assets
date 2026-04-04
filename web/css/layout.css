@@ -452,6 +452,12 @@ footer.footer a {
     margin: 0;
 }
 
+.history-sidebar .toc-list .history-loading-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .history-sidebar .toc-list li p a {
     display: block;
     width: 100%;
@@ -555,12 +561,17 @@ footer.footer a {
     animation: mac-spinner-rotate 0.75s linear infinite;
 }
 
-.history-content > .history-loading,
-.history-mobile-tasks > .history-loading,
+.history-content .history-loading,
+.history-mobile-tasks .history-loading,
 .history-sidebar .history-loading {
     display: flex;
     justify-content: center;
     padding: 2.5em 0;
+}
+
+.history-sidebar .history-loading {
+    display: flex;
+    padding: 0.4em 0.5em;
 }
 
 @keyframes mac-spinner-rotate {

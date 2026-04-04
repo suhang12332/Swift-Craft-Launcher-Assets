@@ -43,7 +43,12 @@
         <div class="history-two-col">
             <aside class="history-sidebar" aria-label="Versions">
                 <ul class="toc-list" id="releaseToc">
-                    <li><p>Loading…</p></li>
+                    <li class="history-loading-item">
+                        <div class="history-loading" role="status" aria-live="polite">
+                            <span class="mac-spinner" aria-hidden="true"></span>
+                            <span class="history-loading-label">Loading release history…</span>
+                        </div>
+                    </li>
                 </ul>
             </aside>
 
@@ -64,4 +69,3 @@
 </body>
 
 </html>
-
