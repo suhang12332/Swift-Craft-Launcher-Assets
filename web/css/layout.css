@@ -558,18 +558,37 @@ footer.footer a {
         row-gap: 0.5em;
     }
 
-    .history-title-row > a:first-child {
-        width: 100%;
-    }
-
     .history-title-row .back-to-index {
-        margin-left: 0;
-        align-self: flex-start;
+        margin-left: auto;
         font-size: 0.9em;
     }
 
     .history-sidebar {
         display: none;
+    }
+
+    .history-detail {
+        position: relative;
+        padding-top: 2.25em;
+    }
+
+    .history-detail .back-to-index {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 0;
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .history-detail #releaseTitleLink {
+        display: none;
+    }
+
+    .history-detail .HIStrings {
+        display: block;
+        margin-bottom: 0;
     }
 
     .history-detail .history-content {
