@@ -525,6 +525,54 @@ footer.footer a {
     display: none;
 }
 
+.history-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7em;
+    min-height: 2rem;
+    color: var(--footer-color);
+    font-size: 0.95rem;
+}
+
+.history-loading-label {
+    line-height: 1.4;
+}
+
+.mac-spinner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    background: conic-gradient(
+        from 0deg,
+        rgba(127, 127, 127, 0.18) 0deg,
+        rgba(127, 127, 127, 0.28) 120deg,
+        rgba(127, 127, 127, 0.9) 300deg,
+        rgba(127, 127, 127, 1) 360deg
+    );
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+    animation: mac-spinner-rotate 0.75s linear infinite;
+}
+
+.history-content > .history-loading,
+.history-mobile-tasks > .history-loading {
+    display: flex;
+    justify-content: center;
+    padding: 2.5em 0;
+}
+
+.history-sidebar .history-loading {
+    display: flex;
+    padding: 0.4em 0.5em;
+}
+
+@keyframes mac-spinner-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .toc-list a[aria-current="page"] {
     font-weight: 700;
 }

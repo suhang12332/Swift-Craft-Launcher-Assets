@@ -188,6 +188,26 @@
     el.setAttribute('aria-busy', busy ? 'true' : 'false');
   }
 
+  function getLoadingText(kind) {
+    const lang = String(document.documentElement.lang || '').toLowerCase();
+    if (lang.startsWith('en')) {
+      return kind === 'content' ? 'Loading release details…' : 'Loading release history…';
+    }
+    if (lang.startsWith('zh-hant')) {
+      return kind === 'content' ? '正在載入版本詳情…' : '正在載入版本歷史…';
+    }
+    return kind === 'content' ? '正在加载版本详情…' : '正在加载版本历史…';
+  }
+
+  function renderLoadingMarkup(kind) {
+    return (
+      `<div class="history-loading" role="status" aria-live="polite">` +
+      `<span class="mac-spinner" aria-hidden="true"></span>` +
+      `<span class="history-loading-label">${escapeHtml(getLoadingText(kind))}</span>` +
+      `</div>`
+    );
+  }
+
   function setSelected(listEl, version) {
     if (!listEl) return;
     for (const a of listEl.querySelectorAll('a[data-version]')) {
@@ -203,7 +223,7 @@
     if (!contentEl) return;
 
     setBusy(contentEl, true);
-    contentEl.innerHTML = '';
+    contentEl.innerHTML = renderLoadingMarkup('content');
 
     const url = baseUrl + filename;
     try {
@@ -288,6 +308,7 @@
     async function loadIfNeeded() {
       if (hasLoaded) return;
       hasLoaded = true;
+      body.innerHTML = renderLoadingMarkup('content');
       await showRelease({
         baseUrl,
         filename,
@@ -322,15 +343,26 @@
   function init() {
     const initAsync = async () => {
       const baseUrl = getBaseUrl();
-      const files = await loadReleaseFilesFromDirectory(baseUrl);
       const isNarrowScreen = window.matchMedia('(max-width: 736px)').matches;
 
-    // Two-column layout (left: toc list, right: content)
-    const tocEl = document.getElementById('releaseToc');
-    const contentEl2 = document.getElementById('releaseContent');
-    const titleEl2 = document.getElementById('releaseTitle');
-    const titleLinkEl2 = document.getElementById('releaseTitleLink');
+      // Two-column layout (left: toc list, right: content)
+      const tocEl = document.getElementById('releaseToc');
+      const contentEl2 = document.getElementById('releaseContent');
+      const titleEl2 = document.getElementById('releaseTitle');
+      const titleLinkEl2 = document.getElementById('releaseTitleLink');
       const tasksEl = document.getElementById('releaseTasks');
+      if (tocEl) {
+        tocEl.innerHTML = `<li>${renderLoadingMarkup('list')}</li>`;
+      }
+      if (contentEl2 && !isNarrowScreen) {
+        contentEl2.innerHTML = renderLoadingMarkup('content');
+        setBusy(contentEl2, true);
+      }
+      if (tasksEl && isNarrowScreen) {
+        tasksEl.innerHTML = renderLoadingMarkup('list');
+      }
+
+      const files = await loadReleaseFilesFromDirectory(baseUrl);
       if (isNarrowScreen && tasksEl) {
         if (!files || !files.length) {
           tasksEl.innerHTML =
@@ -471,4 +503,3 @@
 
   document.addEventListener('DOMContentLoaded', init);
 })();
-
