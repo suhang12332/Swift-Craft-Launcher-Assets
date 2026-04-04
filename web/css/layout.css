@@ -556,15 +556,11 @@ footer.footer a {
 }
 
 .history-content > .history-loading,
-.history-mobile-tasks > .history-loading {
+.history-mobile-tasks > .history-loading,
+.history-sidebar .history-loading {
     display: flex;
     justify-content: center;
     padding: 2.5em 0;
-}
-
-.history-sidebar .history-loading {
-    display: flex;
-    padding: 0.4em 0.5em;
 }
 
 @keyframes mac-spinner-rotate {
