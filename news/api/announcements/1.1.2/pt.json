@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Correção importante - 1.1.2",
+    "content": "🎮 Bem-vindo ao %@ 1.1.2!\n\n🎉Correção importante:🎉\n\nO launcher às vezes ficava preso no carregamento ao instalar mods ou outros recursos (não por causa da rede). Esse problema foi corrigido.\n\n🔒 Segurança de dados: faça backup regularmente dos seus saves do Minecraft e dos dados do launcher\n🐛 Relatórios de bugs: se encontrar problemas, relate-os no nosso repositório GitHub\n\n",
+    "author": "Equipe Swift Craft Launcher"
+  }
+}

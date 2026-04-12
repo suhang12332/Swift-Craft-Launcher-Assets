@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Önemli düzeltme - 1.1.2",
+    "content": "🎮 %@ 1.1.2'ye hoş geldiniz!\n\n🎉Önemli düzeltme:🎉\n\nBaşlatıcı, mod veya diğer kaynakları yüklerken bazen yüklemeye takılı kalabiliyordu (ağ kaynaklı değil). Bu sorun giderildi.\n\n🔒 Veri güvenliği: Minecraft kayıtlarınızı ve başlatıcı verilerinizi düzenli olarak yedekleyin\n🐛 Hata bildirimi: Sorun yaşarsanız lütfen GitHub deposumuzda bildirin\n\n",
+    "author": "Swift Craft Launcher Ekibi"
+  }
+}

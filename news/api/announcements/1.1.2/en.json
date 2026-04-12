@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Major fix - 1.1.2",
+    "content": "🎮 Welcome to %@ 1.1.2!\n\n🎉Major fix:🎉\n\nThe launcher could sometimes get stuck loading when installing mods or other resources (not due to network issues). This issue is now fixed.\n\n🔒 Data safety: Please back up your Minecraft saves and launcher data regularly\n🐛 Bug reports: If you run into any problems, please report them on our GitHub repository\n\n",
+    "author": "Swift Craft Launcher Team"
+  }
+}

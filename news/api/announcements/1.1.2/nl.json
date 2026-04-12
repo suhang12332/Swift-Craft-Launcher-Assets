@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Belangrijke fix - 1.1.2",
+    "content": "🎮 Welkom bij %@ 1.1.2!\n\n🎉Belangrijke fix:🎉\n\nDe launcher kon soms blijven laden bij het installeren van mods of andere resources (niet door het netwerk). Dit is nu opgelost.\n\n🔒 Gegevensveiligheid: maak regelmatig een back-up van je Minecraft-saves en launcher-gegevens\n🐛 Bugrapporten: als je problemen hebt, meld ze in onze GitHub-repository\n\n",
+    "author": "Swift Craft Launcher Team"
+  }
+}

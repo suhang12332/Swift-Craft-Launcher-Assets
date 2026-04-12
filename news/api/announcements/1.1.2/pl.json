@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Ważna poprawka - 1.1.2",
+    "content": "🎮 Witamy w %@ 1.1.2!\n\n🎉Ważna poprawka:🎉\n\nLauncher czasami zawieszał się na ekranie ładowania podczas instalacji modów lub innych zasobów (nie z powodu sieci). Ten problem został naprawiony.\n\n🔒 Bezpieczeństwo danych: regularnie twórz kopie zapisów Minecraft i danych launchera\n🐛 Zgłaszanie błędów: jeśli napotkasz problemy, zgłoś je w naszym repozytorium GitHub\n\n",
+    "author": "Zespół Swift Craft Launcher"
+  }
+}

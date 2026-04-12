@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Correctif majeur - 1.1.2",
+    "content": "🎮 Bienvenue dans %@ 1.1.2 !\n\n🎉Correctif majeur :🎉\n\nLe launcher pouvait parfois rester bloqué sur le chargement lors de l'installation de mods ou d'autres ressources (sans que ce soit lié au réseau). Ce problème est désormais corrigé.\n\n🔒 Sécurité des données : sauvegardez régulièrement vos sauvegardes Minecraft et les données du launcher\n🐛 Rapports de bugs : si vous rencontrez un problème, signalez-le sur notre dépôt GitHub\n\n",
+    "author": "Équipe Swift Craft Launcher"
+  }
+}
