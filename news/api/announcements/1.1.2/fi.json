@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "Merkittävä korjaus - 1.1.2",
-    "content": "🎮 Tervetuloa %@ 1.1.2:een!\n\n🎉**Merkittävä korjaus:**🎉\n\nKäynnistysohjelma saattoi joskus jäädä lataustilaan modien tai muiden resurssien asennuksessa (ei verkon vuoksi). Tämä ongelma on nyt korjattu.\n\n🔒 Tietoturva: Varmuuskopioi säännöllisesti Minecraft-tallennuksesi ja launcherin tiedot\n🐛 Virheraportointi: Jos kohtaat ongelmia, raportoi ne GitHub-repositoriossamme\n\n",
-    "author": "Swift Craft Launcher -tiimi"
-  }
-}
