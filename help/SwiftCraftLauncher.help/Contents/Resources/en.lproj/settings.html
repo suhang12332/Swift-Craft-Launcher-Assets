@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>Launcher Settings</title>
     <meta name="description" content="Configure Swift Craft Launcher settings, including general settings, game settings, advanced game settings, and AI settings">
-    <meta name="keywords" content="settings, configuration, language, theme, layout, working directory, downloads, GitHub proxy, player, offline login, Yggdrasil, authlib-injector, Modrinth, CurseForge, snapshot versions, memory, Java, JVM, environment variables, AI, Keychain, Ollama, OpenAI, garbage collector">
+    <meta name="keywords" content="settings, configuration, language, theme, layout, working directory, downloads, GitHub proxy, player, offline login, Yggdrasil, authlib-injector, Modrinth, CurseForge, snapshot versions, memory, Java, Java runtime, reinstall, JVM, environment variables, AI, Keychain, Ollama, OpenAI, garbage collector">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/help/SwiftCraftLauncher.help/Contents/Resources/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -137,6 +137,18 @@
         <h2 aria-controls="aria-settings-default-memory" class="Name">Default Memory Allocation</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-default-memory">
             <p>Set the global default memory range (Xms-Xmx).</p>
+        </div>
+    </div>
+
+    <div id="settings-java-runtime-reinstall" class="Task">
+        <h2 aria-controls="aria-settings-java-runtime-reinstall" class="Name">Java Runtimes and Reinstall</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-java-runtime-reinstall">
+            <p>When the launcher detects usable Java runtime components under your working directory, a <strong>Java runtimes</strong> section appears in Game Settings. Use the pop-up menu to choose which component to work with (for example, the runtime required by a specific Minecraft version line).</p>
+            <p>The <strong>Help</strong> button next to it shows the selected runtime’s executable path and a summary of the <code class="CodeLine">java --version</code> output.</p>
+            <p><strong>Reinstall:</strong> For the selected component, the launcher <strong>deletes the entire folder</strong> for that component under the runtimes directory, then <strong>downloads and installs it again</strong>. A download progress window opens during the process; after it finishes and the window closes, the list refreshes automatically. Reinstall is disabled while a download is already in progress.</p>
+            <div class="Alert">
+                <p class="Note"><em>Note:</em> When the launcher first downloads a missing component automatically, it uses the same approach—clear that component’s directory first—so the install is consistent.</p>
+            </div>
         </div>
     </div>
 

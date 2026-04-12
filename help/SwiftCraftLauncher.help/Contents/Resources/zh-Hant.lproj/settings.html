@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>啟動器設置</title>
     <meta name="description" content="配置 Swift Craft Launcher 設置，包括通用設置、遊戲設置、遊戲高級設置和AI設置">
-    <meta name="keywords" content="設置, 配置, 語言, 主題, 介面佈局, 工作目錄, 下載, GitHub 代理, 玩家, 離線登入, Yggdrasil, authlib-injector, Modrinth, CurseForge, 快照版, 記憶體, Java, JVM, 環境變數, AI, Keychain, Ollama, OpenAI, 垃圾回收器">
+    <meta name="keywords" content="設置, 配置, 語言, 主題, 介面佈局, 工作目錄, 下載, GitHub 代理, 玩家, 離線登入, Yggdrasil, authlib-injector, Modrinth, CurseForge, 快照版, 記憶體, Java, Java 運行時, 重新安裝, JVM, 環境變數, AI, Keychain, Ollama, OpenAI, 垃圾回收器">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/help/SwiftCraftLauncher.help/Contents/Resources/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -137,6 +137,18 @@
         <h2 aria-controls="aria-settings-default-memory" class="Name">預設記憶體分配</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-default-memory">
             <p>設置全域預設記憶體範圍（Xms-Xmx）。</p>
+        </div>
+    </div>
+
+    <div id="settings-java-runtime-reinstall" class="Task">
+        <h2 aria-controls="aria-settings-java-runtime-reinstall" class="Name">Java 運行時與重新安裝</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-java-runtime-reinstall">
+            <p>當啟動器已在工作目錄中偵測到可用的 Java 運行時元件時，會在遊戲設置中顯示 <strong>Java 運行時</strong>區域。您可以在選單中選擇要操作的元件（例如不同版本線路所需的運行時）。</p>
+            <p>旁側的 <strong>輔助說明按鈕</strong>可檢視目前選中運行時的可執行檔路徑以及 <code class="CodeLine">java --version</code> 輸出摘要。</p>
+            <p><strong>重新安裝：</strong>針對目前選中的元件，啟動器會<strong>先刪除</strong>該元件在運行時目錄下對應的整個資料夾，再<strong>重新下載並安裝</strong>。過程中會開啟下載進度視窗；完成後關閉視窗，清單會自動重新整理。下載進行中時無法再次點選重新安裝。</p>
+            <div class="Alert">
+                <p class="Note"><em>【注】</em>首次缺少某元件而由啟動器自動下載時，也會採用「先清空該元件目錄再安裝」的同一策略，以確保安裝結果一致。</p>
+            </div>
         </div>
     </div>
 
