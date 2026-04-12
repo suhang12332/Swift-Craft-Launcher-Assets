@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Vigtig rettelse - 1.1.2",
+    "content": "🎮 Velkommen til %@ 1.1.2!\n\n🎉**Vigtig rettelse:**🎉\n\nLauncheren kunne nogle gange blive hængende i indlæsning, når du installerede mods eller andre ressourcer (ikke på grund af netværket). Dette problem er nu rettet.\n\n🔒 Datasikkerhed: Tag regelmæssigt backup af dine Minecraft-gemmer og launcher-data\n🐛 Fejlrapporter: Hvis du støder på problemer, så rapportér dem venligst i vores GitHub-repository\n\n",
+    "author": "Swift Craft Launcher Team"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Viktig fiks - 1.1.2",
+    "content": "🎮 Velkommen til %@ 1.1.2!\n\n🎉**Viktig fiks:**🎉\n\nLauncheren kunne noen ganger henge i lasting ved installasjon av mods eller andre ressurser (ikke på grunn av nettverket). Dette er nå fikset.\n\n🔒 Datasikkerhet: Ta regelmessig sikkerhetskopi av Minecraft-lagringene og launcher-dataene dine\n🐛 Feilrapporter: Hvis du opplever problemer, rapporter dem i vårt GitHub-repository\n\n",
+    "author": "Swift Craft Launcher Team"
+  }
+}
