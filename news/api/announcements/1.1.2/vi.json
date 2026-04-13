@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "Sửa lỗi quan trọng - 1.1.2",
-    "content": "🎮 Chào mừng đến với %@ 1.1.2!\n\n🎉Sửa lỗi quan trọng:🎉\n\nTrình khởi chạy đôi khi bị kẹt ở trạng thái loading khi cài mod hoặc tài nguyên khác (không phải do mạng). Vấn đề này đã được khắc phục.\n\n🔒 An toàn dữ liệu: Hãy sao lưu thường xuyên bản lưu Minecraft và dữ liệu launcher\n🐛 Báo lỗi: Nếu gặp sự cố, vui lòng báo cáo trên kho GitHub của chúng tôi\n\n",
-    "author": "Đội ngũ Swift Craft Launcher"
-  }
-}

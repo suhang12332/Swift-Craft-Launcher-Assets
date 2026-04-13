@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "Viktig åtgärd - 1.1.2",
-    "content": "🎮 Välkommen till %@ 1.1.2!\n\n🎉Viktig åtgärd:🎉\n\nLaunchern kunde ibland fastna vid inläsning när du installerade mods eller andra resurser (inte på grund av nätverket). Det här problemet är nu åtgärdat.\n\n🔒 Datasäkerhet: säkerhetskopiera regelbundet dina Minecraft-sparfiler och launcher-data\n🐛 Felrapporter: om du stöter på problem, rapportera dem i vårt GitHub-repository\n\n",
-    "author": "Swift Craft Launcher Team"
-  }
-}

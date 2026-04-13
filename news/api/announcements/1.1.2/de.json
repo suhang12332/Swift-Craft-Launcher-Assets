@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "Wichtiger Fix - 1.1.2",
-    "content": "🎮 Willkommen bei %@ 1.1.2!\n\n🎉Wichtiger Fix:🎉\n\nDer Launcher konnte beim Installieren von Mods oder anderen Ressourcen manchmal beim Laden hängenbleiben (nicht wegen der Netzwerkverbindung). Dieses Problem ist nun behoben.\n\n🔒 Datensicherheit: Sichern Sie regelmäßig Ihre Minecraft-Welten und Launcher-Daten\n🐛 Fehlerberichte: Bei Problemen melden Sie diese bitte in unserem GitHub-Repository\n\n",
-    "author": "Swift Craft Launcher Team"
-  }
-}

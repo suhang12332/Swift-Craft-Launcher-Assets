@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "重大修復 - 1.1.2",
-    "content": "🎮 歡迎使用 %@ 1.1.2！\n\n🎉重大修復:🎉\n\n啟動器先前在安裝 mod 或其他資源時，偶爾會出現一直顯示 loading 的問題（與網路無關），此問題現已修復。\n\n🔒 資料安全：請定期備份您的 Minecraft 存檔與啟動器資料\n🐛 問題回饋：若您遇到任何問題，請至我們的 GitHub 儲存庫回報\n\n",
-    "author": "Swift Craft Launcher 團隊"
-  }
-}
