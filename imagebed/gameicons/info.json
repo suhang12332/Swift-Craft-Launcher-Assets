@@ -1,0 +1,19 @@
+{
+  "icons": [
+    {
+      "name": "vanilla.png"
+    },
+    {
+      "name": "fabric.png"
+    },
+    {
+      "name": "forge.png"
+    },
+    {
+      "name": "neoforge.png"
+    },
+    {
+      "name": "quilt.png"
+    }
+  ]
+}

@@ -8,7 +8,7 @@
   {
     "name": "Fabric",
     "url": "https://fabricmc.net/",
-    "avatar": "https://fabricmc.net/assets/logo.png",
+    "avatar": "https://github.com/fabricmc.png",
     "description": "Lightweight, experimental modding toolchain for Minecraft"
   },
   {
@@ -96,4 +96,3 @@
     "description": "Universal binary optimization tool for macOS applications"
   }
 ]
-
