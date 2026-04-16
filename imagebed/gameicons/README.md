@@ -14,7 +14,7 @@
 
 `info.json` 用于维护图标信息，推荐字段如下：
 
-- `name`: 图标文件名，例如 `minecraft.png`。
+- `name`: 图标文件名，例如 `minecraft` 默认会拼接`.png`。
 
 示例：
 
@@ -22,7 +22,7 @@
 {
   "icons": [
     {
-      "name": "minecraft.png"
+      "name": "minecraft"
     }
   ]
 }
