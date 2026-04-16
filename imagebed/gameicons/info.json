@@ -1,22 +1,28 @@
 {
   "icons": [
     {
-      "name": "vanilla"
+      "name": "vanilla",
+      "author": "vanilla"
     },
     {
-      "name": "fabric"
+      "name": "fabric",
+      "author": "fabric"
     },
     {
-      "name": "forge"
+      "name": "forge",
+      "author": "forge"
     },
     {
-      "name": "neoforge"
+      "name": "neoforge",
+      "author": "neoforge"
     },
     {
-      "name": "quilt"
+      "name": "quilt",
+      "author": "quilt"
     },
     {
-      "name": "猫凹条"
+      "name": "猫凹条",
+      "author": "猫凹条"
     }
   ]
 }
