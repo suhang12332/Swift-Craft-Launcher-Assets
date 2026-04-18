@@ -2,7 +2,7 @@ html,
 body {
     width: 100%;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 0 0;
     min-height: 100vh;
 }
 
@@ -10,6 +10,11 @@ body {
     max-width: 100% !important;
     display: flex;
     flex-direction: column;
+}
+
+.page-content-wrap {
+    margin: 0;
+    padding: 0 1rem;
 }
 
 .hero-section {
@@ -68,14 +73,6 @@ body {
 }
 
 @media all and (max-width: 736px) {
-    .language-selector-mobile {
-        display: inline-block;
-    }
-
-    .language-selector-desktop {
-        display: none;
-    }
-
     .hero-section {
         margin: 2em auto;
         padding: 0 1em;
@@ -217,19 +214,6 @@ header.Hero .nav-links .docs-link {
     }
 }
 
-/* Language selector - 使用原生样式 */
-.language-selector {
-    font-size: 0.9rem;
-}
-
-.language-selector-mobile {
-    display: none;
-}
-
-.language-selector-desktop {
-    display: inline-block;
-}
-
 /* Download button container */
 .download-container {
     margin: 2em 0;
@@ -258,7 +242,7 @@ header.Hero .nav-links .docs-link {
 footer.footer {
     margin-top: auto;
     display: flex;
-    min-height: 208px;
+    min-height: 240px;
 }
 
 footer.footer > div {
@@ -442,6 +426,7 @@ footer.footer a {
 
     .copyright p {
         text-align: center;
+        white-space: normal;
     }
 }
 
@@ -459,7 +444,7 @@ footer.footer a {
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 0;
 }
 
@@ -467,12 +452,8 @@ footer.footer a {
     color: var(--footer-color);
     font-size: 0.85rem;
     margin: 0;
-    text-align: left;
-}
-
-.copyright-language {
-    flex: 0 0 auto;
-    margin: 0;
+    text-align: center;
+    white-space: nowrap;
 }
 
 /* Version history page: two-column layout (keep header unchanged) */
