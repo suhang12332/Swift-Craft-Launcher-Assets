@@ -410,7 +410,25 @@
   function getBaseUrl() {
     const meta = document.querySelector('meta[name="releases-base"]');
     const fromMeta = meta?.getAttribute('content')?.trim();
-    return fromMeta || DEFAULT_RELEASES_BASE;
+    const base = fromMeta || DEFAULT_RELEASES_BASE;
+    try {
+      const u = new URL(base, window.location.href);
+      const host = String(u.hostname || '').toLowerCase();
+      const segs = String(u.pathname || '').split('/').filter(Boolean);
+      // If configured as GitHub Pages URL:
+      //   https://<owner>.github.io/<repo>/releases-notes/
+      // convert to raw URL to avoid CORS failures on custom domains.
+      if (host.endsWith('.github.io') && segs.length >= 2) {
+        const owner = host.slice(0, -'.github.io'.length);
+        const repo = segs[0];
+        const releasesDir = segs.slice(1).join('/') || 'releases-notes';
+        const ref = getRepoRef();
+        return `https://raw.githubusercontent.com/${owner}/${repo}/${ref}/${releasesDir.replace(/^\/+|\/+$/g, '')}/`;
+      }
+    } catch (_) {
+      // Keep original base when URL parsing fails.
+    }
+    return base;
   }
 
   function toGitHubBlobUrl(baseUrl, filename) {
