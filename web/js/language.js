@@ -129,13 +129,31 @@
         return 'en';
     }
     
+    // 同步多个语言选择器的选中值
+    function syncLanguageSelectors(selectors, selectedValue) {
+        selectors.forEach(function(selector) {
+            if (selector.value !== selectedValue) {
+                selector.value = selectedValue;
+            }
+        });
+    }
+
     // 监听语言选择器的变化，处理跳转和记录用户选择
     document.addEventListener('DOMContentLoaded', function() {
-        const languageSelector = document.getElementById('languageSelector');
-        if (languageSelector) {
-            // 设置当前选中项
-            const currentLang = getCurrentPageLanguage();
-            const options = languageSelector.options;
+        const languageSelectors = Array.from(document.querySelectorAll('[data-language-selector]'));
+        const legacySelector = document.getElementById('languageSelector');
+        if (legacySelector && !languageSelectors.includes(legacySelector)) {
+            languageSelectors.push(legacySelector);
+        }
+
+        if (!languageSelectors.length) {
+            return;
+        }
+
+        // 设置当前选中项
+        const currentLang = getCurrentPageLanguage();
+        languageSelectors.forEach(function(selector) {
+            const options = selector.options;
             for (let i = 0; i < options.length; i++) {
                 const value = options[i].value;
                 const optionLang = getLanguageFromOptionValue(value);
@@ -144,21 +162,25 @@
                     break;
                 }
             }
-            
-            // 监听选择变化
-            languageSelector.addEventListener('change', function() {
+        });
+
+        // 监听选择变化
+        languageSelectors.forEach(function(selector) {
+            selector.addEventListener('change', function() {
                 const selectedValue = this.value;
-                
+
+                syncLanguageSelectors(languageSelectors, selectedValue);
+
                 // 获取目标语言
                 const selectedLang = getLanguageFromOptionValue(selectedValue);
-                
+
                 // 保存用户选择
                 localStorage.setItem('user-selected-language', selectedLang);
-                
+
                 // 跳转到选中的语言版本
                 window.location.href = selectedValue;
             });
-        }
+        });
     });
 })();
 

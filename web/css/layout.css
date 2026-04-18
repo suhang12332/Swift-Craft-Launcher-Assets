@@ -2,7 +2,7 @@ html,
 body {
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 0.3rem;
     min-height: 100vh;
 }
 
@@ -68,6 +68,14 @@ body {
 }
 
 @media all and (max-width: 736px) {
+    .language-selector-mobile {
+        display: inline-block;
+    }
+
+    .language-selector-desktop {
+        display: none;
+    }
+
     .hero-section {
         margin: 2em auto;
         padding: 0 1em;
@@ -214,6 +222,14 @@ header.Hero .nav-links .docs-link {
     font-size: 0.9rem;
 }
 
+.language-selector-mobile {
+    display: none;
+}
+
+.language-selector-desktop {
+    display: inline-block;
+}
+
 /* Download button container */
 .download-container {
     margin: 2em 0;
@@ -263,21 +279,39 @@ footer.footer .footer-content {
     padding: 2em 0;
 }
 
+footer.footer .footer-content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 footer.footer h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-bottom: 1.5em;
+    margin: 0;
+    line-height: 1.5;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
     color: var(--subheading-color);
 }
 
 footer.footer p {
-    margin-bottom: 1em;
+    margin: 0;
+    line-height: 1.5;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+footer.footer p + p {
+    margin-top: 0;
 }
 
 footer.footer a {
     color: var(--footer-link-color);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 /* Contributor avatars */
@@ -406,6 +440,10 @@ footer.footer a {
         align-items: center;
         justify-content: center;
     }
+
+    .copyright p {
+        text-align: center;
+    }
 }
 
 /* Copyright section */
@@ -418,18 +456,24 @@ footer.footer a {
 .copyright > div {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 2em 1em;
+    padding: 1em 0;
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 0;
 }
 
 .copyright p {
     color: var(--footer-color);
     font-size: 0.85rem;
     margin: 0;
-    text-align: center;
+    text-align: left;
+}
+
+.copyright-language {
+    flex: 0 0 auto;
+    margin: 0;
 }
 
 /* Version history page: two-column layout (keep header unchanged) */
