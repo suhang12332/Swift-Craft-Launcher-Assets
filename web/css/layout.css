@@ -456,7 +456,7 @@ footer.footer a {
 .copyright > div {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 1em 1em;
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
