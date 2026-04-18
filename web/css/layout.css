@@ -264,7 +264,6 @@ footer.footer {
 footer.footer > div {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2em;
     border-top: 1px solid var(--border-color);
     flex: 1;
     display: flex;
