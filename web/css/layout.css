@@ -466,7 +466,7 @@ footer.footer a {
 .history-two-col {
     max-width: 1200px;
     margin: 4em auto;
-    padding: 0;
+    padding: 1em;
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 2em;
