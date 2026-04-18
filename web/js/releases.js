@@ -6,6 +6,11 @@
   const DEFAULT_RELEASES_BASE =
     'https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/main/releases-notes/';
 
+  const LAUNCHER_APP_RELEASES_API =
+    'https://api.github.com/repos/suhang12332/Swift-Craft-Launcher/releases?per_page=100';
+
+  let downloadCountPaintGen = 0;
+
   async function tryFetchJson(url) {
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) return null;
@@ -216,10 +221,130 @@
     }
   }
 
-  async function showRelease({ baseUrl, filename, listEl, contentEl, titleEl, rawLinkEl }) {
+  function parseLinkNext(header) {
+    if (!header) return null;
+    for (const part of header.split(',')) {
+      if (part.includes('rel="next"')) {
+        const m = part.match(/<([^>]+)>/);
+        return m ? m[1].trim() : null;
+      }
+    }
+    return null;
+  }
+
+  async function fetchAllLauncherReleases() {
+    const out = [];
+    let url = LAUNCHER_APP_RELEASES_API;
+    while (url) {
+      const res = await fetch(url, {
+        headers: { Accept: 'application/vnd.github+json' }
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      const page = await res.json();
+      if (!Array.isArray(page)) throw new Error('releases: expected array');
+      out.push(...page);
+      url = parseLinkNext(res.headers.get('Link'));
+    }
+    return out;
+  }
+
+  function normalizeReleaseTag(tag) {
+    return String(tag || '')
+      .replace(/^v/i, '')
+      .trim();
+  }
+
+  function buildVersionToAssetDownloads(releases) {
+    const map = new Map();
+    for (const r of releases) {
+      if (!r || r.draft) continue;
+      const key = normalizeReleaseTag(r.tag_name);
+      let sum = 0;
+      for (const a of r.assets || []) {
+        sum += Number(a.download_count) || 0;
+      }
+      map.set(key, sum);
+    }
+    return map;
+  }
+
+  async function loadLauncherDownloadMap() {
+    try {
+      const rel = await fetchAllLauncherReleases();
+      return buildVersionToAssetDownloads(rel);
+    } catch (e) {
+      console.warn('releases.js: launcher release download stats unavailable', e);
+      return null;
+    }
+  }
+
+  function localeFromDoc() {
+    const lang = document.documentElement.lang || 'en';
+    const low = String(lang).toLowerCase();
+    if (low.startsWith('zh-hant')) return 'zh-Hant';
+    if (low.startsWith('zh')) return 'zh-Hans';
+    return lang;
+  }
+
+  function getDownloadStatsLoading() {
+    const lang = String(document.documentElement.lang || '').toLowerCase();
+    if (lang.startsWith('en')) return '· …';
+    if (lang.startsWith('zh-hant')) return '· …';
+    return '· …';
+  }
+
+  function getDownloadStatsLabel(formattedNumber) {
+    const lang = String(document.documentElement.lang || '').toLowerCase();
+    if (lang.startsWith('en')) return `· ${formattedNumber} downloads`;
+    if (lang.startsWith('zh-hant')) return `· 累計下載 ${formattedNumber} 次`;
+    return `· 累计下载 ${formattedNumber} 次`;
+  }
+
+  function clearReleaseDownloadCount() {
+    const el = document.getElementById('releaseDownloadCount');
+    if (!el) return;
+    downloadCountPaintGen += 1;
+    el.textContent = '';
+    el.setAttribute('hidden', '');
+  }
+
+  async function paintReleaseDownloadCount(version, mapPromise) {
+    const el = document.getElementById('releaseDownloadCount');
+    if (!el) return;
+    const gen = ++downloadCountPaintGen;
+    el.removeAttribute('hidden');
+    el.textContent = getDownloadStatsLoading();
+
+    try {
+      const map = await mapPromise;
+      if (gen !== downloadCountPaintGen) return;
+      if (!map) {
+        el.textContent = '';
+        el.setAttribute('hidden', '');
+        return;
+      }
+      if (!map.has(version)) {
+        el.textContent = '';
+        el.setAttribute('hidden', '');
+        return;
+      }
+      const n = map.get(version);
+      const formatted = new Intl.NumberFormat(localeFromDoc()).format(n);
+      el.textContent = getDownloadStatsLabel(formatted);
+    } catch (_) {
+      if (gen !== downloadCountPaintGen) return;
+      el.textContent = '';
+      el.setAttribute('hidden', '');
+    }
+  }
+
+  async function showRelease({ baseUrl, filename, listEl, contentEl, titleEl, rawLinkEl, downloadMapPromise }) {
     const version = filenameToVersion(filename);
     setSelected(listEl, version);
     if (titleEl) titleEl.textContent = version;
+    if (titleEl && downloadMapPromise) {
+      void paintReleaseDownloadCount(version, downloadMapPromise);
+    }
     if (!contentEl) return;
 
     setBusy(contentEl, true);
@@ -265,7 +390,7 @@
     return `https://github.com/${owner}/${repo}/blob/${ref}/releases-notes/${filename}`;
   }
 
-  function makeTask({ version, filename, baseUrl, initiallyOpen }) {
+  function makeTask({ version, filename, baseUrl, initiallyOpen, downloadMapPromise }) {
     const task = document.createElement('div');
     task.className = 'Task';
     task.setAttribute('data-istaskopen', initiallyOpen ? 'true' : 'false');
@@ -320,11 +445,20 @@
       body.appendChild(outro);
     }
 
+    function refreshHeaderDownloads() {
+      if (downloadMapPromise) {
+        void paintReleaseDownloadCount(version, downloadMapPromise);
+      }
+    }
+
     function setOpen(open) {
       task.setAttribute('data-istaskopen', open ? 'true' : 'false');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       body.setAttribute('aria-hidden', open ? 'false' : 'true');
-      if (open) void loadIfNeeded();
+      if (open) {
+        void loadIfNeeded();
+        refreshHeaderDownloads();
+      }
     }
 
     btn.addEventListener('click', () => {
@@ -335,7 +469,10 @@
       }
     });
 
-    if (initiallyOpen) void loadIfNeeded();
+    if (initiallyOpen) {
+      void loadIfNeeded();
+      refreshHeaderDownloads();
+    }
 
     return task;
   }
@@ -362,6 +499,8 @@
         tasksEl.innerHTML = renderLoadingMarkup('list');
       }
 
+      const launcherDownloadMapPromise = loadLauncherDownloadMap();
+
       const files = await loadReleaseFilesFromDirectory(baseUrl);
       if (isNarrowScreen && tasksEl) {
         if (!files || !files.length) {
@@ -379,7 +518,15 @@
         for (const filename of files) {
           const version = filenameToVersion(filename);
           const initiallyOpen = version === initialVersion;
-          tasksEl.appendChild(makeTask({ version, filename, baseUrl, initiallyOpen }));
+          tasksEl.appendChild(
+            makeTask({
+              version,
+              filename,
+              baseUrl,
+              initiallyOpen,
+              downloadMapPromise: launcherDownloadMapPromise
+            })
+          );
         }
         return;
       }
@@ -392,6 +539,7 @@
           '<p class="release-error">无法加载版本列表。</p>' +
           '<p class="release-error-detail">请确认仓库公开可访问，且 GitHub API 可以读取 <code>releases-notes</code> 目录。</p>';
         if (titleEl2) titleEl2.textContent = '—';
+        clearReleaseDownloadCount();
         return;
       }
 
@@ -414,7 +562,8 @@
             filename,
             listEl: tocEl,
             contentEl: contentEl2,
-            titleEl: titleEl2
+            titleEl: titleEl2,
+            downloadMapPromise: launcherDownloadMapPromise
           });
         });
         p.appendChild(a);
@@ -431,7 +580,8 @@
         filename: initialFilename,
         listEl: tocEl,
         contentEl: contentEl2,
-        titleEl: titleEl2
+        titleEl: titleEl2,
+        downloadMapPromise: launcherDownloadMapPromise
       });
       return;
     }
@@ -453,7 +603,15 @@
       for (const filename of files) {
         const version = filenameToVersion(filename);
         const initiallyOpen = version === initialVersion;
-        tasksEl.appendChild(makeTask({ version, filename, baseUrl, initiallyOpen }));
+        tasksEl.appendChild(
+          makeTask({
+            version,
+            filename,
+            baseUrl,
+            initiallyOpen,
+            downloadMapPromise: launcherDownloadMapPromise
+          })
+        );
       }
       return;
     }
@@ -469,6 +627,7 @@
       contentEl.innerHTML =
         '<p class="release-error">无法加载版本列表。</p>';
       if (titleEl) titleEl.textContent = '—';
+      clearReleaseDownloadCount();
       return;
     }
 
@@ -486,7 +645,14 @@
       a.addEventListener('click', (ev) => {
         ev.preventDefault();
         history.replaceState(null, '', `#${encodeURIComponent(version)}`);
-        void showRelease({ baseUrl, filename, listEl, contentEl, titleEl });
+        void showRelease({
+          baseUrl,
+          filename,
+          listEl,
+          contentEl,
+          titleEl,
+          downloadMapPromise: launcherDownloadMapPromise
+        });
       });
       li.appendChild(a);
       listEl.appendChild(li);
@@ -495,7 +661,14 @@
     const hash = decodeURIComponent((window.location.hash || '').replace(/^#/, '')).trim();
     const initialFilename =
       (hash && files.find((f) => filenameToVersion(f) === hash)) || files[0];
-    void showRelease({ baseUrl, filename: initialFilename, listEl, contentEl, titleEl });
+    void showRelease({
+      baseUrl,
+      filename: initialFilename,
+      listEl,
+      contentEl,
+      titleEl,
+      downloadMapPromise: launcherDownloadMapPromise
+    });
     };
 
     void initAsync();

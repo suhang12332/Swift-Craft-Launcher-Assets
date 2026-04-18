@@ -481,6 +481,21 @@ footer.footer a {
     gap: 1em;
 }
 
+.history-release-heading {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35em 0.65em;
+    min-width: 0;
+    flex: 1;
+}
+
+.history-release-heading #releaseTitleLink {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
 .history-title-row > a {
     display: inline-flex;
     align-items: center;
@@ -519,6 +534,17 @@ footer.footer a {
 
 .history-detail #releaseTitleLink:hover {
     text-decoration: underline !important;
+}
+
+.history-detail #releaseDownloadCount {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--footer-color);
+    line-height: 1.2;
+}
+
+.history-detail #releaseDownloadCount[hidden] {
+    display: none !important;
 }
 
 .history-content {
