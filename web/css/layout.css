@@ -2,7 +2,7 @@ html,
 body {
     width: 100%;
     margin: 0;
-    padding: 0 0.3rem;
+    padding: 0 0.5rem;
     min-height: 100vh;
 }
 
@@ -456,7 +456,7 @@ footer.footer a {
 .copyright > div {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 1em;
+    padding: 1em 0;
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
