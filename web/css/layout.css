@@ -671,6 +671,10 @@ footer.footer a {
         display: none;
     }
 
+    .history-detail #releaseDownloadCount {
+        display: none !important;
+    }
+
     .history-detail .HIStrings {
         display: block;
         margin-bottom: 0;
@@ -682,5 +686,18 @@ footer.footer a {
 
     .history-mobile-tasks {
         display: block;
+    }
+
+    .history-mobile-tasks .TaskButtonName {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5em;
+        flex-wrap: wrap;
+    }
+
+    .history-mobile-tasks .task-download-count {
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: var(--footer-color);
     }
 }

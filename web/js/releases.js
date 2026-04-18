@@ -97,6 +97,16 @@
       repo = inferred.repo;
       ref = getRepoRef();
     }
+    if (!owner || !repo) {
+      // Custom domains cannot be reverse-mapped to owner/repo from location.
+      // Fall back to repository info encoded in the default raw base URL.
+      const fallback = parseReleasesBase(DEFAULT_RELEASES_BASE);
+      if (fallback) {
+        owner = fallback.owner;
+        repo = fallback.repo;
+        if (!ref) ref = fallback.ref;
+      }
+    }
     if (!owner || !repo) return null;
     const releasesPath = parsed ? 'releases-notes' : getDirectoryPathFromBaseUrl(baseUrl);
     const apiUrl = `https://api.github.com/repos/${encodeURIComponent(
@@ -300,6 +310,13 @@
     return `· 累计下载 ${formattedNumber} 次`;
   }
 
+  function getTaskDownloadStatsLabel(formattedNumber) {
+    const lang = String(document.documentElement.lang || '').toLowerCase();
+    if (lang.startsWith('en')) return `${formattedNumber} downloads`;
+    if (lang.startsWith('zh-hant')) return `累計下載 ${formattedNumber} 次`;
+    return `累计下载 ${formattedNumber} 次`;
+  }
+
   function clearReleaseDownloadCount() {
     const el = document.getElementById('releaseDownloadCount');
     if (!el) return;
@@ -335,6 +352,27 @@
       if (gen !== downloadCountPaintGen) return;
       el.textContent = '';
       el.setAttribute('hidden', '');
+    }
+  }
+
+  async function paintTaskDownloadCount(el, version, mapPromise) {
+    if (!el || !mapPromise) return;
+    el.hidden = false;
+    el.textContent = '…';
+    try {
+      const map = await mapPromise;
+      if (!map || !map.has(version)) {
+        el.hidden = true;
+        el.textContent = '';
+        return;
+      }
+      const n = map.get(version);
+      const formatted = new Intl.NumberFormat(localeFromDoc()).format(n);
+      el.textContent = getTaskDownloadStatsLabel(formatted);
+      el.hidden = false;
+    } catch (_) {
+      el.hidden = true;
+      el.textContent = '';
     }
   }
 
@@ -404,8 +442,14 @@
     btn.setAttribute('aria-expanded', initiallyOpen ? 'true' : 'false');
 
     const btnText = document.createElement('span');
+    btnText.className = 'task-version-text';
     btnText.textContent = version;
     btn.appendChild(btnText);
+
+    const btnDownloadCount = document.createElement('span');
+    btnDownloadCount.className = 'task-download-count';
+    btnDownloadCount.hidden = true;
+    btn.appendChild(btnDownloadCount);
 
     const arrow = document.createElement('span');
     arrow.className = 'task-arrow';
@@ -445,19 +489,12 @@
       body.appendChild(outro);
     }
 
-    function refreshHeaderDownloads() {
-      if (downloadMapPromise) {
-        void paintReleaseDownloadCount(version, downloadMapPromise);
-      }
-    }
-
     function setOpen(open) {
       task.setAttribute('data-istaskopen', open ? 'true' : 'false');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       body.setAttribute('aria-hidden', open ? 'false' : 'true');
       if (open) {
         void loadIfNeeded();
-        refreshHeaderDownloads();
       }
     }
 
@@ -471,7 +508,10 @@
 
     if (initiallyOpen) {
       void loadIfNeeded();
-      refreshHeaderDownloads();
+    }
+
+    if (downloadMapPromise) {
+      void paintTaskDownloadCount(btnDownloadCount, version, downloadMapPromise);
     }
 
     return task;
@@ -503,6 +543,7 @@
 
       const files = await loadReleaseFilesFromDirectory(baseUrl);
       if (isNarrowScreen && tasksEl) {
+        clearReleaseDownloadCount();
         if (!files || !files.length) {
           tasksEl.innerHTML =
             '<p class="release-error">无法读取 <code>releases-notes/</code> 目录。</p>';
