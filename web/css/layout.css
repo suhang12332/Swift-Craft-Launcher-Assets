@@ -130,7 +130,7 @@ header.Hero {
 header.Hero nav {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 2em;
+    padding: 1em 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -621,8 +621,16 @@ footer.footer a {
         rgba(127, 127, 127, 0.9) 300deg,
         rgba(127, 127, 127, 1) 360deg
     );
-    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
-    mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
+    -webkit-mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - 2px),
+        #000 calc(100% - 1px)
+    );
+    mask: radial-gradient(
+        farthest-side,
+        transparent calc(100% - 2px),
+        #000 calc(100% - 1px)
+    );
     animation: mac-spinner-rotate 0.75s linear infinite;
 }
 

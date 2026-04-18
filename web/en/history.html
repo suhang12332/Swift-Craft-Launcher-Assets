@@ -57,54 +57,66 @@
         </header>
 
         <!-- Body（Help-style Task list content） -->
-        <main>
-            <div class="history-two-col">
-                <aside class="history-sidebar" aria-label="Versions">
-                    <ul class="toc-list" id="releaseToc">
-                        <li class="history-loading-item">
-                            <div
-                                class="history-loading"
-                                role="status"
-                                aria-live="polite"
-                            >
-                                <span
-                                    class="mac-spinner"
-                                    aria-hidden="true"
-                                ></span>
-                                <span class="history-loading-label"
-                                    >Loading release history…</span
+        <div class="page-content-wrap">
+            <main>
+                <div class="history-two-col">
+                    <aside class="history-sidebar" aria-label="Versions">
+                        <ul class="toc-list" id="releaseToc">
+                            <li class="history-loading-item">
+                                <div
+                                    class="history-loading"
+                                    role="status"
+                                    aria-live="polite"
                                 >
-                            </div>
-                        </li>
-                    </ul>
-                </aside>
+                                    <span
+                                        class="mac-spinner"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <span class="history-loading-label"
+                                        >Loading release history…</span
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
 
-                <section class="history-detail" aria-label="Release details">
-                    <div class="HIStrings">
-                        <p class="history-title-row">
-                            <span class="history-release-heading">
-                                <a id="releaseTitleLink" href="#" target="_blank">
-                                    <strong id="releaseTitle">—</strong>
-                                </a>
-                                <span
-                                    id="releaseDownloadCount"
-                                    class="release-download-count"
-                                    hidden
-                                ></span>
-                            </span>
-                            <a class="back-to-index" href="../index.html"
-                                >Back to Home</a
-                            >
-                        </p>
-                    </div>
-                    <div
-                        id="releaseContent"
-                        class="history-content"
-                        aria-busy="false"
-                    ></div>
-                    <div id="releaseTasks" class="history-mobile-tasks"></div>
-                </section>
-            </div>
-        </main>
+                    <section
+                        class="history-detail"
+                        aria-label="Release details"
+                    >
+                        <div class="HIStrings">
+                            <p class="history-title-row">
+                                <span class="history-release-heading">
+                                    <a
+                                        id="releaseTitleLink"
+                                        href="#"
+                                        target="_blank"
+                                    >
+                                        <strong id="releaseTitle">—</strong>
+                                    </a>
+                                    <span
+                                        id="releaseDownloadCount"
+                                        class="release-download-count"
+                                        hidden
+                                    ></span>
+                                </span>
+                                <a class="back-to-index" href="../index.html"
+                                    >Back to Home</a
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="releaseContent"
+                            class="history-content"
+                            aria-busy="false"
+                        ></div>
+                        <div
+                            id="releaseTasks"
+                            class="history-mobile-tasks"
+                        ></div>
+                    </section>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
