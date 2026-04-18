@@ -36,14 +36,13 @@ body {
 .app-icon {
     width: 96px;
     height: 96px;
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1em 0;
     display: block;
 }
 
 .intro-text h2 {
     font-size: 1.75rem;
     font-weight: 600;
-    margin-bottom: 1em;
     color: var(--subheading-color);
 }
 
@@ -100,7 +99,7 @@ body {
     }
 
     .intro-text h2.hero-main-title {
-        font-size: 1.9rem !important;
+        font-size: 3.2rem !important;
         font-weight: 700 !important;
     }
 
