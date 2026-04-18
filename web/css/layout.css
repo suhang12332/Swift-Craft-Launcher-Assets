@@ -400,6 +400,7 @@ footer.footer a {
 
     footer.footer .footer-content > div {
         width: 100%;
+        align-items: center;
     }
 
     .contributors-wrapper {
