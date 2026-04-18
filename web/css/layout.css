@@ -242,7 +242,7 @@ header.Hero .nav-links .docs-link {
 footer.footer {
     margin-top: auto;
     display: flex;
-    min-height: 240px;
+    min-height: 208px;
 }
 
 footer.footer > div {
@@ -417,13 +417,13 @@ footer.footer a {
 .copyright {
     width: 100%;
     background: var(--hero-background-start);
-    margin-bottom: 1em;
+    margin-bottom: 0;
 }
 
 .copyright > div {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2em;
+    padding: 1em 2em 1em;
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
