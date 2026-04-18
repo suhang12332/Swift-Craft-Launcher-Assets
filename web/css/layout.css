@@ -399,11 +399,6 @@ footer.footer a {
         margin-top: 0.5em;
     }
 
-    .copyright {
-        margin-bottom: 2em;
-        padding-bottom: 1em;
-    }
-
     .copyright > div {
         padding: 1.4em 2em;
         min-height: 20px;
@@ -423,7 +418,7 @@ footer.footer a {
 .copyright > div {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 2em 1em;
+    padding: 1em 2em 1.4em;
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
