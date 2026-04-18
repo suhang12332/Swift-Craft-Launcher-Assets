@@ -42,6 +42,11 @@ body {
     color: var(--subheading-color);
 }
 
+.intro-text h2.hero-main-title {
+    font-size: 3.2rem !important;
+    font-weight: 700 !important;
+}
+
 .intro-text p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -87,6 +92,11 @@ body {
 
     .intro-text h2 {
         font-size: 1.5rem;
+    }
+
+    .intro-text h2.hero-main-title {
+        font-size: 1.9rem !important;
+        font-weight: 700 !important;
     }
 
     .intro-text p {
