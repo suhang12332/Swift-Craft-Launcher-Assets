@@ -124,9 +124,9 @@ header.Hero {
 }
 
 header.Hero nav {
-    max-width: 1442px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 2.61538em;
+    padding: 1em 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -418,7 +418,7 @@ footer.footer a {
 .copyright > div {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 2em 1.4em;
+    padding: 1em 2em 1em;
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
