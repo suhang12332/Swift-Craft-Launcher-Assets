@@ -185,6 +185,12 @@ header.Hero .nav-links .docs-link {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
+    color: var(--base-color) !important;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
 }
 
 .github-icon {
