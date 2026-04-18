@@ -1,101 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant" class="dark-mode-enabled">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="light dark" name="color-scheme" />
+        <title>Swift Craft Launcher - 專為 macOS 打造的 Minecraft 啟動器</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac128pt1x.png"
+        />
+        <link rel="stylesheet" href="../css/app.css" />
+        <link rel="stylesheet" href="../css/layout.css" />
+        <script src="../js/language.js"></script>
+        <script src="../js/contributors.js" defer></script>
+        <script src="../js/download-total.js" defer></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="light dark" name="color-scheme">
-    <title>Swift Craft Launcher - 專為 macOS 打造的 Minecraft 啟動器</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac128pt1x.png">
-    <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <script src="../js/language.js"></script>
-    <script src="../js/contributors.js" defer></script>
-</head>
-
-<body dir="ltr" class="AppleTopic apd-topic dark-mode-enabled" data-designversion="2">
-    <!-- Header -->
-    <header class="Hero">
-        <nav>
-            <h1>Swift Craft Launcher</h1>
-            <div class="nav-links">
-                <a href="../../help/SwiftCraftLauncher.help/Contents/Resources/zh-Hant.lproj/index.html" class="docs-link" target="_blank" rel="noopener noreferrer">文件</a>
-                <a href="history.html" class="docs-link">版本歷史</a>
-                <a href="https://github.com/suhang12332/Swift-Craft-Launcher/" class="github-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                    <img src="../assets/github-mark.svg" alt="GitHub" class="github-icon github-icon-light">
-                    <img src="../assets/github-mark-white.svg" alt="GitHub" class="github-icon github-icon-dark">
-                </a>
-                <select class="language-selector" id="languageSelector">
-                    <option value="../en/index.html">English</option>
-                    <option value="../index.html">简体中文</option>
-                    <option value="index.html" selected>繁體中文</option>
-                </select>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Body -->
-    <main>
-        <section class="hero-section">
-            <div class="intro-text">
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png" alt="Swift Craft Launcher Icon" class="app-icon">
-                <h2>Swift Craft Launcher</h2>
-                <p>Swift Craft Launcher 是一款基於 SwiftUI 的原生 macOS Minecraft 啟動器，提供流暢的效能、完整的模組載入器支援、Microsoft 帳戶登入和直觀的遊戲管理。</p>
-                <p><b>需要 macOS 14.0 或更高版本</b></p>
-                <div class="download-container">
-                    <a href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest" class="download-button" target="_blank" rel="noopener noreferrer">下載</a>
+    <body
+        dir="ltr"
+        class="AppleTopic apd-topic dark-mode-enabled"
+        data-designversion="2"
+    >
+        <!-- Header -->
+        <header class="Hero">
+            <nav>
+                <h1>Swift Craft Launcher</h1>
+                <div class="nav-links">
+                    <a
+                        href="../../help/SwiftCraftLauncher.help/Contents/Resources/zh-Hant.lproj/index.html"
+                        class="docs-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >文件</a
+                    >
+                    <a href="history.html" class="docs-link">版本歷史</a>
+                    <a
+                        href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+                        class="github-link"
+                        aria-label="GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="../assets/github-mark.svg"
+                            alt="GitHub"
+                            class="github-icon github-icon-light"
+                        />
+                        <img
+                            src="../assets/github-mark-white.svg"
+                            alt="GitHub"
+                            class="github-icon github-icon-dark"
+                        />
+                    </a>
+                    <select class="language-selector" id="languageSelector">
+                        <option value="../en/index.html">English</option>
+                        <option value="../index.html">简体中文</option>
+                        <option value="index.html" selected>繁體中文</option>
+                    </select>
                 </div>
-            </div>
-            <div class="macbook-container">
-                <img src="../assets/slice.png" alt="Swift Craft Launcher" class="macbook-screen">
-            </div>
-        </section>
-    </main>
+            </nav>
+        </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div>
-            <div class="footer-content">
-                <div>
-                    <h3>支援</h3>
-                    <p><a href="../../help/SwiftCraftLauncher.help/Contents/Resources/zh-Hant.lproj/index.html" target="_blank" rel="noopener noreferrer">使用者指南</a></p>
-                    <p><a href="history.html">版本歷史</a></p>
-                    <p><a href="https://github.com/suhang12332/Swift-Craft-Launcher/issues" target="_blank" rel="noopener noreferrer">回報問題</a></p>
-                    <p><a href="https://github.com/suhang12332/Swift-Craft-Launcher/" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <!-- Body -->
+        <main>
+            <section class="hero-section">
+                <div class="intro-text">
+                    <img
+                        src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+                        alt="Swift Craft Launcher Icon"
+                        class="app-icon"
+                    />
+                    <h2>Swift Craft Launcher</h2>
+                    <p>
+                        Swift Craft Launcher 是一款基於 SwiftUI 的原生 macOS
+                        Minecraft
+                        啟動器，提供流暢的效能、完整的模組載入器支援、Microsoft
+                        帳戶登入和直觀的遊戲管理。
+                    </p>
+                    <p><b>需要 macOS 14.0 或更高版本</b></p>
+                    <div class="download-container">
+                        <a
+                            href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
+                            class="download-button"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><span id="downloadTotal" aria-live="polite">
+                                · …</span
+                            ></a
+                        >
+                    </div>
                 </div>
-                <div>
-                    <h3>社群</h3>
-                    <p><a href="https://qm.qq.com/cgi-bin/qm/qr?k=1057517524" target="_blank" rel="noopener noreferrer">QQ</a></p>
-                    <p><a href="https://discord.gg/gYESVa3CZd" target="_blank" rel="noopener noreferrer">Discord</a></p>
-                    <p><a href="https://space.bilibili.com/627351279?spm_id_from=333.1007.0.0" target="_blank" rel="noopener noreferrer">Bilibili</a></p>
+                <div class="macbook-container">
+                    <img
+                        src="../assets/slice.png"
+                        alt="Swift Craft Launcher"
+                        class="macbook-screen"
+                    />
                 </div>
-                <div>
-                    <h3>GitHub 貢獻者</h3>
-                    <div class="contributors-wrapper">
-                        <div class="contributors-avatars" data-source="github">
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div>
+                <div class="footer-content">
+                    <div>
+                        <h3>支援</h3>
+                        <p>
+                            <a
+                                href="../../help/SwiftCraftLauncher.help/Contents/Resources/zh-Hant.lproj/index.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >使用者指南</a
+                            >
+                        </p>
+                        <p><a href="history.html">版本歷史</a></p>
+                        <p>
+                            <a
+                                href="https://github.com/suhang12332/Swift-Craft-Launcher/issues"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >回報問題</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >GitHub</a
+                            >
+                        </p>
+                    </div>
+                    <div>
+                        <h3>社群</h3>
+                        <p>
+                            <a
+                                href="https://qm.qq.com/cgi-bin/qm/qr?k=1057517524"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >QQ</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="https://discord.gg/gYESVa3CZd"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Discord</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="https://space.bilibili.com/627351279?spm_id_from=333.1007.0.0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Bilibili</a
+                            >
+                        </p>
+                    </div>
+                    <div>
+                        <h3>GitHub 貢獻者</h3>
+                        <div class="contributors-wrapper">
+                            <div
+                                class="contributors-avatars"
+                                data-source="github"
+                            ></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>核心貢獻者</h3>
+                        <div class="contributors-wrapper">
+                            <div
+                                class="contributors-avatars"
+                                data-source="core"
+                            ></div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h3>核心貢獻者</h3>
-                    <div class="contributors-wrapper">
-                        <div class="contributors-avatars" data-source="core">
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </footer>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div>
+                <p>版權所有 © 2025-2026 Swift Craft Launcher。保留所有權利。</p>
             </div>
         </div>
-    </footer>
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div>
-            <p>
-                版權所有 © 2025-2026 Swift Craft Launcher。保留所有權利。
-            </p>
-        </div>
-    </div>
-</body>
-
+    </body>
 </html>
-

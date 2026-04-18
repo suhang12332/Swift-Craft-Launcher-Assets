@@ -1,100 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark-mode-enabled">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="light dark" name="color-scheme" />
+        <title>Swift Craft Launcher - A Minecraft Launcher for macOS</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac128pt1x.png"
+        />
+        <link rel="stylesheet" href="../css/app.css" />
+        <link rel="stylesheet" href="../css/layout.css" />
+        <script src="../js/language.js"></script>
+        <script src="../js/contributors.js" defer></script>
+        <script src="../js/download-total.js" defer></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="light dark" name="color-scheme">
-    <title>Swift Craft Launcher - A Minecraft Launcher for macOS</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac128pt1x.png">
-    <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <script src="../js/language.js"></script>
-    <script src="../js/contributors.js" defer></script>
-</head>
-
-<body dir="ltr" class="AppleTopic apd-topic dark-mode-enabled" data-designversion="2">
-    <!-- Header -->
-    <header class="Hero">
-        <nav>
-            <h1>Swift Craft Launcher</h1>
-            <div class="nav-links">
-                <a href="../../help/SwiftCraftLauncher.help/Contents/Resources/en.lproj/index.html" class="docs-link" target="_blank" rel="noopener noreferrer">Docs</a>
-                <a href="history.html" class="docs-link">Changelog</a>
-                <a href="https://github.com/suhang12332/Swift-Craft-Launcher/" class="github-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                    <img src="../assets/github-mark.svg" alt="GitHub" class="github-icon github-icon-light">
-                    <img src="../assets/github-mark-white.svg" alt="GitHub" class="github-icon github-icon-dark">
-                </a>
-                <select class="language-selector" id="languageSelector">
-                    <option value="index.html" selected>English</option>
-                    <option value="../index.html">简体中文</option>
-                    <option value="../zh-Hant/index.html">繁體中文</option>
-                </select>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Body -->
-    <main>
-        <section class="hero-section">
-            <div class="intro-text">
-                <img src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png" alt="Swift Craft Launcher Icon" class="app-icon">
-                <h2>Swift Craft Launcher</h2>
-                <p>Swift Craft Launcher is a SwiftUI-based native macOS Minecraft launcher, offering smooth performance, full mod loader support, Microsoft account login, and intuitive game management.</p>
-                <p><b>Requires macOS 14.0 or later</b></p>
-                <div class="download-container">
-                    <a href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest" class="download-button" target="_blank" rel="noopener noreferrer">Download</a>
+    <body
+        dir="ltr"
+        class="AppleTopic apd-topic dark-mode-enabled"
+        data-designversion="2"
+    >
+        <!-- Header -->
+        <header class="Hero">
+            <nav>
+                <h1>Swift Craft Launcher</h1>
+                <div class="nav-links">
+                    <a
+                        href="../../help/SwiftCraftLauncher.help/Contents/Resources/en.lproj/index.html"
+                        class="docs-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Docs</a
+                    >
+                    <a href="history.html" class="docs-link">Changelog</a>
+                    <a
+                        href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+                        class="github-link"
+                        aria-label="GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="../assets/github-mark.svg"
+                            alt="GitHub"
+                            class="github-icon github-icon-light"
+                        />
+                        <img
+                            src="../assets/github-mark-white.svg"
+                            alt="GitHub"
+                            class="github-icon github-icon-dark"
+                        />
+                    </a>
+                    <select class="language-selector" id="languageSelector">
+                        <option value="index.html" selected>English</option>
+                        <option value="../index.html">简体中文</option>
+                        <option value="../zh-Hant/index.html">繁體中文</option>
+                    </select>
                 </div>
-            </div>
-            <div class="macbook-container">
-                <img src="../assets/slice.png" alt="Swift Craft Launcher" class="macbook-screen">
-            </div>
-        </section>
-    </main>
+            </nav>
+        </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div>
-            <div class="footer-content">
-                <div>
-                    <h3>Support</h3>
-                    <p><a href="../../help/SwiftCraftLauncher.help/Contents/Resources/en.lproj/index.html" target="_blank" rel="noopener noreferrer">User Guide</a></p>
-                    <p><a href="history.html">Changelog</a></p>
-                    <p><a href="https://github.com/suhang12332/Swift-Craft-Launcher/issues" target="_blank" rel="noopener noreferrer">Report Issues</a></p>
-                    <p><a href="https://github.com/suhang12332/Swift-Craft-Launcher/" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <!-- Body -->
+        <main>
+            <section class="hero-section">
+                <div class="intro-text">
+                    <img
+                        src="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher/main/SwiftCraftLauncher/Assets.xcassets/AppIcon.appiconset/mac512pt2x.png"
+                        alt="Swift Craft Launcher Icon"
+                        class="app-icon"
+                    />
+                    <h2>Swift Craft Launcher</h2>
+                    <p>
+                        Swift Craft Launcher is a SwiftUI-based native macOS
+                        Minecraft launcher, offering smooth performance, full
+                        mod loader support, Microsoft account login, and
+                        intuitive game management.
+                    </p>
+                    <p><b>Requires macOS 14.0 or later</b></p>
+                    <div class="download-container">
+                        <a
+                            href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
+                            class="download-button"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><span id="downloadTotal" aria-live="polite">
+                                · …</span
+                            ></a
+                        >
+                    </div>
                 </div>
-                <div>
-                    <h3>Community</h3>
-                    <p><a href="https://qm.qq.com/cgi-bin/qm/qr?k=1057517524" target="_blank" rel="noopener noreferrer">QQ</a></p>
-                    <p><a href="https://discord.gg/gYESVa3CZd" target="_blank" rel="noopener noreferrer">Discord</a></p>
-                    <p><a href="https://space.bilibili.com/627351279?spm_id_from=333.1007.0.0" target="_blank" rel="noopener noreferrer">Bilibili</a></p>
+                <div class="macbook-container">
+                    <img
+                        src="../assets/slice.png"
+                        alt="Swift Craft Launcher"
+                        class="macbook-screen"
+                    />
                 </div>
-                <div>
-                    <h3>GitHub Contributors</h3>
-                    <div class="contributors-wrapper">
-                        <div class="contributors-avatars" data-source="github">
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div>
+                <div class="footer-content">
+                    <div>
+                        <h3>Support</h3>
+                        <p>
+                            <a
+                                href="../../help/SwiftCraftLauncher.help/Contents/Resources/en.lproj/index.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >User Guide</a
+                            >
+                        </p>
+                        <p><a href="history.html">Changelog</a></p>
+                        <p>
+                            <a
+                                href="https://github.com/suhang12332/Swift-Craft-Launcher/issues"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Report Issues</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="https://github.com/suhang12332/Swift-Craft-Launcher/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >GitHub</a
+                            >
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Community</h3>
+                        <p>
+                            <a
+                                href="https://qm.qq.com/cgi-bin/qm/qr?k=1057517524"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >QQ</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="https://discord.gg/gYESVa3CZd"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Discord</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="https://space.bilibili.com/627351279?spm_id_from=333.1007.0.0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Bilibili</a
+                            >
+                        </p>
+                    </div>
+                    <div>
+                        <h3>GitHub Contributors</h3>
+                        <div class="contributors-wrapper">
+                            <div
+                                class="contributors-avatars"
+                                data-source="github"
+                            ></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Core Contributors</h3>
+                        <div class="contributors-wrapper">
+                            <div
+                                class="contributors-avatars"
+                                data-source="core"
+                            ></div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h3>Core Contributors</h3>
-                    <div class="contributors-wrapper">
-                        <div class="contributors-avatars" data-source="core">
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </footer>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div>
+                <p>
+                    Copyright © 2025-2026 Swift Craft Launcher. All rights
+                    reserved.
+                </p>
             </div>
         </div>
-    </footer>
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div>
-            <p>
-                Copyright © 2025-2026 Swift Craft Launcher. All rights reserved.
-            </p>
-        </div>
-    </div>
-</body>
-
+    </body>
 </html>
