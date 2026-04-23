@@ -107,15 +107,16 @@ async function loadGitHubContributors(container) {
 // 从本地 JSON 加载核心贡献者（仅解析本地文件，只显示前8个）
 async function loadCoreContributors(container) {
     try {
-        // 根据当前页面路径确定 contributors.json 的相对路径
-        const isSubDir = window.location.pathname.includes('/zh-Hans/') || window.location.pathname.includes('/zh-Hant/') || window.location.pathname.includes('/en/');
-        const jsonPath = isSubDir ? '../../contributors/contributors.json' : '../contributors/contributors.json';
-        const response = await fetch(jsonPath);
+        // 使用直链加载，避免相对路径在不同部署环境下失效
+        const response = await fetch(
+            'https://suhang12332.github.io/Swift-Craft-Launcher-Assets/contributors/contributors.json',
+            { cache: 'no-cache' }
+        );
         if (!response.ok) {
-            throw new Error('Failed to load local contributors');
+            throw new Error(`Failed to load contributors from direct URL: ${response.status}`);
         }
-        
         const data = await response.json();
+
         const contributors = data.contributors || [];
         
         // 只显示前8个（两排，每排4个）
