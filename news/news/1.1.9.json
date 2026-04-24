@@ -1,112 +1,112 @@
 {
-  "ar": {
-    "title": "⭐️ ادعمنا",
-    "content": "✨ إذا كان **%@** مفيدًا لك، فنرجو دعمنا بوضع **Star** على GitHub.\n\n🚀 دعمك يساعد المزيد من المستخدمين على اكتشاف المشروع ويمنحنا دافعًا لمواصلة التحسين.\n\n🙌 شكرًا لك على ثقتك ودعمك!\n\n[انتقل إلى مستودع GitHub وضع Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "فريق Swift Craft Launcher"
-  },
-  "da": {
-    "title": "⭐️ Støt os",
-    "content": "✨ Hvis **%@** hjælper dig, må du meget gerne give projektet en **Star** på GitHub.\n\n🚀 Din støtte hjælper flere med at opdage projektet og motiverer os til at fortsætte forbedringerne.\n\n🙌 Tak for din støtte!\n\n[Gå til GitHub-repositoriet og giv en Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher Team"
-  },
-  "de": {
-    "title": "⭐️ Unterstütze uns",
-    "content": "✨ Wenn dir **%@** hilft, gib dem Projekt gern einen **Star** auf GitHub.\n\n🚀 Deine Unterstützung hilft mehr Nutzern, das Projekt zu entdecken, und motiviert uns, es weiter zu verbessern.\n\n🙌 Vielen Dank für deine Unterstützung!\n\n[Zum GitHub-Repository und Star vergeben](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher Team"
-  },
   "en": {
-    "title": "⭐️ Support Us",
-    "content": "✨ If **%@** has been helpful, please consider giving us a **Star** on GitHub.\n\n🚀 Your support helps more users discover the project and motivates us to keep improving.\n\n🙌 Thank you for your support!\n\n[Visit the GitHub repository and leave a Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
+    "title": "🙏 Update Notice",
+    "content": "😭 Recent versions have been updated frequently due to a large-scale system refactoring.\n\n✊ During this process, some temporary issues may occur. We are actively working to fix them and improve overall stability.\n\n🙏 We sincerely apologize for any inconvenience and appreciate your understanding and support.",
     "author": "Swift Craft Launcher Team"
-  },
-  "es": {
-    "title": "⭐️ Apóyanos",
-    "content": "✨ Si **%@** te ha resultado útil, te invitamos a darnos una **Star** en GitHub.\n\n🚀 Tu apoyo ayuda a que más usuarios descubran el proyecto y nos motiva a seguir mejorándolo.\n\n🙌 ¡Gracias por tu apoyo!\n\n[Ir al repositorio de GitHub y dejar una Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Equipo Swift Craft Launcher"
-  },
-  "fi": {
-    "title": "⭐️ Tue meitä",
-    "content": "✨ Jos **%@** on ollut sinulle hyödyllinen, anna projektille **Star** GitHubissa.\n\n🚀 Tukesi auttaa useampia käyttäjiä löytämään projektin ja kannustaa meitä kehittämään sitä edelleen.\n\n🙌 Kiitos tuestasi!\n\n[Siirry GitHub-repositorioon ja anna Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher -tiimi"
-  },
-  "fr": {
-    "title": "⭐️ Soutenez-nous",
-    "content": "✨ Si **%@** vous est utile, n'hésitez pas à nous donner une **Star** sur GitHub.\n\n🚀 Votre soutien aide plus d'utilisateurs à découvrir le projet et nous motive à continuer à l'améliorer.\n\n🙌 Merci pour votre soutien !\n\n[Aller au dépôt GitHub et laisser une Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Équipe Swift Craft Launcher"
-  },
-  "hi": {
-    "title": "⭐️ हमारा समर्थन करें",
-    "content": "✨ अगर **%@** आपके काम आया है, तो कृपया GitHub पर हमें एक **Star** दें।\n\n🚀 आपका समर्थन अधिक उपयोगकर्ताओं को प्रोजेक्ट तक पहुंचने में मदद करता है और हमें इसे बेहतर बनाने की प्रेरणा देता है।\n\n🙌 आपके समर्थन के लिए धन्यवाद!\n\n[GitHub रिपॉजिटरी पर जाएँ और Star दें](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher टीम"
-  },
-  "it": {
-    "title": "⭐️ Supportaci",
-    "content": "✨ Se **%@** ti è stato utile, ti invitiamo a lasciare una **Star** su GitHub.\n\n🚀 Il tuo supporto aiuta più utenti a scoprire il progetto e ci motiva a migliorarlo continuamente.\n\n🙌 Grazie per il tuo supporto!\n\n[Vai al repository GitHub e lascia una Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Team Swift Craft Launcher"
-  },
-  "ja": {
-    "title": "⭐️ 応援してください",
-    "content": "✨ **%@** が役に立ったら、GitHub で **Star** を付けて応援してください。\n\n🚀 あなたのサポートは、より多くのユーザーにこのプロジェクトを届け、継続的な改善の力になります。\n\n🙌 ご支援ありがとうございます！\n\n[GitHub リポジトリで Star を付ける](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher チーム"
-  },
-  "ko": {
-    "title": "⭐️ 응원해 주세요",
-    "content": "✨ **%@** 가 도움이 되었다면 GitHub에서 **Star** 를 눌러 응원해 주세요.\n\n🚀 여러분의 응원은 더 많은 사용자가 프로젝트를 발견하도록 돕고, 저희가 계속 개선할 수 있는 힘이 됩니다.\n\n🙌 응원해 주셔서 감사합니다!\n\n[GitHub 저장소로 이동해 Star 남기기](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher 팀"
-  },
-  "nb": {
-    "title": "⭐️ Støtt oss",
-    "content": "✨ Hvis **%@** har vært nyttig for deg, setter vi stor pris på en **Star** på GitHub.\n\n🚀 Din støtte hjelper flere brukere med å finne prosjektet og motiverer oss til å forbedre det videre.\n\n🙌 Takk for støtten!\n\n[Gå til GitHub-repositoriet og gi en Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher Team"
-  },
-  "nl": {
-    "title": "⭐️ Steun ons",
-    "content": "✨ Als **%@** je heeft geholpen, geef ons dan gerust een **Star** op GitHub.\n\n🚀 Jouw steun helpt meer gebruikers het project te ontdekken en motiveert ons om te blijven verbeteren.\n\n🙌 Bedankt voor je steun!\n\n[Ga naar de GitHub-repository en geef een Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher Team"
-  },
-  "pl": {
-    "title": "⭐️ Wesprzyj nas",
-    "content": "✨ Jeśli **%@** jest dla Ciebie pomocny, daj nam proszę **Star** na GitHubie.\n\n🚀 Twoje wsparcie pomaga większej liczbie użytkowników odkryć projekt i motywuje nas do dalszego rozwoju.\n\n🙌 Dziękujemy za wsparcie!\n\n[Przejdź do repozytorium GitHub i zostaw Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Zespół Swift Craft Launcher"
-  },
-  "pt": {
-    "title": "⭐️ Apoie-nos",
-    "content": "✨ Se **%@** tem sido útil para você, considere dar uma **Star** no GitHub.\n\n🚀 Seu apoio ajuda mais usuários a descobrirem o projeto e nos motiva a continuar melhorando.\n\n🙌 Obrigado pelo seu apoio!\n\n[Ir para o repositório no GitHub e dar uma Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Equipe Swift Craft Launcher"
-  },
-  "ru": {
-    "title": "⭐️ Поддержите нас",
-    "content": "✨ Если **%@** оказался полезным, пожалуйста, поставьте нам **Star** на GitHub.\n\n🚀 Ваша поддержка помогает большему числу пользователей узнать о проекте и вдохновляет нас развивать его дальше.\n\n🙌 Спасибо за вашу поддержку!\n\n[Перейти в репозиторий GitHub и поставить Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Команда Swift Craft Launcher"
-  },
-  "sv": {
-    "title": "⭐️ Stötta oss",
-    "content": "✨ Om **%@** har varit till hjälp får du gärna ge oss en **Star** på GitHub.\n\n🚀 Ditt stöd hjälper fler användare att hitta projektet och motiverar oss att fortsätta förbättra det.\n\n🙌 Tack för ditt stöd!\n\n[Gå till GitHub-repot och ge en Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher Team"
-  },
-  "th": {
-    "title": "⭐️ สนับสนุนเรา",
-    "content": "✨ หาก **%@** ช่วยคุณได้ อย่าลืมกด **Star** ให้เราบน GitHub\n\n🚀 การสนับสนุนของคุณช่วยให้ผู้ใช้มากขึ้นค้นพบโปรเจกต์ และเป็นกำลังใจให้เราพัฒนาต่อไป\n\n🙌 ขอบคุณสำหรับการสนับสนุน!\n\n[ไปที่ GitHub repository และกด Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "ทีม Swift Craft Launcher"
-  },
-  "tr": {
-    "title": "⭐️ Bize Destek Olun",
-    "content": "✨ **%@** işinize yaradıysa, GitHub'da bize bir **Star** vermeyi düşünebilirsiniz.\n\n🚀 Desteğiniz daha fazla kullanıcının projeyi keşfetmesine yardımcı olur ve bizi geliştirmeye motive eder.\n\n🙌 Desteğiniz için teşekkürler!\n\n[GitHub deposuna gidin ve Star verin](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Swift Craft Launcher Ekibi"
-  },
-  "vi": {
-    "title": "⭐️ Hỗ trợ chúng tôi",
-    "content": "✨ Nếu **%@** hữu ích với bạn, hãy ủng hộ chúng tôi bằng một **Star** trên GitHub.\n\n🚀 Sự ủng hộ của bạn giúp nhiều người dùng khám phá dự án hơn và tiếp thêm động lực để chúng tôi cải thiện liên tục.\n\n🙌 Cảm ơn bạn đã ủng hộ!\n\n[Truy cập kho GitHub và để lại Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
-    "author": "Đội ngũ Swift Craft Launcher"
   },
   "zh-Hans": {
-    "title": "⭐️ 支持我们",
-    "content": "✨ 如果 **%@** 对你有帮助，欢迎在 GitHub 给我们点一个 **Star**。\n\n🚀 你的支持能帮助更多用户发现这个项目，也会激励我们持续优化体验。\n\n🙌 感谢你的支持！\n\n[前往 GitHub 仓库并点亮 Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
+    "title": "🙏 更新说明与致歉",
+    "content": "😭 近期版本更新较为频繁，主要由于正在进行大规模架构重构。\n\n✊ 在此过程中可能会出现部分临时问题，我们正在持续修复并优化稳定性。\n\n🙏 对由此带来的不便我们深表歉意，感谢你的理解与支持！",
     "author": "Swift Craft Launcher 团队"
   },
   "zh-Hant": {
-    "title": "⭐️ 支持我們",
-    "content": "✨ 如果 **%@** 對你有幫助，歡迎在 GitHub 給我們點一個 **Star**。\n\n🚀 你的支持能幫助更多使用者發現這個專案，也會激勵我們持續優化體驗。\n\n🙌 感謝你的支持！\n\n[前往 GitHub 儲存庫並點亮 Star](https://github.com/suhang12332/Swift-Craft-Launcher)",
+    "title": "🙏 更新說明與致歉",
+    "content": "😭 近期版本更新較為頻繁，主要由於正在進行大規模架構重構。\n\n✊ 在此過程中可能會出現部分臨時問題，我們正在持續修復並優化穩定性。\n\n🙏 對因此造成的不便我們深表歉意，感謝你的理解與支持！",
     "author": "Swift Craft Launcher 團隊"
+  },
+  "ja": {
+    "title": "🙏 更新のお知らせとお詫び",
+    "content": "😭 最近のバージョンは大規模なリファクタリングのため更新が頻繁に行われています。\n\n✊ この過程で一時的な問題が発生する可能性がありますが、継続的に改善を進めています。\n\n🙏 ご不便をおかけし申し訳ありません。ご理解とご支援に感謝いたします。",
+    "author": "Swift Craft Launcher チーム"
+  },
+  "ko": {
+    "title": "🙏 업데이트 안내 및 사과",
+    "content": "😭 최근 버전은 대규모 구조 개선으로 인해 업데이트가 자주 이루어지고 있습니다.\n\n✊ 이 과정에서 일시적인 문제가 발생할 수 있으며, 지속적으로 안정성을 개선하고 있습니다.\n\n🙏 불편을 드려 죄송하며, 이해와 지원에 감사드립니다.",
+    "author": "Swift Craft Launcher 팀"
+  },
+  "fr": {
+    "title": "🙏 Mise à jour et excuses",
+    "content": "😭 Les versions récentes ont été mises à jour fréquemment en raison d’une refonte majeure du système.\n\n✊ Des problèmes temporaires peuvent survenir pendant cette phase, nous travaillons activement à les corriger et à améliorer la stabilité.\n\n🙏 Nous nous excusons pour la gêne occasionnée et vous remercions de votre compréhension.",
+    "author": "Équipe Swift Craft Launcher"
+  },
+  "de": {
+    "title": "🙏 Update-Hinweis und Entschuldigung",
+    "content": "😭 In den letzten Versionen gab es häufige Updates aufgrund einer großen System-Umstrukturierung.\n\n✊ Während dieser Phase können vorübergehend Fehler auftreten. Wir arbeiten aktiv an Stabilität und Verbesserungen.\n\n🙏 Wir entschuldigen uns für eventuelle Unannehmlichkeiten und danken dir für dein Verständnis.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "es": {
+    "title": "🙏 Aviso de actualización y disculpa",
+    "content": "😭 Las versiones recientes han tenido actualizaciones frecuentes debido a una gran reestructuración del sistema.\n\n✊ Durante este proceso pueden aparecer errores temporales mientras mejoramos la estabilidad.\n\n🙏 Pedimos disculpas por las molestias y agradecemos tu comprensión y apoyo.",
+    "author": "Equipo Swift Craft Launcher"
+  },
+  "it": {
+    "title": "🙏 Avviso di aggiornamento e scuse",
+    "content": "😭 Le versioni recenti sono state aggiornate frequentemente a causa di una grande ristrutturazione del sistema.\n\n✊ Durante questa fase potrebbero verificarsi problemi temporanei mentre miglioriamo stabilità e prestazioni.\n\n🙏 Ci scusiamo per il disagio e ti ringraziamo per la comprensione.",
+    "author": "Team Swift Craft Launcher"
+  },
+  "ru": {
+    "title": "🙏 Обновление и извинения",
+    "content": "😭 В последних версиях обновления выходят часто из-за масштабной переработки системы.\n\n✊ В этот период могут возникать временные проблемы, мы активно работаем над их исправлением.\n\n🙏 Приносим извинения за неудобства и благодарим за понимание.",
+    "author": "Команда Swift Craft Launcher"
+  },
+  "pt": {
+    "title": "🙏 Aviso de atualização e pedido de desculpas",
+    "content": "😭 As versões recentes foram atualizadas com frequência devido a uma grande reestruturação do sistema.\n\n✊ Durante este processo podem ocorrer problemas temporários enquanto melhoramos a estabilidade.\n\n🙏 Pedimos desculpas pelo inconveniente e agradecemos sua compreensão.",
+    "author": "Equipe Swift Craft Launcher"
+  },
+  "ar": {
+    "title": "🙏 إشعار تحديث واعتذار",
+    "content": "😭 في الإصدارات الأخيرة، كانت التحديثات متكررة بسبب إعادة هيكلة واسعة للنظام.\n\n✊ قد تظهر بعض الأخطاء المؤقتة أثناء هذه المرحلة، ونحن نعمل على إصلاحها وتحسين الاستقرار تدريجيًا.\n\n🙏 نعتذر عن أي إزعاج ونشكرك على تفهمك ودعمك.",
+    "author": "فريق Swift Craft Launcher"
+  },
+  "nl": {
+    "title": "🙏 Update en excuses",
+    "content": "😭 Recente versies zijn vaak bijgewerkt vanwege een grote systeemherstructurering.\n\n✊ Tijdens dit proces kunnen tijdelijke problemen optreden terwijl we de stabiliteit verbeteren.\n\n🙏 Onze excuses voor het ongemak en bedankt voor je begrip.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "pl": {
+    "title": "🙏 Aktualizacja i przeprosiny",
+    "content": "😭 Ostatnie wersje były często aktualizowane z powodu dużej przebudowy systemu.\n\n✊ W tym czasie mogą wystąpić tymczasowe problemy, które stale naprawiamy.\n\n🙏 Przepraszamy za niedogodności i dziękujemy za wyrozumiałość.",
+    "author": "Zespół Swift Craft Launcher"
+  },
+  "sv": {
+    "title": "🙏 Uppdatering och ursäkt",
+    "content": "😭 Nya versioner har uppdaterats ofta på grund av en stor omstrukturering av systemet.\n\n✊ Under denna process kan tillfälliga problem uppstå medan vi förbättrar stabiliteten.\n\n🙏 Vi ber om ursäkt för eventuella besvär och tackar för din förståelse.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "tr": {
+    "title": "🙏 Güncelleme ve özür",
+    "content": "😭 Son sürümler, büyük bir sistem yeniden yapılandırması nedeniyle sık sık güncellendi.\n\n✊ Bu süreçte geçici sorunlar oluşabilir ve bunları aktif olarak düzeltiyoruz.\n\n🙏 Anlayışınız için teşekkür ederiz ve yaşanan aksaklıklar için özür dileriz.",
+    "author": "Swift Craft Launcher Ekibi"
+  },
+  "vi": {
+    "title": "🙏 Thông báo cập nhật và xin lỗi",
+    "content": "😭 Các phiên bản gần đây được cập nhật thường xuyên do tái cấu trúc hệ thống lớn.\n\n✊ Trong quá trình này có thể xảy ra một số lỗi tạm thời, chúng tôi đang tích cực khắc phục.\n\n🙏 Xin lỗi vì sự bất tiện và cảm ơn sự thông cảm của bạn.",
+    "author": "Đội ngũ Swift Craft Launcher"
+  },
+  "hi": {
+    "title": "🙏 अपडेट और क्षमा याचना",
+    "content": "😭 हाल के संस्करणों में बड़े स्तर पर सिस्टम रीफैक्टरिंग के कारण बार-बार अपडेट किए गए हैं।\n\n✊ इस दौरान कुछ अस्थायी समस्याएँ हो सकती हैं, जिन्हें हम लगातार ठीक कर रहे हैं।\n\n🙏 असुविधा के लिए क्षमा करें और आपके सहयोग के लिए धन्यवाद।",
+    "author": "Swift Craft Launcher टीम"
+  },
+  "fi": {
+    "title": "🙏 Päivitys ja pahoittelu",
+    "content": "😭 Viimeaikaiset versiot on päivitetty usein suuren järjestelmäuudistuksen vuoksi.\n\n✊ Tämän aikana voi esiintyä tilapäisiä ongelmia, joita korjaamme jatkuvasti.\n\n🙏 Pahoittelemme häiriötä ja kiitämme ymmärryksestäsi.",
+    "author": "Swift Craft Launcher -tiimi"
+  },
+  "nb": {
+    "title": "🙏 Oppdatering og unnskyldning",
+    "content": "😭 Nylige versjoner har blitt oppdatert ofte på grunn av en større systemomstrukturering.\n\n✊ Under denne prosessen kan det oppstå midlertidige problemer som vi jobber med å fikse.\n\n🙏 Vi beklager ulempene og takker for forståelsen.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "da": {
+    "title": "🙏 Opdatering og undskyldning",
+    "content": "😭 De seneste versioner er blevet opdateret ofte på grund af en større systemomstrukturering.\n\n✊ I denne proces kan der opstå midlertidige problemer, som vi aktivt arbejder på at rette.\n\n🙏 Vi beklager ulejligheden og takker for din forståelse.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "th": {
+    "title": "🙏 ประกาศอัปเดตและขออภัย",
+    "content": "😭 เวอร์ชันล่าสุดมีการอัปเดตบ่อยครั้ง เนื่องจากการปรับโครงสร้างระบบขนาดใหญ่\n\n✊ ในระหว่างนี้อาจเกิดปัญหาชั่วคราวได้ และเรากำลังเร่งแก้ไขอย่างต่อเนื่อง\n\n🙏 ขออภัยในความไม่สะดวก และขอบคุณสำหรับความเข้าใจของคุณ",
+    "author": "ทีม Swift Craft Launcher"
   }
 }
