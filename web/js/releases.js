@@ -11,14 +11,25 @@
 
   let downloadCountPaintGen = 0;
 
+  function ghFetchUrl(url) {
+    try {
+      if (window.sclGhProxy && typeof window.sclGhProxy.wrap === 'function') {
+        return window.sclGhProxy.wrap(url);
+      }
+    } catch (_) {
+      /* ignore */
+    }
+    return url;
+  }
+
   async function tryFetchJson(url) {
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(ghFetchUrl(url), { cache: 'no-store' });
     if (!res.ok) return null;
     return await res.json();
   }
 
   async function tryFetchText(url) {
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(ghFetchUrl(url), { cache: 'no-store' });
     if (!res.ok) return null;
     return await res.text();
   }
@@ -193,7 +204,7 @@
   }
 
   async function fetchText(url) {
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(ghFetchUrl(url), { cache: 'no-store' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.text();
   }
@@ -244,7 +255,7 @@
 
   async function fetchAllLauncherReleases() {
     const out = [];
-    let url = LAUNCHER_APP_RELEASES_API;
+    let url = ghFetchUrl(LAUNCHER_APP_RELEASES_API);
     while (url) {
       const res = await fetch(url, {
         headers: { Accept: 'application/vnd.github+json' }
@@ -253,7 +264,8 @@
       const page = await res.json();
       if (!Array.isArray(page)) throw new Error('releases: expected array');
       out.push(...page);
-      url = parseLinkNext(res.headers.get('Link'));
+      const next = parseLinkNext(res.headers.get('Link'));
+      url = next ? ghFetchUrl(next) : null;
     }
     return out;
   }
@@ -392,9 +404,10 @@
     try {
       const md = await fetchText(url);
       contentEl.innerHTML = renderMarkdown(md);
-      if (rawLinkEl) rawLinkEl.setAttribute('href', url);
+      const rawHref = ghFetchUrl(url);
+      if (rawLinkEl) rawLinkEl.setAttribute('href', rawHref);
       const rawLink = contentEl.parentElement?.querySelector('[data-raw-link="release"]');
-      if (rawLink) rawLink.setAttribute('href', url);
+      if (rawLink) rawLink.setAttribute('href', rawHref);
     } catch (e) {
       const msg = escapeHtml(String(e && e.message ? e.message : e));
       contentEl.innerHTML =
@@ -479,7 +492,7 @@
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.setAttribute('data-raw-link', 'release');
-    link.href = baseUrl + filename;
+    link.href = ghFetchUrl(baseUrl + filename);
     outro.appendChild(link);
 
     let hasLoaded = false;
@@ -528,6 +541,10 @@
 
   function init() {
     const initAsync = async () => {
+      if (window.sclGhProxy && typeof window.sclGhProxy.ensureInit === 'function') {
+        await window.sclGhProxy.ensureInit();
+      }
+
       const baseUrl = getBaseUrl();
       const isNarrowScreen = window.matchMedia('(max-width: 736px)').matches;
 
@@ -606,7 +623,12 @@
         a.addEventListener('click', (ev) => {
           ev.preventDefault();
           history.replaceState(null, '', `#${encodeURIComponent(version)}`);
-          if (titleLinkEl2) titleLinkEl2.setAttribute('href', toGitHubBlobUrl(baseUrl, filename));
+          if (titleLinkEl2) {
+            titleLinkEl2.setAttribute(
+              'href',
+              ghFetchUrl(toGitHubBlobUrl(baseUrl, filename))
+            );
+          }
           void showRelease({
             baseUrl,
             filename,
@@ -624,7 +646,12 @@
       const hash = decodeURIComponent((window.location.hash || '').replace(/^#/, '')).trim();
       const initialFilename =
         (hash && files.find((f) => filenameToVersion(f) === hash)) || files[0];
-      if (titleLinkEl2) titleLinkEl2.setAttribute('href', toGitHubBlobUrl(baseUrl, initialFilename));
+      if (titleLinkEl2) {
+        titleLinkEl2.setAttribute(
+          'href',
+          ghFetchUrl(toGitHubBlobUrl(baseUrl, initialFilename))
+        );
+      }
       void showRelease({
         baseUrl,
         filename: initialFilename,

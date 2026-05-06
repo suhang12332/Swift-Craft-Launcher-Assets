@@ -64,9 +64,27 @@ function renderContributors(contributors, container) {
 }
 
 // 从 GitHub API 加载贡献者（仅调用 API，不回退）
+function ghWrap(url) {
+    try {
+        if (window.sclGhProxy && typeof window.sclGhProxy.wrap === 'function') {
+            return window.sclGhProxy.wrap(url);
+        }
+    } catch (_) {
+        /* ignore */
+    }
+    return url;
+}
+
 async function loadGitHubContributors(container) {
     try {
-        const response = await fetch('https://api.github.com/repos/suhang12332/Swift-Craft-Launcher/contributors?per_page=100');
+        if (window.sclGhProxy && typeof window.sclGhProxy.ensureInit === 'function') {
+            await window.sclGhProxy.ensureInit();
+        }
+        const response = await fetch(
+            ghWrap(
+                'https://api.github.com/repos/suhang12332/Swift-Craft-Launcher/contributors?per_page=100'
+            )
+        );
         if (!response.ok) {
             throw new Error(`GitHub API error: ${response.status}`);
         }
@@ -74,11 +92,11 @@ async function loadGitHubContributors(container) {
         const contributors = await response.json();
         
         // 转换 GitHub API 格式为统一格式
-        const formattedContributors = contributors.map(contributor => ({
+        const formattedContributors = contributors.map((contributor) => ({
             name: contributor.login,
             login: contributor.login,
-            avatar: contributor.avatar_url,
-            avatar_url: contributor.avatar_url,
+            avatar: ghWrap(contributor.avatar_url),
+            avatar_url: ghWrap(contributor.avatar_url),
             url: contributor.html_url,
             html_url: contributor.html_url
         }));
@@ -87,7 +105,9 @@ async function loadGitHubContributors(container) {
         
         // 在网格最后添加"More"链接
         const moreLink = document.createElement('a');
-        moreLink.href = 'https://github.com/suhang12332/Swift-Craft-Launcher/graphs/contributors';
+        moreLink.href = ghWrap(
+            'https://github.com/suhang12332/Swift-Craft-Launcher/graphs/contributors'
+        );
         moreLink.className = 'contributor-more-link';
         moreLink.target = '_blank';
         moreLink.rel = 'noopener noreferrer';
@@ -165,5 +185,6 @@ async function loadContributors() {
     }
 }
 
-// 页面加载完成后加载贡献者
-document.addEventListener('DOMContentLoaded', loadContributors);
+document.addEventListener('DOMContentLoaded', () => {
+    void loadContributors();
+});

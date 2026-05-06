@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../css/app.css" />
         <link rel="stylesheet" href="../css/layout.css" />
         <script src="../js/language.js"></script>
+        <script src="../js/gh-proxy.js" defer></script>
         <script src="../js/contributors.js" defer></script>
         <script src="../js/download-total.js" defer></script>
     </head>
@@ -66,15 +67,26 @@
                     </p>
                     <p><b>Requires macOS 14.0 or later</b></p>
                     <div class="download-container">
-                        <a
-                            href="https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
-                            class="download-button"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><span id="downloadTotal" aria-live="polite">
-                                · …</span
-                            ></a
+                        <select
+                            id="downloadArchSelect"
+                            class="download-button download-native-select"
+                            aria-live="polite"
+                            disabled
                         >
+                            <option
+                                id="downloadStatOption"
+                                value=""
+                                selected
+                                disabled
+                                >· …</option
+                            >
+                            <option id="downloadOptArm64" value=""
+                                >Apple Silicon</option
+                            >
+                            <option id="downloadOptX86" value=""
+                                >Intel (x86_64)</option
+                            >
+                        </select>
                     </div>
                 </div>
                 <div class="macbook-container">
