@@ -1,9 +1,7 @@
 const GITHUB_RELEASES_API =
     'https://api.github.com/repos/suhang12332/Swift-Craft-Launcher/releases?per_page=100';
-const GITHUB_LATEST_RELEASE_API =
-    'https://api.github.com/repos/suhang12332/Swift-Craft-Launcher/releases/latest';
-const FALLBACK_LATEST_URL =
-    'https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest';
+const GITHUB_REPO_OWNER = 'suhang12332';
+const GITHUB_REPO_NAME = 'Swift-Craft-Launcher';
 
 function ghWrap(url) {
     try {
@@ -70,10 +68,14 @@ async function fetchAllReleases() {
     return out;
 }
 
-async function fetchLatestRelease() {
-    const res = await fetch(ghWrap(GITHUB_LATEST_RELEASE_API));
-    if (!res.ok) throw new Error(String(res.status));
-    return res.json();
+/** 与 GitHub 列表顺序一致：靠前即较新；优先正式版 */
+function pickLatestRelease(releases) {
+    if (!Array.isArray(releases)) return null;
+    return (
+        releases.find((r) => r && !r.draft && !r.prerelease) ||
+        releases.find((r) => r && !r.draft) ||
+        null
+    );
 }
 
 function sumReleaseDownloads(releases) {
@@ -91,23 +93,37 @@ function pickDmgByArch(release) {
     const assets = (release.assets || []).filter(
         (a) => a && a.name && a.name.endsWith('.dmg')
     );
-    const arm64 = assets.find(
-        (a) =>
-            a.browser_download_url &&
-            a.browser_download_url.includes('arm64')
-    );
-    const x86 = assets.find(
-        (a) =>
-            a.browser_download_url &&
-            a.browser_download_url.includes('x86_64')
-    );
+    const arm64 = assets.find((a) => /arm64/i.test(a.name));
+    const x86 = assets.find((a) => /x86_64/i.test(a.name));
     return { arm64, x86 };
+}
+
+/** 来自 pickLatestRelease 的 tag_name；去掉前缀 v 以匹配 /releases/download/1.2.3/ */
+function releaseDownloadPathSegment(release) {
+    let tag = typeof release?.tag_name === 'string' ? release.tag_name.trim() : '';
+    if (/^v\d/i.test(tag)) tag = tag.slice(1);
+    return tag;
+}
+
+/**
+ * 拼 GitHub /releases/download/{segment}/{filename} 直链。
+ * 地域检测判定为 CN（与页面语言无关）时由 ghWrap 加 gh-proxy.com 前缀。
+ */
+function releaseAssetDownloadUrl(release, asset) {
+    if (!release || !asset) return '';
+    const name = typeof asset.name === 'string' ? asset.name.trim() : '';
+    if (!name) return '';
+    const segment = releaseDownloadPathSegment(release);
+    if (!segment) return '';
+    const raw = `https://github.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/releases/download/${encodeURIComponent(segment)}/${encodeURIComponent(name)}`;
+    return ghWrap(raw);
 }
 
 function wireNativeDownloadSelect(select) {
     select.addEventListener('change', () => {
         const url = select.value;
         if (!url) return;
+        console.log('[Swift Craft Launcher] download URL:', url);
         const a = document.createElement('a');
         a.href = url;
         a.rel = 'noopener noreferrer';
@@ -121,14 +137,48 @@ function wireNativeDownloadSelect(select) {
 function applyLatestToSelect(select, release) {
     const optArm = document.getElementById('downloadOptArm64');
     const optX86 = document.getElementById('downloadOptX86');
+    if (!select) return;
+
+    if (!release) {
+        if (optArm) {
+            optArm.value = '';
+            optArm.disabled = true;
+        }
+        if (optX86) {
+            optX86.value = '';
+            optX86.disabled = true;
+        }
+        select.disabled = true;
+        return;
+    }
+
     const { arm64, x86 } = pickDmgByArch(release);
+    const armUrl = arm64 ? releaseAssetDownloadUrl(release, arm64) : '';
+    const x86Url = x86 ? releaseAssetDownloadUrl(release, x86) : '';
 
-    const armUrl = ghWrap(arm64?.browser_download_url || FALLBACK_LATEST_URL);
-    const x86Url = ghWrap(x86?.browser_download_url || FALLBACK_LATEST_URL);
+    if (optArm) {
+        optArm.value = armUrl;
+        optArm.disabled = !armUrl;
+    }
+    if (optX86) {
+        optX86.value = x86Url;
+        optX86.disabled = !x86Url;
+    }
 
-    if (optArm) optArm.value = armUrl;
-    if (optX86) optX86.value = x86Url;
-    select.disabled = false;
+    select.disabled = !armUrl && !x86Url;
+
+    const proxyOn =
+        typeof window.sclGhProxy?.isProxyActive === 'function'
+            ? window.sclGhProxy.isProxyActive()
+            : !!window.__sclGhUseProxy;
+    console.log(
+        '[Swift Craft Launcher] download links ready — gh-proxy (geo IP):',
+        proxyOn,
+        '| arm:',
+        armUrl || '(none)',
+        '| intel:',
+        x86Url || '(none)'
+    );
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -151,33 +201,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const jobs = [];
 
-    if (statOpt) {
+    if (statOpt || select) {
         jobs.push(
             fetchAllReleases()
                 .then((releases) => {
-                    const n = sumReleaseDownloads(releases);
-                    const formatted = new Intl.NumberFormat(locale).format(n);
-                    statOpt.textContent = str.label(formatted);
+                    if (statOpt) {
+                        const n = sumReleaseDownloads(releases);
+                        const formatted = new Intl.NumberFormat(locale).format(n);
+                        statOpt.textContent = str.label(formatted);
+                    }
+                    if (select) {
+                        applyLatestToSelect(select, pickLatestRelease(releases));
+                    }
                 })
                 .catch((e) => {
                     console.error('download-total:', e);
-                    statOpt.remove();
-                    if (select && select.options.length > 0) {
-                        select.selectedIndex = 0;
+                    if (statOpt) {
+                        statOpt.remove();
+                        if (select && select.options.length > 0) {
+                            select.selectedIndex = 0;
+                        }
                     }
-                })
-        );
-    }
-
-    if (select) {
-        jobs.push(
-            fetchLatestRelease()
-                .then((rel) => {
-                    applyLatestToSelect(select, rel);
-                })
-                .catch((e) => {
-                    console.error('download-links:', e);
-                    applyLatestToSelect(select, { assets: [] });
+                    if (select) applyLatestToSelect(select, null);
                 })
         );
     }
