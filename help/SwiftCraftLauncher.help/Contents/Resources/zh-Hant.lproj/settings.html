@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>啟動器設置</title>
     <meta name="description" content="配置 Swift Craft Launcher 設置，包括通用設置、遊戲設置、遊戲高級設置和AI設置">
-    <meta name="keywords" content="語言, 主題, 介面佈局, 工作目錄, 下載, GitHub 代理, Modrinth, CurseForge, 快照版本, 模組包匯出, 清除快取, 記憶體, Java, Java 重新安裝, JVM, 垃圾回收器, 環境變數, AI 設定, OpenAI, Ollama, 鑰匙圈, 離線登入, Yggdrasil, authlib-injector">
+    <meta name="keywords" content="語言, 主題, 介面佈局, 工作目錄, 下載, GitHub 代理, Modrinth, CurseForge, 快照版本, 模組包匯出, 清除快取, 記憶體, Java, Java 重新安裝, JVM, 垃圾回收器, 環境變數, AI 設定, OpenAI, Ollama, 鑰匙圈, 無痕登入, 離線登入, 好友狀態通知, Minecraft 帳號好友, Yggdrasil, authlib-injector">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/help/SwiftCraftLauncher.help/Contents/Resources/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -351,7 +351,19 @@
         <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/settings/4-6_1.png" alt="玩家設置">
     </figure>
 
-    <p style="margin-bottom: 1em;">玩家設置用於管理登入方式、皮膚站與認證服務等與帳號相關的行為。</p>
+    <p style="margin-bottom: 1em;">玩家設置用於管理登入方式、皮膚站、好友與認證服務等與帳號相關的行為。</p>
+
+    <div id="settings-ephemeral-login" class="Task">
+        <h2 aria-controls="aria-settings-ephemeral-login" class="Name">無痕登入</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ephemeral-login">
+            <p>控制是否在透過瀏覽器完成登入時使用<strong>無痕工作階段</strong>。</p>
+            <p>啟用後，微軟正版登入與第三方皮膚站（Yggdrasil）登入都會使用獨立的無痕瀏覽器視窗，<strong>不會與系統預設瀏覽器共享 Cookie</strong>。這有助於在同一台 Mac 上避免誤用已登入的瀏覽器帳號，但通常需要<strong>每次登入時重新輸入帳號和密碼</strong>。</p>
+            <p>關閉時，登入流程可能會複用系統瀏覽器中已有的登入狀態，操作較便捷，但隱私隔離較弱。</p>
+            <div class="Alert">
+                <p class="Note"><em>【注】</em>此選項只影響登入時的瀏覽器行為，不會改變已保存的玩家檔案或權杖儲存方式。</p>
+            </div>
+        </div>
+    </div>
 
     <div id="settings-offline-login" class="Task">
         <h2 aria-controls="aria-settings-offline-login" class="Name">離線登入</h2>
@@ -367,6 +379,41 @@
             <p>控制「歷史皮膚庫」入口是否在皮膚工具頁顯示，以及皮膚上傳成功後是否寫入歷史庫。</p>
             <p>關閉後，皮膚工具頁將不再顯示歷史庫入口；同時新上傳成功的皮膚不會寫入歷史庫。</p>
             <p>此開關不會自動刪除已保存的歷史記錄。若需清理，請在歷史庫彈窗中手動逐條刪除。</p>
+        </div>
+    </div>
+
+    <div id="settings-minecraft-friends-presence" class="Task">
+        <h2 aria-controls="aria-settings-minecraft-friends-presence" class="Name">好友狀態通知</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-presence">
+            <p>控制啟動器是否在背景檢查好友動態，並透過<strong>系統通知</strong>提醒您。</p>
+            <p>啟用後，當<strong>目前選中的玩家為微軟正版帳號</strong>時，啟動器會定期在背景查詢好友狀態；若偵測到好友上線、離線或向您傳送邀請等變化，會傳送 macOS 系統通知。</p>
+            <p><strong>使用前提：</strong></p>
+            <ul>
+                <li><p>本開關處於啟用狀態；</p></li>
+                <li><p>側邊欄或玩家列表中已選中一個微軟正版玩家（非離線檔案、非僅接入第三方皮膚站的檔案）；</p></li>
+                <li><p>在<strong>系統設定 → 通知</strong>中已為 Swift Craft Launcher 啟用通知，並將提醒樣式設為<strong>「提醒」</strong>（Alerts），否則可能看不到橫幅或列表提示。</p></li>
+            </ul>
+            <p>關閉後，啟動器不會為好友狀態進行背景輪詢，也不會因此推送系統通知。您仍可透過主介面工具列的<strong>好友</strong>按鈕手動開啟好友面板查看列表。</p>
+            <div class="Alert">
+                <p class="Note"><em>【注】</em>好友狀態通知是<strong>啟動器本機</strong>的提醒功能，與下方「Minecraft 帳號好友」中保存在官方帳號端的開關相互獨立；但若您在帳號端關閉了好友列表等功能，實際可收到的好友相關事件也會相應減少。</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-minecraft-friends-account" class="Task">
+        <h2 aria-controls="aria-settings-minecraft-friends-account" class="Name">Minecraft 帳號好友</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-account">
+            <p>用於查看並修改保存在 <strong>Microsoft Minecraft 官方帳號</strong>端的好友相關策略，與遊戲內好友系統保持一致。</p>
+            <p>僅當<strong>目前選中的玩家為線上正版帳號</strong>時，此區域才會顯示。開啟玩家設置頁、切換目前玩家，或點擊<strong>從帳號同步</strong>時，啟動器會從網路拉取最新狀態；修改任一開關後會寫回官方伺服器並再次同步確認。</p>
+            <p><strong>可用選項：</strong></p>
+            <ul>
+                <li><p><strong>啟用好友列表</strong> — 控制帳號是否啟用 Minecraft 好友列表功能；</p></li>
+                <li><p><strong>接受好友邀請</strong> — 控制是否允許其他玩家向您傳送的好友邀請被接受。</p></li>
+            </ul>
+            <p>載入或保存過程中，開關會暫時不可用並顯示進度指示；若權杖失效或網路錯誤，介面會提示錯誤並盡量恢復為伺服器上的最新狀態。</p>
+            <div class="Alert">
+                <p class="Important"><em>【重要】</em>此處修改的是<strong>官方帳號設定</strong>，會影響遊戲與啟動器內好友相關能力，而不僅是啟動器本機的顯示偏好。與「好友狀態通知」不同：後者只決定啟動器是否主動推送系統通知。</p>
+            </div>
         </div>
     </div>
 

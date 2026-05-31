@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>Launcher Settings</title>
     <meta name="description" content="Configure Swift Craft Launcher settings, including general settings, game settings, advanced game settings, and AI settings">
-    <meta name="keywords" content="language, theme, layout, working directory, downloads, GitHub proxy, Modrinth, CurseForge, snapshot versions, modpack export, clear cache, memory, Java, Java reinstall, JVM, garbage collector, environment variables, AI settings, OpenAI, Ollama, Keychain, offline login, Yggdrasil, authlib-injector">
+    <meta name="keywords" content="language, theme, layout, working directory, downloads, GitHub proxy, Modrinth, CurseForge, snapshot versions, modpack export, clear cache, memory, Java, Java reinstall, JVM, garbage collector, environment variables, AI settings, OpenAI, Ollama, Keychain, incognito login, offline login, friend activity notifications, Minecraft account friends, Yggdrasil, authlib-injector">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/help/SwiftCraftLauncher.help/Contents/Resources/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -351,7 +351,19 @@
         <img src="https://suhang12332.github.io/Swift-Craft-Launcher-Assets/imagebed/settings/4-6_1.png" alt="Player settings">
     </figure>
 
-    <p style="margin-bottom: 1em;">Player Settings are used to manage login behavior, skin site defaults, and authentication-related services.</p>
+    <p style="margin-bottom: 1em;">Player Settings are used to manage login behavior, skin site defaults, friends, and authentication-related services.</p>
+
+    <div id="settings-ephemeral-login" class="Task">
+        <h2 aria-controls="aria-settings-ephemeral-login" class="Name">Incognito Login</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ephemeral-login">
+            <p>Controls whether sign-in uses a <strong>private browser session</strong> when authentication happens in the browser.</p>
+            <p>When enabled, both Microsoft premium login and third-party skin site (Yggdrasil) login use a separate incognito browser window and <strong>do not share cookies with your default system browser</strong>. This helps avoid accidentally using an already signed-in browser account on the same Mac, but you will usually need to <strong>enter your account and password again on each login</strong>.</p>
+            <p>When disabled, the sign-in flow may reuse an existing browser session, which is more convenient but offers less privacy isolation.</p>
+            <div class="Alert">
+                <p class="Note"><em>[Note]</em> This option only affects browser behavior during login. It does not change how saved player profiles or tokens are stored.</p>
+            </div>
+        </div>
+    </div>
 
     <div id="settings-offline-login" class="Task">
         <h2 aria-controls="aria-settings-offline-login" class="Name">Offline Login</h2>
@@ -367,6 +379,41 @@
             <p>Controls whether the History Skin Library entry is shown in the Skin Tool page, and whether successfully uploaded skins are written to the history library.</p>
             <p>When disabled, the history library entry is hidden in the Skin Tool page, and newly successful uploads are not saved to the history library.</p>
             <p>This toggle does not automatically delete existing history data. To clean it up, remove entries manually in the history library pop-up.</p>
+        </div>
+    </div>
+
+    <div id="settings-minecraft-friends-presence" class="Task">
+        <h2 aria-controls="aria-settings-minecraft-friends-presence" class="Name">Friend Activity Notifications</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-presence">
+            <p>Controls whether the launcher checks friend activity in the background and alerts you with <strong>system notifications</strong>.</p>
+            <p>When enabled, and when the <strong>currently selected player is a Microsoft premium account</strong>, the launcher periodically checks friend status in the background. If a friend comes online, goes offline, or sends you an invite, macOS system notifications are sent.</p>
+            <p><strong>Requirements:</strong></p>
+            <ul>
+                <li><p>This toggle is turned on;</p></li>
+                <li><p>A Microsoft premium player is selected in the sidebar or player list (not an offline profile, and not a profile tied only to a third-party skin site);</p></li>
+                <li><p>Notifications are enabled for Swift Craft Launcher in <strong>System Settings → Notifications</strong>, and the alert style is set to <strong>Alerts</strong>; otherwise banners or list entries may not appear.</p></li>
+            </ul>
+            <p>When disabled, the launcher does not poll friend status in the background and does not push related system notifications. You can still open the friends panel manually from the <strong>Friends</strong> button in the main toolbar.</p>
+            <div class="Alert">
+                <p class="Note"><em>[Note]</em> Friend activity notifications are a <strong>launcher-local</strong> reminder feature, separate from the account-side switches under <strong>Minecraft Account Friends</strong> below. However, if you disable the friend list or related options on your account, fewer friend-related events will be available to notify you about.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-minecraft-friends-account" class="Task">
+        <h2 aria-controls="aria-settings-minecraft-friends-account" class="Name">Minecraft Account Friends</h2>
+        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-account">
+            <p>Lets you view and change friend-related settings stored on your <strong>official Microsoft Minecraft account</strong>, keeping the launcher aligned with the in-game friends system.</p>
+            <p>This section appears only when the <strong>currently selected player is an online premium account</strong>. When you open Player Settings, switch the current player, or tap <strong>Reload from account</strong>, the launcher fetches the latest state from the network. Changing either switch writes the update back to the official servers and syncs again to confirm.</p>
+            <p><strong>Available options:</strong></p>
+            <ul>
+                <li><p><strong>Enable friend list</strong> — controls whether the Minecraft friend list is enabled for the account;</p></li>
+                <li><p><strong>Accept friend invites</strong> — controls whether friend invites from other players can be accepted.</p></li>
+            </ul>
+            <p>While loading or saving, the toggles are temporarily disabled and a progress indicator is shown. If the token is invalid or a network error occurs, the launcher shows an error and tries to restore the latest server-side state.</p>
+            <div class="Alert">
+                <p class="Important"><em>[Important]</em> These are <strong>official account settings</strong> and affect friend-related capabilities in both the game and the launcher, not just local display preferences. This is different from <strong>Friend Activity Notifications</strong>, which only controls whether the launcher proactively sends system notifications.</p>
+            </div>
         </div>
     </div>
 
