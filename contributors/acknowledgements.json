@@ -100,5 +100,17 @@
     "url": "https://zread.ai",
     "avatar": "https://files.seeusercontent.com/2026/05/29/sf8T/svgviewer-png-output-2.png",
     "description": "Where to Go Next?"
+  },
+  {
+    "name": "Zread",
+    "url": "https://github.com/kean/Nuke",
+    "avatar": "https://github.com/kean.png",
+    "description": "Image loading system"
+  },
+  {
+    "name": "SwiftLintPlugins",
+    "url": "https://github.com/SimplyDanny/SwiftLintPlugins",
+    "avatar": "https://github.com/SimplyDanny.png",
+    "description": "inary version of the SwiftLint Swift Package Manager plugins."
   }
 ]
