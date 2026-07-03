@@ -102,12 +102,6 @@
     "description": "Where to Go Next?"
   },
   {
-    "name": "Zread",
-    "url": "https://github.com/kean/Nuke",
-    "avatar": "https://github.com/kean.png",
-    "description": "Image loading system"
-  },
-  {
     "name": "SwiftLintPlugins",
     "url": "https://github.com/SimplyDanny/SwiftLintPlugins",
     "avatar": "https://github.com/SimplyDanny.png",
