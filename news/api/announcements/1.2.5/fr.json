@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Modification de la connexion tierce",
+    "content": "Cette mise à jour modifie le mécanisme d'actualisation des jetons (Token) pour les connexions tierces.\n\nVeuillez supprimer votre compte tiers actuellement connecté, puis vous reconnecter afin de finaliser la nouvelle procédure d'authentification.\n\n🙏 Nous vous présentons nos sincères excuses pour la gêne occasionnée et vous remercions pour votre patience, votre compréhension et votre soutien.",
+    "author": "Équipe Swift Craft Launcher"
+  }
+}

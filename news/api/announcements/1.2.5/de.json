@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Änderung der Drittanbieter-Anmeldung",
+    "content": "Mit diesem Update wurde der Token-Aktualisierungsmechanismus für Drittanbieter-Anmeldungen angepasst.\n\nBitte entferne dein aktuell angemeldetes Drittanbieter-Konto und melde dich erneut an, um den neuen Authentifizierungsprozess abzuschließen.\n\n🙏 Wir entschuldigen uns aufrichtig für die entstandenen Unannehmlichkeiten und danken dir für deine Geduld, dein Verständnis und deine Unterstützung.",
+    "author": "Swift Craft Launcher Team"
+  }
+}

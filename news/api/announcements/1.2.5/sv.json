@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Ändring av inloggning via tredje part",
+    "content": "Den här uppdateringen ändrar Token-förnyelsen för inloggning via tredje part.\n\nTa bort ditt nuvarande tredjepartskonto och logga in igen för att slutföra den nya autentiseringsprocessen.\n\n🙏 Vi ber uppriktigt om ursäkt för eventuella besvär och tackar för ditt tålamod, din förståelse och ditt fortsatta stöd.",
+    "author": "Swift Craft Launcher Team"
+  }
+}

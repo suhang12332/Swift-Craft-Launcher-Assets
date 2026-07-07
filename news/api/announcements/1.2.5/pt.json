@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Alteração no login de terceiros",
+    "content": "Esta atualização altera o mecanismo de renovação do Token para logins de terceiros.\n\nRemova a conta de terceiros atualmente conectada e faça login novamente para concluir o novo processo de autenticação.\n\n🙏 Pedimos sinceras desculpas por qualquer inconveniente causado por esta alteração e agradecemos sua paciência, compreensão e apoio.",
+    "author": "Equipe Swift Craft Launcher"
+  }
+}

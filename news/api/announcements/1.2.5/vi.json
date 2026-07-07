@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Thông báo điều chỉnh đăng nhập bên thứ ba",
+    "content": "Bản cập nhật này thay đổi cơ chế làm mới Token cho đăng nhập bằng tài khoản bên thứ ba.\n\nVui lòng xóa tài khoản bên thứ ba đang đăng nhập và đăng nhập lại để hoàn tất quy trình xác thực mới.\n\n🙏 Chúng tôi chân thành xin lỗi vì những bất tiện do thay đổi này gây ra và cảm ơn sự kiên nhẫn, thông cảm cũng như sự ủng hộ của bạn.",
+    "author": "Đội ngũ Swift Craft Launcher"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Kolmannen osapuolen kirjautumisen muutos",
+    "content": "Tämä päivitys muuttaa kolmannen osapuolen kirjautumisten Token-päivitysmekanismia.\n\nPoista nykyinen kirjautunut kolmannen osapuolen tili ja kirjaudu uudelleen sisään suorittaaksesi uuden tunnistautumisprosessin loppuun.\n\n🙏 Pahoittelemme muutoksesta aiheutunutta haittaa ja kiitämme kärsivällisyydestäsi, ymmärryksestäsi ja jatkuvasta tuestasi.",
+    "author": "Swift Craft Launcher -tiimi"
+  }
+}

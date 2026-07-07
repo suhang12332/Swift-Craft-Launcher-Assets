@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Üçüncü taraf oturum açma değişikliği",
+    "content": "Bu güncelleme, üçüncü taraf oturum açma işlemlerinin Token yenileme mekanizmasını değiştirmektedir.\n\nLütfen mevcut üçüncü taraf hesabınızı kaldırın ve yeni kimlik doğrulama sürecini tamamlamak için tekrar giriş yapın.\n\n🙏 Bu değişiklikten kaynaklanan rahatsızlıktan dolayı içtenlikle özür diler, sabrınız, anlayışınız ve desteğiniz için teşekkür ederiz.",
+    "author": "Swift Craft Launcher Ekibi"
+  }
+}

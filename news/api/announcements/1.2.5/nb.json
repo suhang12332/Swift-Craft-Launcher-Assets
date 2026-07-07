@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Endringer i tredjepartsinnlogging",
+    "content": "Denne oppdateringen endrer Token-fornyelsesmekanismen for tredjepartsinnlogging.\n\nFjern den tredjepartskontoen du er logget inn med, og logg inn på nytt for å fullføre den nye autentiseringsprosessen.\n\n🙏 Vi beklager oppriktig eventuelle ulemper dette medfører, og takker for din tålmodighet, forståelse og støtte.",
+    "author": "Swift Craft Launcher Team"
+  }
+}
