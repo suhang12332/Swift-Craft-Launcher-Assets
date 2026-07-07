@@ -1,0 +1,112 @@
+{
+  "en": {
+    "title": "Third-Party Login Adjustment Notice",
+    "content": "This update changes the Token refresh mechanism for third-party logins.\n\nPlease remove your currently signed-in third-party account and sign in again to complete the new authentication process.\n\n🙏 We sincerely apologize for any inconvenience caused by this change. Thank you for your patience, understanding, and continued support.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "zh-Hans": {
+    "title": "第三方登录调整说明",
+    "content": "本次更新调整了第三方登录的 Token 刷新机制。\n\n请手动删除当前已登录的第三方账号，并重新登录一次，以完成新的认证流程。\n\n🙏 对此次调整给你带来的不便，我们深表歉意，感谢你的耐心、理解与支持。",
+    "author": "Swift Craft Launcher 团队"
+  },
+  "zh-Hant": {
+    "title": "第三方登入調整說明",
+    "content": "本次更新調整了第三方登入的 Token 更新機制。\n\n請手動刪除目前已登入的第三方帳號，並重新登入一次，以完成新的驗證流程。\n\n🙏 對此次調整造成的不便，我們深表歉意，感謝你的耐心、理解與支持。",
+    "author": "Swift Craft Launcher 團隊"
+  },
+  "ja": {
+    "title": "サードパーティログインに関するお知らせ",
+    "content": "今回のアップデートでは、サードパーティログインの Token 更新方式を変更しました。\n\n現在ログイン中のサードパーティアカウントを一度削除し、改めてログインして新しい認証手続きを完了してください。\n\n🙏 この変更によりご不便をおかけしますことを深くお詫び申し上げます。ご理解とご支援、そしてご協力に心より感謝いたします。",
+    "author": "Swift Craft Launcher チーム"
+  },
+  "ko": {
+    "title": "타사 로그인 변경 안내",
+    "content": "이번 업데이트에서는 타사 로그인 Token 갱신 방식이 변경되었습니다.\n\n현재 로그인되어 있는 타사 계정을 삭제한 후 다시 로그인하여 새로운 인증 절차를 완료해 주세요.\n\n🙏 이번 변경으로 불편을 드린 점 진심으로 사과드리며, 여러분의 인내와 이해, 그리고 지속적인 지원에 감사드립니다.",
+    "author": "Swift Craft Launcher 팀"
+  },
+  "fr": {
+    "title": "Modification de la connexion tierce",
+    "content": "Cette mise à jour modifie le mécanisme d'actualisation des jetons (Token) pour les connexions tierces.\n\nVeuillez supprimer votre compte tiers actuellement connecté, puis vous reconnecter afin de finaliser la nouvelle procédure d'authentification.\n\n🙏 Nous vous présentons nos sincères excuses pour la gêne occasionnée et vous remercions pour votre patience, votre compréhension et votre soutien.",
+    "author": "Équipe Swift Craft Launcher"
+  },
+  "de": {
+    "title": "Änderung der Drittanbieter-Anmeldung",
+    "content": "Mit diesem Update wurde der Token-Aktualisierungsmechanismus für Drittanbieter-Anmeldungen angepasst.\n\nBitte entferne dein aktuell angemeldetes Drittanbieter-Konto und melde dich erneut an, um den neuen Authentifizierungsprozess abzuschließen.\n\n🙏 Wir entschuldigen uns aufrichtig für die entstandenen Unannehmlichkeiten und danken dir für deine Geduld, dein Verständnis und deine Unterstützung.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "es": {
+    "title": "Cambios en el inicio de sesión de terceros",
+    "content": "Esta actualización modifica el mecanismo de actualización del Token para los inicios de sesión de terceros.\n\nElimina la cuenta de terceros con la que has iniciado sesión actualmente y vuelve a iniciar sesión para completar el nuevo proceso de autenticación.\n\n🙏 Lamentamos sinceramente cualquier inconveniente ocasionado por este cambio y agradecemos tu paciencia, comprensión y apoyo.",
+    "author": "Equipo Swift Craft Launcher"
+  },
+  "it": {
+    "title": "Modifiche all'accesso tramite terze parti",
+    "content": "Questo aggiornamento modifica il meccanismo di aggiornamento del Token per gli accessi tramite terze parti.\n\nRimuovi l'account di terze parti attualmente connesso ed effettua nuovamente l'accesso per completare la nuova procedura di autenticazione.\n\n🙏 Ci scusiamo sinceramente per gli eventuali disagi causati da questa modifica e ti ringraziamo per la pazienza, la comprensione e il continuo supporto.",
+    "author": "Team Swift Craft Launcher"
+  },
+  "ru": {
+    "title": "Изменения входа через сторонние сервисы",
+    "content": "В этом обновлении изменён механизм обновления Token для входа через сторонние сервисы.\n\nПожалуйста, удалите текущую привязанную учётную запись стороннего сервиса и войдите снова, чтобы завершить новый процесс аутентификации.\n\n🙏 Приносим искренние извинения за возможные неудобства и благодарим вас за терпение, понимание и поддержку.",
+    "author": "Команда Swift Craft Launcher"
+  },
+  "pt": {
+    "title": "Alteração no login de terceiros",
+    "content": "Esta atualização altera o mecanismo de renovação do Token para logins de terceiros.\n\nRemova a conta de terceiros atualmente conectada e faça login novamente para concluir o novo processo de autenticação.\n\n🙏 Pedimos sinceras desculpas por qualquer inconveniente causado por esta alteração e agradecemos sua paciência, compreensão e apoio.",
+    "author": "Equipe Swift Craft Launcher"
+  },
+  "ar": {
+    "title": "إشعار بتعديل تسجيل الدخول عبر الجهات الخارجية",
+    "content": "يتضمن هذا التحديث تغيير آلية تحديث رمز Token لتسجيل الدخول عبر الجهات الخارجية.\n\nيرجى حذف حساب الجهة الخارجية المسجل حاليًا ثم تسجيل الدخول مرة أخرى لإكمال عملية المصادقة الجديدة.\n\n🙏 نعتذر بصدق عن أي إزعاج قد يسببه هذا التغيير، ونشكركم على صبركم وتفهمكم ودعمكم المستمر.",
+    "author": "فريق Swift Craft Launcher"
+  },
+  "nl": {
+    "title": "Wijziging in aanmelden via derden",
+    "content": "Deze update wijzigt het vernieuwingsmechanisme van de Token voor aanmeldingen via derden.\n\nVerwijder je momenteel aangemelde account van een derde partij en meld je opnieuw aan om het nieuwe verificatieproces te voltooien.\n\n🙏 Onze oprechte excuses voor het eventuele ongemak. Bedankt voor je geduld, begrip en voortdurende steun.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "pl": {
+    "title": "Zmiany w logowaniu przez usługi zewnętrzne",
+    "content": "Ta aktualizacja zmienia mechanizm odświeżania Token dla logowania przez usługi zewnętrzne.\n\nUsuń obecnie zalogowane konto usługi zewnętrznej i zaloguj się ponownie, aby ukończyć nowy proces uwierzytelniania.\n\n🙏 Serdecznie przepraszamy za wszelkie niedogodności i dziękujemy za cierpliwość, wyrozumiałość oraz wsparcie.",
+    "author": "Zespół Swift Craft Launcher"
+  },
+  "sv": {
+    "title": "Ändring av inloggning via tredje part",
+    "content": "Den här uppdateringen ändrar Token-förnyelsen för inloggning via tredje part.\n\nTa bort ditt nuvarande tredjepartskonto och logga in igen för att slutföra den nya autentiseringsprocessen.\n\n🙏 Vi ber uppriktigt om ursäkt för eventuella besvär och tackar för ditt tålamod, din förståelse och ditt fortsatta stöd.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "tr": {
+    "title": "Üçüncü taraf oturum açma değişikliği",
+    "content": "Bu güncelleme, üçüncü taraf oturum açma işlemlerinin Token yenileme mekanizmasını değiştirmektedir.\n\nLütfen mevcut üçüncü taraf hesabınızı kaldırın ve yeni kimlik doğrulama sürecini tamamlamak için tekrar giriş yapın.\n\n🙏 Bu değişiklikten kaynaklanan rahatsızlıktan dolayı içtenlikle özür diler, sabrınız, anlayışınız ve desteğiniz için teşekkür ederiz.",
+    "author": "Swift Craft Launcher Ekibi"
+  },
+  "vi": {
+    "title": "Thông báo điều chỉnh đăng nhập bên thứ ba",
+    "content": "Bản cập nhật này thay đổi cơ chế làm mới Token cho đăng nhập bằng tài khoản bên thứ ba.\n\nVui lòng xóa tài khoản bên thứ ba đang đăng nhập và đăng nhập lại để hoàn tất quy trình xác thực mới.\n\n🙏 Chúng tôi chân thành xin lỗi vì những bất tiện do thay đổi này gây ra và cảm ơn sự kiên nhẫn, thông cảm cũng như sự ủng hộ của bạn.",
+    "author": "Đội ngũ Swift Craft Launcher"
+  },
+  "hi": {
+    "title": "तृतीय-पक्ष लॉगिन परिवर्तन सूचना",
+    "content": "इस अपडेट में तृतीय-पक्ष लॉगिन के Token रिफ्रेश तंत्र में बदलाव किया गया है।\n\nकृपया वर्तमान में लॉगिन किए गए तृतीय-पक्ष खाते को हटाएँ और नई प्रमाणीकरण प्रक्रिया पूरी करने के लिए पुनः लॉगिन करें।\n\n🙏 इस परिवर्तन से हुई असुविधा के लिए हम हार्दिक क्षमा चाहते हैं। आपके धैर्य, समझ और निरंतर सहयोग के लिए धन्यवाद।",
+    "author": "Swift Craft Launcher टीम"
+  },
+  "fi": {
+    "title": "Kolmannen osapuolen kirjautumisen muutos",
+    "content": "Tämä päivitys muuttaa kolmannen osapuolen kirjautumisten Token-päivitysmekanismia.\n\nPoista nykyinen kirjautunut kolmannen osapuolen tili ja kirjaudu uudelleen sisään suorittaaksesi uuden tunnistautumisprosessin loppuun.\n\n🙏 Pahoittelemme muutoksesta aiheutunutta haittaa ja kiitämme kärsivällisyydestäsi, ymmärryksestäsi ja jatkuvasta tuestasi.",
+    "author": "Swift Craft Launcher -tiimi"
+  },
+  "nb": {
+    "title": "Endringer i tredjepartsinnlogging",
+    "content": "Denne oppdateringen endrer Token-fornyelsesmekanismen for tredjepartsinnlogging.\n\nFjern den tredjepartskontoen du er logget inn med, og logg inn på nytt for å fullføre den nye autentiseringsprosessen.\n\n🙏 Vi beklager oppriktig eventuelle ulemper dette medfører, og takker for din tålmodighet, forståelse og støtte.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "da": {
+    "title": "Ændring af tredjepartslogin",
+    "content": "Denne opdatering ændrer Token-opdateringsmekanismen for tredjepartslogin.\n\nFjern den tredjepartskonto, du aktuelt er logget ind med, og log ind igen for at gennemføre den nye godkendelsesproces.\n\n🙏 Vi beklager oprigtigt de gener, denne ændring måtte medføre, og takker for din tålmodighed, forståelse og støtte.",
+    "author": "Swift Craft Launcher Team"
+  },
+  "th": {
+    "title": "ประกาศการเปลี่ยนแปลงการเข้าสู่ระบบด้วยบัญชีบุคคลที่สาม",
+    "content": "การอัปเดตครั้งนี้ได้ปรับเปลี่ยนกลไกการรีเฟรช Token สำหรับการเข้าสู่ระบบด้วยบัญชีบุคคลที่สาม\n\nโปรดลบบัญชีบุคคลที่สามที่กำลังเข้าสู่ระบบอยู่ และเข้าสู่ระบบใหม่อีกครั้งเพื่อดำเนินกระบวนการยืนยันตัวตนรูปแบบใหม่ให้เสร็จสมบูรณ์\n\n🙏 ขออภัยเป็นอย่างยิ่งในความไม่สะดวกที่เกิดจากการเปลี่ยนแปลงครั้งนี้ และขอขอบคุณสำหรับความอดทน ความเข้าใจ และการสนับสนุนของคุณ",
+    "author": "ทีม Swift Craft Launcher"
+  }
+}
