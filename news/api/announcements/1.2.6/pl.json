@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Zmiany w logowaniu przez usługi zewnętrzne",
+    "content": "Ta aktualizacja zmienia mechanizm odświeżania Token dla logowania przez usługi zewnętrzne.\n\nUsuń obecnie zalogowane konto usługi zewnętrznej i zaloguj się ponownie, aby ukończyć nowy proces uwierzytelniania.\n\n🙏 Serdecznie przepraszamy za wszelkie niedogodności i dziękujemy za cierpliwość, wyrozumiałość oraz wsparcie.",
+    "author": "Zespół Swift Craft Launcher"
+  }
+}

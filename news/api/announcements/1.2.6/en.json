@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Third-Party Login Adjustment Notice",
+    "content": "This update changes the Token refresh mechanism for third-party logins.\n\nPlease remove your currently signed-in third-party account and sign in again to complete the new authentication process.\n\n🙏 We sincerely apologize for any inconvenience caused by this change. Thank you for your patience, understanding, and continued support.",
+    "author": "Swift Craft Launcher Team"
+  }
+}

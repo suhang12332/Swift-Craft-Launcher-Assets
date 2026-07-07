@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Modifiche all'accesso tramite terze parti",
+    "content": "Questo aggiornamento modifica il meccanismo di aggiornamento del Token per gli accessi tramite terze parti.\n\nRimuovi l'account di terze parti attualmente connesso ed effettua nuovamente l'accesso per completare la nuova procedura di autenticazione.\n\n🙏 Ci scusiamo sinceramente per gli eventuali disagi causati da questa modifica e ti ringraziamo per la pazienza, la comprensione e il continuo supporto.",
+    "author": "Team Swift Craft Launcher"
+  }
+}

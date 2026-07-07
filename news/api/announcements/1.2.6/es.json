@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Cambios en el inicio de sesión de terceros",
+    "content": "Esta actualización modifica el mecanismo de actualización del Token para los inicios de sesión de terceros.\n\nElimina la cuenta de terceros con la que has iniciado sesión actualmente y vuelve a iniciar sesión para completar el nuevo proceso de autenticación.\n\n🙏 Lamentamos sinceramente cualquier inconveniente ocasionado por este cambio y agradecemos tu paciencia, comprensión y apoyo.",
+    "author": "Equipo Swift Craft Launcher"
+  }
+}
