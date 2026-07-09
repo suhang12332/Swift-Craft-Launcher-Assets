@@ -35,3 +35,5 @@ yarn-error.log*
 
 # GitHub Wiki working copy (cloned by CI)
 wiki/
+
+.gitHub
