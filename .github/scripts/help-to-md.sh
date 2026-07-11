@@ -58,6 +58,9 @@ for f in "$SRC_DIR"/*.html; do
   perl "$SCRIPT_DIR/help-to-md-postprocess.pl" "$out" "$map_file"
   rm -f "$map_file" "$tmp_preprocessed" 2>/dev/null
 
+  # 3.5 将 <span style="color: #ff3b30;">转为 markdown 加粗（GitHub Wiki 不支持 style 属性）
+  perl -pi -e 's/<span style="color: #ff3b30;">\s*(.*?)\s*<\/span>/ **$1**/g' "$out" 2>/dev/null || true
+
   # 4. 调整内部链接以适配 GitHub Wiki，统一使用 home（不用 index）
   perl -pi -e '
     s/\]\(((?!https?:\/\/)[^)]*?)index\.html(\))/\]\(\1home\2/g;
