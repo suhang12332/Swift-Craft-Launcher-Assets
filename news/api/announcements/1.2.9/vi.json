@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Thông báo về sự cố không thể cập nhật trong trình khởi chạy ở phiên bản 1.2.9",
+    "content": "Phiên bản 1.2.9 đã thay đổi logic cập nhật, nhưng không phải tất cả các trường hợp kiểm thử đều được bao phủ, dẫn đến lỗi chức năng cập nhật tích hợp trong trình khởi chạy.\n\nGiải pháp là tải xuống thủ công phiên bản mới nhất 1.3.0 từ GitHub: https://github.com/suhang12332/Swift-Craft-Launcher/releases. Các bản cập nhật cho phiên bản sau 1.3.0 có thể tiếp tục được thực hiện bằng chức năng cập nhật tích hợp trong trình khởi chạy.\n\n🙏 Chúng tôi chân thành xin lỗi vì những bất tiện do sự điều chỉnh này gây ra và cảm ơn sự kiên nhẫn, thông cảm và ủng hộ của bạn.",
+    "author": "Đội ngũ Swift Craft Launcher"
+  }
+}

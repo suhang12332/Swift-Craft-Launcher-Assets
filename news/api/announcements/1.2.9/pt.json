@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Aviso sobre a impossibilidade de atualizar no launcher para a versão 1.2.9",
+    "content": "A versão 1.2.9 alterou a lógica de atualização, mas nem todos os casos de teste foram cobertos, o que causou uma falha na função de atualização integrada do launcher.\n\nA solução é baixar manualmente a versão mais recente, a 1.3.0, do GitHub: https://github.com/suhang12332/Swift-Craft-Launcher/releases. As atualizações para versões posteriores à 1.3.0 podem continuar a ser feitas através da função de atualização integrada do launcher.\n\n🙏 Pedimos sinceras desculpas pelos inconvenientes causados por este ajuste e agradecemos a sua paciência, compreensão e apoio.",
+    "author": "Equipe Swift Craft Launcher"
+  }
+}

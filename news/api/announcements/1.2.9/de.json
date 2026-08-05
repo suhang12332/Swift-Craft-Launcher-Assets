@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Hinweis zum Problem der fehlenden Update-Funktion im Launcher für Version 1.2.9",
+    "content": "Version 1.2.9 führte Änderungen an der Update-Logik ein, aber nicht alle Testfälle wurden abgedeckt, was zu einer Störung der integrierten Update-Funktion des Launchers führte.\n\nDie Lösung besteht darin, die neueste Version 1.3.0 manuell von GitHub herunterzuladen: https://github.com/suhang12332/Swift-Craft-Launcher/releases. Updates für Versionen nach 1.3.0 können weiterhin über die integrierte Update-Funktion des Launchers durchgeführt werden.\n\n🙏 Wir entschuldigen uns aufrichtig für die Unannehmlichkeiten, die diese Anpassung verursacht hat, und danken für Ihre Geduld, Ihr Verständnis und Ihre Unterstützung.",
+    "author": "Swift Craft Launcher Team"
+  }
+}

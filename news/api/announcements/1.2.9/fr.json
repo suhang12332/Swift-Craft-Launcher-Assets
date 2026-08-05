@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Avis concernant l'impossibilité de mise à jour dans le lanceur pour la version 1.2.9",
+    "content": "La version 1.2.9 a modifié la logique de mise à jour, mais tous les cas de test n'ont pas été couverts, ce qui a entraîné un dysfonctionnement de la fonction de mise à jour intégrée du lanceur.\n\nLa solution consiste à télécharger manuellement la dernière version, la 1.3.0, sur GitHub : https://github.com/suhang12332/Swift-Craft-Launcher/releases. Les mises à jour des versions postérieures à la 1.3.0 peuvent continuer à être effectuées via la fonction de mise à jour intégrée du lanceur.\n\n🙏 Nous nous excusons sincèrement pour les désagréments causés par cet ajustement et vous remercions pour votre patience, votre compréhension et votre soutien.",
+    "author": "Équipe Swift Craft Launcher"
+  }
+}

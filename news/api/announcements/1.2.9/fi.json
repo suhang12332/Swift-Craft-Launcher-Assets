@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Ilmoitus versiota 1.2.9 koskevasta ongelmasta, jossa päivittäminen ei onnistu launcherin sisällä",
+    "content": "Versio 1.2.9 muutti päivityslogiikkaa, mutta kaikkia testitapauksia ei katettu, mikä johti launcherin sisäänrakennetun päivitystoiminnon häiriöön.\n\nRatkaisu on ladata uusin versio 1.3.0 manuaalisesti GitHubista: https://github.com/suhang12332/Swift-Craft-Launcher/releases. Versioiden 1.3.0 jälkeen päivitykset voidaan edelleen suorittaa launcherin sisäänrakennetulla päivitystoiminnolla.\n\n🙏 Pahoittelemme tämän muutoksen aiheuttamaa haittaa ja kiitämme kärsivällisyydestäsi, ymmärryksestäsi ja tuestasi.",
+    "author": "Swift Craft Launcher -tiimi"
+  }
+}

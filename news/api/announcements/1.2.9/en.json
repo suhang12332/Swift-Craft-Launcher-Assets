@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "title": "Notice Regarding the Inability to Update in Launcher for Version 1.2.9",
+    "content": "Version 1.2.9 introduced changes to the update logic, but not all test cases were covered, resulting in an issue with the launcher's built-in update function.\n\nThe solution is to manually download the latest release, version 1.3.0, from GitHub: https://github.com/suhang12332/Swift-Craft-Launcher/releases. Updates for versions after 1.3.0 can continue to be performed using the launcher's built-in update feature.\n\n🙏 We sincerely apologize for any inconvenience caused by this adjustment, and thank you for your patience, understanding, and continued support.",
+    "author": "Swift Craft Launcher Team"
+  }
+}
