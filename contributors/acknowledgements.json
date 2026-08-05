@@ -43,8 +43,8 @@
   },
   {
     "name": "NSSkinRender",
-    "url": "https://github.com/irisWirisW/NSSkinRender",
-    "avatar": "https://github.com/irisWirisW.png",
+    "url": "https://github.com/suhang12332/NSSkinRender",
+    "avatar": "https://github.com/suhang12332.png",
     "description": "3D Minecraft skin renderer for Swift/SwiftUI with cape support and interactive controls."
   },
   {
@@ -70,12 +70,6 @@
     "url": "https://github.com/UNIkeEN/SJMCL",
     "avatar": "https://mc.sjtu.cn/sjmcl/logo.png",
     "description": "Another open-source Minecraft launcher designed by SJTU Minecraft Club"
-  },
-  {
-    "name": "LittleSkin",
-    "url": "https://littleskin.cn",
-    "avatar": "https://github.com/LittleSkinChina.png",
-    "description": "Established in March 2016, we are the second-largest Minecraft skin hosting server in Mainland China."
   },
   {
     "name": "curseforge-fingerprint",
