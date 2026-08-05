@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "Meddelelse om problem med manglende opdatering i launcher til version 1.2.9",
-    "content": "Version 1.2.9 ændrede opdateringslogikken, men ikke alle testcases blev dækket, hvilket resulterede i en fejl i launcherens indbyggede opdateringsfunktion.\n\nLøsningen er at manuelt downloade den seneste version 1.3.0 fra GitHub: https://github.com/suhang12332/Swift-Craft-Launcher/releases. Opdateringer til versioner efter 1.3.0 kan fortsat udføres ved hjælp af launcherens indbyggede opdateringsfunktion.\n\n🙏 Vi beklager oprigtigt ulejligheden forårsaget af denne justering og takker for din tålmodighed, forståelse og støtte.",
-    "author": "Swift Craft Launcher Team"
-  }
-}

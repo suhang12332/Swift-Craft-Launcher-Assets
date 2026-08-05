@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "Meddelande om att uppdatering i startprogrammet inte fungerar för version 1.2.9",
-    "content": "Version 1.2.9 ändrade uppdateringslogiken, men inte alla testfall täcktes, vilket ledde till ett fel i startprogrammets inbyggda uppdateringsfunktion.\n\nLösningen är att manuellt ladda ner den senaste versionen 1.3.0 från GitHub: https://github.com/suhang12332/Swift-Craft-Launcher/releases. Uppdateringar för versioner efter 1.3.0 kan fortsätta att utföras med startprogrammets inbyggda uppdateringsfunktion.\n\n🙏 Vi ber uppriktigt om ursäkt för besvären som denna justering orsakat och tackar för ditt tålamod, din förståelse och ditt stöd.",
-    "author": "Swift Craft Launcher Team"
-  }
-}

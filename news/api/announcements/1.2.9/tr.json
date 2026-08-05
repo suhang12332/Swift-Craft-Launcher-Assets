@@ -1,8 +1,0 @@
-{
-  "success": true,
-  "data": {
-    "title": "1.2.9 Sürümünde Başlatıcı İçinde Güncelleme Yapılamaması Sorunu Hakkında Bildirim",
-    "content": "1.2.9 sürümü, güncelleme mantığında yapılan değişikliklerin ardından test senaryolarının tam olarak kapsanmaması nedeniyle başlatıcının yerleşik güncelleme işlevinde soruna yol açtı.\n\nÇözüm, GitHub'daki en son sürüm olan 1.3.0'ı manuel olarak indirmektir: https://github.com/suhang12332/Swift-Craft-Launcher/releases. 1.3.0 sonrası sürümlerin güncellemeleri başlatıcının yerleşik güncelleme işlevi kullanılarak devam ettirilebilir.\n\n🙏 Bu düzenlemenin neden olduğu rahatsızlık için içtenlikle özür diler, sabrınız, anlayışınız ve desteğiniz için teşekkür ederiz.",
-    "author": "Swift Craft Launcher Ekibi"
-  }
-}
