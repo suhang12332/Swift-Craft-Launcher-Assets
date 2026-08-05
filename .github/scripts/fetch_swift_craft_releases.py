@@ -35,12 +35,12 @@ def render_release_html(version: str, body: str) -> str:
 
         if stripped.startswith("## "):
             heading = stripped[3:]
-            html_lines.append(f"<h4>{html_escape(heading)}</h4>")
+            html_lines.append(f"<h5>{html_escape(heading)}</h5>")
         elif stripped.startswith("- "):
             item = stripped[2:]
-            html_lines.append(f"<p>{html_escape(item)}</p>")
+            html_lines.append(f"<p style=\"font-size:11px;\">{html_escape(item)}</p>")
         else:
-            html_lines.append(f"<p>{html_escape(stripped)}</p>")
+            html_lines.append(f"<p style=\"font-size:11px;\">{html_escape(stripped)}</p>")
 
     html_body = "\n".join(html_lines)
 
@@ -138,4 +138,3 @@ def main(argv: Optional[List[str]] = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
