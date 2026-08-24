@@ -94,5 +94,11 @@
     "url": "https://github.com/hjy-233/SwiftNBT",
     "avatar": "http://github.com/hjy-233.png",
     "description": "SwiftNBT is a lightweight Swift package for reading, writing, and manipulating Minecraft NBT data."
+  },
+  {
+    "name": "TouchBarSupport",
+    "url": "https://github.com/functy23/TouchBarSupport",
+    "avatar": "http://github.com/functy23.png",
+    "description": "Support TouchBar"
   }
 ]
