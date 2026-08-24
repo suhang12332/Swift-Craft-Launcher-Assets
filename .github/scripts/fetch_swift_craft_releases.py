@@ -53,7 +53,7 @@ def render_release_html(version: str, body: str) -> str:
     <meta name="description" content="Swift Craft Launcher 版本 {version} 发布日志">
     <meta name="keywords" content="Swift Craft Launcher, 发布日志, 版本 {version}">
     <meta content="light dark" name="color-scheme">
-    <link media="all" href="https://raw.githubusercontent.com/suhang12332/Swift-Craft-Launcher-Assets/refs/heads/main/help/SwiftCraftLauncher.help/Contents/Resources/css/app.css" type="text/css" rel="stylesheet">
+    <link media="all" href="https://swift-craft-launcher-assets-doc.pages.dev/css/app.css" type="text/css" rel="stylesheet">
 </head>
 <body dir="ltr" id="release-{html_escape(version)}" class="AppleTopic apd-topic dark-mode-enabled" data-istaskopen="true" data-designversion="2">
     <a name="release-{html_escape(version)}"></a>
