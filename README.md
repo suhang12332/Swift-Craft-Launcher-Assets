@@ -1,6 +1,6 @@
 # Swift Craft Launcher Assets
 
-这是一个整合了 Swift Craft Launcher 所有相关资源的统一仓库。
+Swift Craft Launcher 所有相关资源的统一仓库。
 
 ## 仓库结构
 
@@ -392,20 +392,7 @@ ar, da, de, en, es, fi, fr, hi, it, ja, ko, nb, nl, pl, pt, ru, sv, th, tr, vi, 
 - 按功能模块分类存储（注册、添加游戏、添加资源、设置、编辑皮肤等）
 
 ### 🌐 web/
-**Swift-Craft-Launcher-Web** - 前端代码
+**Swift-Craft-Launcher-Web** - 前端代码（暂不维护 已经转到了[官网](https://github.com/suhang12332/Swift-Craft-Launcher-Web)）
 - 项目官网前端代码
 - 包含多语言支持（英文、简体中文、繁体中文）
 - 静态网站资源
-
-## 原始仓库
-
-- [Swift-Craft-Launcher-Help](https://github.com/suhang12332/Swift-Craft-Launcher-Help)
-- [Swift-Craft-Launcher-News](https://github.com/suhang12332/Swift-Craft-Launcher-News)
-- [Swift-Craft-Launcher-Contributors](https://github.com/suhang12332/Swift-Craft-Launcher-Contributors)
-- [Swift-Craft-Launcher-HelpBook](https://github.com/suhang12332/Swift-Craft-Launcher-HelpBook)
-- [swift-craft-launcher-web.github.io](https://github.com/suhang12332/swift-craft-launcher-web.github.io)
-
-## 使用说明
-
-各个子目录保持原有的结构和功能，可以独立使用。整合后的仓库便于统一管理和维护所有相关资源。
-
