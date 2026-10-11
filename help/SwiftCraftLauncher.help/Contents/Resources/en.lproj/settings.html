@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>Launcher Settings</title>
     <meta name="description" content="Configure Swift Craft Launcher settings, including general settings, game settings, advanced game settings, and AI settings">
-    <meta name="keywords" content="language, theme, layout, working directory, downloads, GitHub proxy, Modrinth, CurseForge, snapshot versions, modpack export, clear cache, memory, Java, Java reinstall, JVM, garbage collector, environment variables, AI settings, OpenAI, Ollama, Keychain, incognito login, offline login, friend activity notifications, Minecraft account friends, Yggdrasil, authlib-injector">
+    <meta name="keywords" content="language, theme, layout, working directory, downloads, Modrinth, CurseForge, snapshot versions, modpack export, clear cache, memory, Java, Java reinstall, JVM, garbage collector, environment variables, AI settings, OpenAI, Ollama, Keychain, incognito login, offline login, friend activity notifications, Minecraft account friends, Yggdrasil, authlib-injector">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://swift-craft-launcher-assets-doc.pages.dev/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -58,34 +58,6 @@
         <h2 aria-controls="aria-settings-download" class="Name">Concurrent Download Count</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-download">
             <p>Set the number of concurrent downloads, range: 1-64. Higher concurrency can improve download speed but also brings greater performance overhead.</p>
-        </div>
-    </div>
-
-    <div id="settings-github-proxy" class="Task">
-        <h2 aria-controls="aria-settings-github-proxy" class="Name">GitHub Proxy Settings</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-github-proxy">
-            <p>Configure GitHub proxy settings to automatically add proxy prefixes to GitHub-related URLs, helping resolve access issues in certain regions.</p>
-            <p><strong>Enable/Disable Toggle:</strong> Control whether to apply proxy to GitHub URLs. Default: Enabled.</p>
-            <p><strong>Proxy URL:</strong> Configure the proxy server address. Default: <code class="CodeLine">https://gh-proxy.com</code>. The proxy URL must be a valid URL with <code class="CodeLine">http://</code> or <code class="CodeLine">https://</code> protocol.</p>
-            <p><strong>Automatic Application:</strong> The launcher automatically applies proxy to the following GitHub domains:</p>
-            <ul>
-                <li><p><code class="CodeLine">github.com</code> - GitHub repository pages and releases</p></li>
-                <li><p><code class="CodeLine">raw.githubusercontent.com</code> - Raw file content</p></li>
-            </ul>
-            <p><strong>Excluded Domains:</strong> The following domains are not proxied:</p>
-            <ul>
-                <li><p><code class="CodeLine">api.github.com</code> - GitHub API endpoints (usually accessible without proxy)</p></li>
-            </ul>
-            <p><strong>Use Cases:</strong></p>
-            <ul>
-                <li><p>GitHub API calls (latest releases, contributors, appcast, etc.)</p></li>
-                <li><p>File downloads from GitHub repositories</p></li>
-                <li><p>Mod pack dependency downloads</p></li>
-                <li><p>Sparkle update service downloads</p></li>
-            </ul>
-            <div class="Alert">
-                <p class="Note"><em>Note:</em> The proxy is automatically applied when enabled. You don't need to manually configure each URL. If the default proxy is unavailable, you can replace it with other GitHub proxy services such as <code class="CodeLine">https://ghproxy.com</code> or <code class="CodeLine">https://mirror.ghproxy.com</code>.</p>
-            </div>
         </div>
     </div>
 

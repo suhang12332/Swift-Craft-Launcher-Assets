@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>启动器设置</title>
     <meta name="description" content="配置 Swift Craft Launcher 设置，包括通用设置、游戏设置、游戏高级设置和AI设置">
-    <meta name="keywords" content="语言, 主题, 界面布局, 工作目录, 下载, GitHub 代理, Modrinth, CurseForge, 快照版本, 整合包导出, 清理缓存, 内存, Java, Java 重装, JVM, 垃圾回收器, 环境变量, AI 设置, OpenAI, Ollama, 钥匙串, 无痕登录, 离线登录, 好友状态通知, Minecraft 账号好友, Yggdrasil, authlib-injector">
+    <meta name="keywords" content="语言, 主题, 界面布局, 工作目录, 下载, Modrinth, CurseForge, 快照版本, 整合包导出, 清理缓存, 内存, Java, Java 重装, JVM, 垃圾回收器, 环境变量, AI 设置, OpenAI, Ollama, 钥匙串, 无痕登录, 离线登录, 好友状态通知, Minecraft 账号好友, Yggdrasil, authlib-injector">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="https://swift-craft-launcher-assets-doc.pages.dev/css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -58,34 +58,6 @@
         <h2 aria-controls="aria-settings-download" class="Name">并发下载数量</h2>
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-download">
             <p>设置并发下载数量，范围：1-64。更高的并发性可以提高下载速度，但也会带来更大的性能开销。</p>
-        </div>
-    </div>
-
-    <div id="settings-github-proxy" class="Task">
-        <h2 aria-controls="aria-settings-github-proxy" class="Name">GitHub 代理设置</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-github-proxy">
-            <p>配置 GitHub 代理设置，自动为 GitHub 相关的 URL 添加代理前缀，帮助解决某些地区访问 GitHub 资源困难的问题。</p>
-            <p><strong>启用/禁用开关：</strong>控制是否对 GitHub URL 应用代理。默认：启用。</p>
-            <p><strong>代理 URL：</strong>配置代理服务器地址。默认：<code class="CodeLine">https://gh-proxy.com</code>。代理 URL 必须是有效的 URL，协议为 <code class="CodeLine">http://</code> 或 <code class="CodeLine">https://</code>。</p>
-            <p><strong>自动应用：</strong>启动器会自动对以下 GitHub 域名应用代理：</p>
-            <ul>
-                <li><p><code class="CodeLine">github.com</code> - GitHub 仓库页面和发布版本</p></li>
-                <li><p><code class="CodeLine">raw.githubusercontent.com</code> - 原始文件内容</p></li>
-            </ul>
-            <p><strong>排除域名：</strong>以下域名不应用代理：</p>
-            <ul>
-                <li><p><code class="CodeLine">api.github.com</code> - GitHub API 端点（通常无需代理即可访问）</p></li>
-            </ul>
-            <p><strong>使用场景：</strong></p>
-            <ul>
-                <li><p>GitHub API 调用（最新版本、贡献者、更新检查等）</p></li>
-                <li><p>从 GitHub 仓库下载文件</p></li>
-                <li><p>整合包依赖下载</p></li>
-                <li><p>Sparkle 更新服务下载</p></li>
-            </ul>
-            <div class="Alert">
-                <p class="Note"><em>【注】</em>启用后，代理会自动应用，无需手动配置每个 URL。如果默认代理不可用，可以更换为其他 GitHub 代理服务，例如 <code class="CodeLine">https://ghproxy.com</code> 或 <code class="CodeLine">https://mirror.ghproxy.com</code>。</p>
-            </div>
         </div>
     </div>
 
