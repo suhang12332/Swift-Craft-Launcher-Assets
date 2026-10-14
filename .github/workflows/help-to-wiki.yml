@@ -56,6 +56,7 @@ jobs:
           git clone "https://x-access-token:${WIKI_PAT}@github.com/${WIKI_REPO}.git" wiki
 
           # 覆盖 wiki 主仓库根目录（不再使用子目录）
+          find wiki -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           cp -R "_wiki_help/." "wiki/"
           rm -rf "_wiki_help"
 
