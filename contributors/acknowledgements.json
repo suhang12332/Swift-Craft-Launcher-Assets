@@ -18,7 +18,7 @@
     "description": "A mod loader for Minecraft that aims to be fast, secure, and flexible"
   },
   {
-    "name": "Neoforge",
+    "name": "NeoForge",
     "url": "https://neoforged.net/",
     "avatar": "https://github.com/neoforged.png",
     "description": "A community-driven fork of Minecraft Forge"
@@ -51,13 +51,13 @@
     "name": "SwiftMarkDownUI",
     "url": "https://github.com/suhang12332/SwiftMarkDownUI",
     "avatar": "https://github.com/suhang12332.png",
-    "description": "Markdown UI for SwiftUI"
+    "description": "Markdown and HTML rendering for SwiftUI"
   },
   {
     "name": "CFModrinthAdapterKit",
     "url": "https://github.com/suhang12332/CFModrinthAdapterKit",
     "avatar": "https://github.com/suhang12332.png",
-    "description": "CurseForge API adapter for Modrinth"
+    "description": "Bidirectional data adapter between CurseForge and Modrinth"
   },
   {
     "name": "Sparkle",
@@ -81,13 +81,13 @@
     "name": "Archify",
     "url": "https://github.com/Oct4Pie/archify",
     "avatar": "https://github.com/Oct4Pie.png",
-    "description": "Universal binary optimization tool for macOS applications"
+    "description": "Frees disk space by stripping unused architectures and language files from macOS apps"
   },
   {
     "name": "Zread",
     "url": "https://zread.ai",
     "avatar": "https://files.seeusercontent.com/2026/05/29/sf8T/svgviewer-png-output-2.png",
-    "description": "Where to Go Next?✨"
+    "description": "AI-powered code wiki and deep research for GitHub repositories"
   },
   {
     "name": "SwiftNBT",
@@ -99,6 +99,6 @@
     "name": "TouchBarSupport",
     "url": "https://github.com/functy23/TouchBarSupport",
     "avatar": "http://github.com/functy23.png",
-    "description": "Support TouchBar"
+    "description": "Standalone Swift package that brings a configurable Touch Bar to macOS apps"
   }
 ]
