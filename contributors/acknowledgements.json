@@ -75,7 +75,7 @@
     "name": "curseforge-fingerprint",
     "url": "https://github.com/meza/curseforge-fingerprint",
     "avatar": "https://github.com/meza.png",
-    "description": "✨ A simple, secure, decentralized virtual private network solution powered by Rust and Tokio"
+    "description": "Node binding for the file fingerprinting algorithm used by CurseForge"
   },
   {
     "name": "Archify",
