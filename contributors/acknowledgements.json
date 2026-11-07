@@ -60,6 +60,12 @@
     "description": "Bidirectional data adapter between CurseForge and Modrinth"
   },
   {
+    "name": "ModDependencyGraphKit",
+    "url": "https://github.com/suhang12332/ModDependencyGraphKit",
+    "avatar": "https://github.com/suhang12332.png",
+    "description": "A SwiftUI macOS package for building, laying out, and rendering mod dependency graphs."
+  },
+  {
     "name": "Sparkle",
     "url": "https://github.com/sparkle-project/Sparkle",
     "avatar": "https://github.com/sparkle-project.png",
