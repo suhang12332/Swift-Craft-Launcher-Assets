@@ -43,7 +43,7 @@
   },
   {
     "name": "NSSkinRender",
-    "url": "https://github.com/irisWirisW/NSSkinRender.git",
+    "url": "https://github.com/irisWirisW/NSSkinRender",
     "avatar": "https://github.com/irisWirisW.png",
     "description": "3D Minecraft skin renderer for Swift/SwiftUI with cape support and interactive controls."
   },
