@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Launcher Settings</title>
-    <meta name="description" content="Configure Swift Craft Launcher settings, including general settings, game settings, advanced game settings, and AI settings">
-    <meta name="keywords" content="language, theme, layout, working directory, downloads, Modrinth, CurseForge, snapshot versions, modpack export, clear cache, memory, Java, Java reinstall, JVM, garbage collector, environment variables, AI settings, OpenAI, Ollama, Keychain, incognito login, offline login, friend activity notifications, Minecraft account friends, Yggdrasil, authlib-injector">
+    <meta name="description" content="Configure Swift Craft Launcher settings, including general settings, game settings, and advanced game settings">
+    <meta name="keywords" content="language, theme, layout, working directory, downloads, Modrinth, CurseForge, snapshot versions, modpack export, clear cache, memory, Java, Java reinstall, JVM, garbage collector, environment variables, Keychain, incognito login, offline login, Yggdrasil, authlib-injector">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="../css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -95,13 +95,6 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-modpack-export-format">
             <p>Set the default format used when exporting modpacks. Available options: <strong>CurseForge</strong> and <strong>Modrinth</strong>.</p>
             <p>If you plan to publish the modpack on CurseForge, choose <strong>CurseForge</strong> format. If you plan to publish it on Modrinth, choose <strong>Modrinth</strong> format.</p>
-        </div>
-    </div>
-
-    <div id="settings-ai-crash" class="Task">
-        <h2 aria-controls="aria-settings-ai-crash" class="Name">AI Crash Analysis</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-crash">
-            <p>Enable/disable AI crash analysis feature. This feature requires successful AI settings configuration.</p>
         </div>
     </div>
 
@@ -219,111 +212,13 @@
         </div>
     </div>
 
-    <h1 class="Name" style="margin-top: 0.8em;">AI Settings</h1>
-
-    <figure>
-        <img src="https://swift-craft-launcher-imagebed.pages.dev/help/settings/4-5_1.png" alt="AI settings">
-    </figure>
-
-    <p style="margin-bottom: 1em;">Swift Craft Launcher integrates AI assistant functionality, supporting multiple AI providers for game crash analysis, problem solving, and other scenarios.</p>
-
-    <div id="settings-ai-provider" class="Task">
-        <h2 aria-controls="aria-settings-ai-provider" class="Name">AI Provider Selection</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-provider">
-            <p>Select AI service provider. The launcher supports multiple providers with unified interface:</p>
-            <ul>
-                <li><p><strong>OpenAI</strong> - Default API URL: <code class="CodeLine">https://api.openai.com</code>, API path: <code class="CodeLine">/v1/chat/completions</code>. Supports custom API URL (compatible with DeepSeek and other OpenAI-format services). Uses Bearer Token authentication.</p></li>
-                <li><p><strong>Ollama</strong> - Local deployment option. Default API URL: <code class="CodeLine">http://localhost:11434</code>, API path: <code class="CodeLine">/api/chat</code>. Supports custom Base URL and remote Ollama servers. API Key is optional.</p></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="settings-api-key" class="Task">
-        <h2 aria-controls="aria-settings-api-key" class="Name">API Key</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-key">
-            <p>Enter your API key for the selected provider. The input field supports show/hide toggle (eye icon) for security. This is a required field and will be validated before sending messages.</p>
-            <p>For better security, the API key is not stored in regular settings. It is stored in the system Keychain.</p>
-            <div class="Alert">
-                <p class="Important"><em>Important:</em> The API key is required for AI functionality. Make sure to keep it secure and do not share it with others.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-openai-url" class="Task">
-        <h2 aria-controls="aria-settings-openai-url" class="Name">API URL (OpenAI Format)</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-openai-url">
-            <p>Only displayed when OpenAI-format provider is selected. Allows customization of the API URL for compatibility with DeepSeek and other OpenAI-format compatible services. If left empty, the provider's default URL will be used.</p>
-        </div>
-    </div>
-
-    <div id="settings-ollama-url" class="Task">
-        <h2 aria-controls="aria-settings-ollama-url" class="Name">Ollama Base URL</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ollama-url">
-            <p>Only displayed when Ollama is selected. Set the Ollama service address. Default: <code class="CodeLine">http://localhost:11434</code>. Supports remote Ollama servers if configured.</p>
-        </div>
-    </div>
-
-    <div id="settings-ai-model" class="Task">
-        <h2 aria-controls="aria-settings-ai-model" class="Name">Model Name</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-model">
-            <p>Enter the AI model name to use. This is a required field and must be filled before sending messages. Leading and trailing whitespace will be automatically trimmed.</p>
-            <div class="Alert">
-                <p class="Important"><em>Important:</em> The model name must match the models available from your selected provider. For example, OpenAI uses models like "gpt-4" or "gpt-3.5-turbo", while Ollama uses model names you've installed locally.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-ai-avatar" class="Task">
-        <h2 aria-controls="aria-settings-ai-avatar" class="Name">AI Avatar URL</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-avatar">
-            <p>Set the AI avatar URL address. Supports real-time preview using MinecraftSkinUtils component (42x42 preview size). Default: <code class="CodeLine">https://mcskins.top/assets/snippets/download/skin.php?n=7050</code></p>
-        </div>
-    </div>
-
-    <h2 class="Name" style="margin-top: 1.2em;">AI Features</h2>
-
-    <div id="settings-ai-crash-analysis" class="Task">
-        <h2 aria-controls="aria-settings-ai-crash-analysis" class="Name">AI Crash Analysis</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-crash-analysis">
-            <p>When enabled, the launcher automatically collects crash logs and sends them to the AI window for analysis when a game crash is detected.</p>
-            <p><strong>Workflow:</strong></p>
-            <ol>
-                <li><p>Crash detection: The launcher monitors game process exit codes and checks for crash reports generated within the last 5 minutes.</p></li>
-                <li><p>Log collection: Priority is given to all files in the <code class="CodeLine">crash-reports</code> folder. If no crash reports are found, <code class="CodeLine">logs/latest.log</code> is collected.</p></li>
-                <li><p>AI analysis: The AI chat window automatically opens with collected log files attached, allowing you to interact with the AI to get crash analysis and solution suggestions.</p></li>
-            </ol>
-            <div class="Alert">
-                <p class="Note"><em>Note:</em> This feature requires successful AI settings configuration. The toggle for this feature is located in the Game Settings section.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-ai-chat" class="Task">
-        <h2 aria-controls="aria-settings-ai-chat" class="Name">AI Chat Functionality</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-chat">
-            <p>The AI chat feature supports:</p>
-            <ul>
-                <li><p><strong>Streaming responses:</strong> Real-time streaming output (SSE format) for immediate feedback</p></li>
-                <li><p><strong>Message history:</strong> Maintains conversation context throughout the session</p></li>
-                <li><p><strong>File attachments:</strong> Support for sending text files for analysis (files ≤100KB are read and sent, larger files show file info only)</p></li>
-                <li><p><strong>Text truncation:</strong> Content exceeding 5000 characters is automatically truncated</p></li>
-            </ul>
-            <p><strong>Use cases:</strong></p>
-            <ul>
-                <li><p>Game crash analysis (automatic or manual)</p></li>
-                <li><p>Problem consultation and troubleshooting</p></li>
-                <li><p>Log file and configuration file analysis</p></li>
-            </ul>
-        </div>
-    </div>
-
     <h1 class="Name" style="margin-top: 0.8em;">Player Settings</h1>
 
     <figure>
         <img src="https://swift-craft-launcher-imagebed.pages.dev/help/settings/4-6_1.png" alt="Player settings">
     </figure>
 
-    <p style="margin-bottom: 1em;">Player Settings are used to manage login behavior, skin site defaults, friends, and authentication-related services.</p>
+    <p style="margin-bottom: 1em;">Player Settings are used to manage login behavior, skin site defaults, and authentication-related services.</p>
 
     <div id="settings-ephemeral-login" class="Task">
         <h2 aria-controls="aria-settings-ephemeral-login" class="Name">Incognito Login</h2>
@@ -351,41 +246,6 @@
             <p>Controls whether the History Skin Library entry is shown in the Skin Tool page, and whether successfully uploaded skins are written to the history library.</p>
             <p>When disabled, the history library entry is hidden in the Skin Tool page, and newly successful uploads are not saved to the history library.</p>
             <p>This toggle does not automatically delete existing history data. To clean it up, remove entries manually in the history library pop-up.</p>
-        </div>
-    </div>
-
-    <div id="settings-minecraft-friends-presence" class="Task">
-        <h2 aria-controls="aria-settings-minecraft-friends-presence" class="Name">Friend Activity Notifications</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-presence">
-            <p>Controls whether the launcher checks friend activity in the background and alerts you with <strong>system notifications</strong>.</p>
-            <p>When enabled, and when the <strong>currently selected player is a Microsoft premium account</strong>, the launcher periodically checks friend status in the background. If a friend comes online, goes offline, or sends you an invite, macOS system notifications are sent.</p>
-            <p><strong>Requirements:</strong></p>
-            <ul>
-                <li><p>This toggle is turned on;</p></li>
-                <li><p>A Microsoft premium player is selected in the sidebar or player list (not an offline profile, and not a profile tied only to a third-party skin site);</p></li>
-                <li><p>Notifications are enabled for Swift Craft Launcher in <strong>System Settings → Notifications</strong>, and the alert style is set to <strong>Alerts</strong>; otherwise banners or list entries may not appear.</p></li>
-            </ul>
-            <p>When disabled, the launcher does not poll friend status in the background and does not push related system notifications. You can still open the friends panel manually from the <strong>Friends</strong> button in the main toolbar.</p>
-            <div class="Alert">
-                <p class="Note"><em>[Note]</em> Friend activity notifications are a <strong>launcher-local</strong> reminder feature, separate from the account-side switches under <strong>Minecraft Account Friends</strong> below. However, if you disable the friend list or related options on your account, fewer friend-related events will be available to notify you about.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-minecraft-friends-account" class="Task">
-        <h2 aria-controls="aria-settings-minecraft-friends-account" class="Name">Minecraft Account Friends</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-account">
-            <p>Lets you view and change friend-related settings stored on your <strong>official Microsoft Minecraft account</strong>, keeping the launcher aligned with the in-game friends system.</p>
-            <p>This section appears only when the <strong>currently selected player is an online premium account</strong>. When you open Player Settings, switch the current player, or tap <strong>Reload from account</strong>, the launcher fetches the latest state from the network. Changing either switch writes the update back to the official servers and syncs again to confirm.</p>
-            <p><strong>Available options:</strong></p>
-            <ul>
-                <li><p><strong>Enable friend list</strong> — controls whether the Minecraft friend list is enabled for the account;</p></li>
-                <li><p><strong>Accept friend invites</strong> — controls whether friend invites from other players can be accepted.</p></li>
-            </ul>
-            <p>While loading or saving, the toggles are temporarily disabled and a progress indicator is shown. If the token is invalid or a network error occurs, the launcher shows an error and tries to restore the latest server-side state.</p>
-            <div class="Alert">
-                <p class="Important"><em>[Important]</em> These are <strong>official account settings</strong> and affect friend-related capabilities in both the game and the launcher, not just local display preferences. This is different from <strong>Friend Activity Notifications</strong>, which only controls whether the launcher proactively sends system notifications.</p>
-            </div>
         </div>
     </div>
 

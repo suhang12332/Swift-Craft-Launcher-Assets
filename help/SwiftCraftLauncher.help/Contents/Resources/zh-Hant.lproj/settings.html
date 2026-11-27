@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>啟動器設置</title>
-    <meta name="description" content="配置 Swift Craft Launcher 設置，包括通用設置、遊戲設置、遊戲高級設置和AI設置">
-    <meta name="keywords" content="語言, 主題, 介面佈局, 工作目錄, 下載, Modrinth, CurseForge, 快照版本, 模組包匯出, 清除快取, 記憶體, Java, Java 重新安裝, JVM, 垃圾回收器, 環境變數, AI 設定, OpenAI, Ollama, 鑰匙圈, 無痕登入, 離線登入, 好友狀態通知, Minecraft 帳號好友, Yggdrasil, authlib-injector">
+    <meta name="description" content="配置 Swift Craft Launcher 設置，包括通用設置、遊戲設置和遊戲高級設置">
+    <meta name="keywords" content="語言, 主題, 介面佈局, 工作目錄, 下載, Modrinth, CurseForge, 快照版本, 模組包匯出, 清除快取, 記憶體, Java, Java 重新安裝, JVM, 垃圾回收器, 環境變數, 鑰匙圈, 無痕登入, 離線登入, Yggdrasil, authlib-injector">
     <meta content="light dark" name="color-scheme">
     <link media="all" href="../css/app.css" type="text/css" rel="stylesheet">
 </head>
@@ -95,13 +95,6 @@
         <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-modpack-export-format">
             <p>設定匯出整合包時預設使用的格式。可選項：<strong>CurseForge</strong>、<strong>Modrinth</strong>。</p>
             <p>如果整合包準備發布到 CurseForge，請選擇 <strong>CurseForge</strong> 格式；如果準備發布到 Modrinth，請選擇 <strong>Modrinth</strong> 格式。</p>
-        </div>
-    </div>
-
-    <div id="settings-ai-crash" class="Task">
-        <h2 aria-controls="aria-settings-ai-crash" class="Name">AI崩潰分析</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-crash">
-            <p>啟用/停用AI崩潰分析功能。此功能需要先成功配置AI設置。</p>
         </div>
     </div>
 
@@ -219,111 +212,13 @@
         </div>
     </div>
 
-    <h1 class="Name" style="margin-top: 0.8em;">AI設置</h1>
-
-    <figure>
-        <img src="https://swift-craft-launcher-imagebed.pages.dev/help/settings/4-5_1.png" alt="AI設置">
-    </figure>
-
-    <p style="margin-bottom: 1em;">Swift Craft Launcher 整合了 AI 助手功能，支援多種 AI 提供商，可用於遊戲崩潰分析、問題解答等場景。</p>
-
-    <div id="settings-ai-provider" class="Task">
-        <h2 aria-controls="aria-settings-ai-provider" class="Name">AI提供商選擇</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-provider">
-            <p>選擇AI服務提供商。啟動器支援多個提供商，提供統一介面：</p>
-            <ul>
-                <li><p><strong>OpenAI</strong> - 預設 API URL：<code class="CodeLine">https://api.openai.com</code>，API 路徑：<code class="CodeLine">/v1/chat/completions</code>。支援自定義 API URL（相容 DeepSeek 等 OpenAI 格式服務）。使用 Bearer Token 認證。</p></li>
-                <li><p><strong>Ollama</strong> - 本地部署選項。預設 API URL：<code class="CodeLine">http://localhost:11434</code>，API 路徑：<code class="CodeLine">/api/chat</code>。支援自定義 Base URL 和遠端 Ollama 伺服器。API Key 可選。</p></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="settings-api-key" class="Task">
-        <h2 aria-controls="aria-settings-api-key" class="Name">API金鑰</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-api-key">
-            <p>輸入所選提供商的 API 金鑰。輸入框支援顯示/隱藏切換（眼睛圖示）以確保安全。這是必填項，發送訊息前會進行驗證。</p>
-            <p>為提高安全性，API Key 不儲存在一般設定中，而是保存在系統 Keychain 中。</p>
-            <div class="Alert">
-                <p class="Important"><em>【重要】</em>API 金鑰是 AI 功能的必需項。請確保妥善保管，不要與他人分享。</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-openai-url" class="Task">
-        <h2 aria-controls="aria-settings-openai-url" class="Name">API URL（OpenAI 格式）</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-openai-url">
-            <p>僅在選擇 OpenAI 格式提供商時顯示。允許自定義 API URL，以相容 DeepSeek 等 OpenAI 格式相容服務。如果留空，將使用提供商的預設 URL。</p>
-        </div>
-    </div>
-
-    <div id="settings-ollama-url" class="Task">
-        <h2 aria-controls="aria-settings-ollama-url" class="Name">Ollama Base URL</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ollama-url">
-            <p>僅在選擇 Ollama 時顯示。設置 Ollama 服務地址。預設：<code class="CodeLine">http://localhost:11434</code>。如果配置了遠端 Ollama 伺服器，也支援使用。</p>
-        </div>
-    </div>
-
-    <div id="settings-ai-model" class="Task">
-        <h2 aria-controls="aria-settings-ai-model" class="Name">模型名稱</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-model">
-            <p>輸入要使用的 AI 模型名稱。這是必填項，發送訊息前必須填寫。首尾空白字元會自動去除。</p>
-            <div class="Alert">
-                <p class="Important"><em>【重要】</em>模型名稱必須與所選提供商提供的模型匹配。例如，OpenAI 使用 "gpt-4" 或 "gpt-3.5-turbo" 等模型，而 Ollama 使用您本地安裝的模型名稱。</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-ai-avatar" class="Task">
-        <h2 aria-controls="aria-settings-ai-avatar" class="Name">AI頭像URL</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-avatar">
-            <p>設置 AI 頭像的 URL 地址。支援使用 MinecraftSkinUtils 元件進行即時預覽（預覽尺寸：42x42）。預設：<code class="CodeLine">https://mcskins.top/assets/snippets/download/skin.php?n=7050</code></p>
-        </div>
-    </div>
-
-    <h2 class="Name" style="margin-top: 1.2em;">AI功能</h2>
-
-    <div id="settings-ai-crash-analysis" class="Task">
-        <h2 aria-controls="aria-settings-ai-crash-analysis" class="Name">AI崩潰分析</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-crash-analysis">
-            <p>啟用後，當檢測到遊戲崩潰時，啟動器會自動收集崩潰日誌並發送到 AI 視窗進行分析。</p>
-            <p><strong>工作流程：</strong></p>
-            <ol>
-                <li><p>崩潰檢測：啟動器監控遊戲進程退出碼，並檢查最近 5 分鐘內生成的崩潰報告。</p></li>
-                <li><p>日誌收集：優先收集 <code class="CodeLine">crash-reports</code> 資料夾中的所有檔案。如果未找到崩潰報告，則收集 <code class="CodeLine">logs/latest.log</code>。</p></li>
-                <li><p>AI分析：AI 聊天視窗自動打開，並附帶收集的日誌檔案，允許您與 AI 互動以獲取崩潰分析和解決方案建議。</p></li>
-            </ol>
-            <div class="Alert">
-                <p class="Note"><em>【註】</em>此功能需要先成功配置 AI 設置。此功能的開關位於遊戲設置部分。</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-ai-chat" class="Task">
-        <h2 aria-controls="aria-settings-ai-chat" class="Name">AI聊天功能</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-ai-chat">
-            <p>AI 聊天功能支援：</p>
-            <ul>
-                <li><p><strong>流式響應：</strong>即時流式輸出（SSE 格式），提供即時回饋</p></li>
-                <li><p><strong>訊息歷史：</strong>在整個會話過程中維護對話上下文</p></li>
-                <li><p><strong>檔案附件：</strong>支援發送文字檔案進行分析（≤100KB 的檔案會被讀取並發送，更大的檔案僅顯示檔案資訊）</p></li>
-                <li><p><strong>文字截斷：</strong>超過 5000 字元的内容會自動截斷</p></li>
-            </ul>
-            <p><strong>使用場景：</strong></p>
-            <ul>
-                <li><p>遊戲崩潰分析（自動或手動）</p></li>
-                <li><p>問題諮詢和故障排除</p></li>
-                <li><p>日誌檔案和配置檔案分析</p></li>
-            </ul>
-        </div>
-    </div>
-
     <h1 class="Name" style="margin-top: 0.8em;">玩家設置</h1>
 
     <figure>
         <img src="https://swift-craft-launcher-imagebed.pages.dev/help/settings/4-6_1.png" alt="玩家設置">
     </figure>
 
-    <p style="margin-bottom: 1em;">玩家設置用於管理登入方式、皮膚站、好友與認證服務等與帳號相關的行為。</p>
+    <p style="margin-bottom: 1em;">玩家設置用於管理登入方式、皮膚站與認證服務等與帳號相關的行為。</p>
 
     <div id="settings-ephemeral-login" class="Task">
         <h2 aria-controls="aria-settings-ephemeral-login" class="Name">無痕登入</h2>
@@ -351,41 +246,6 @@
             <p>控制「歷史皮膚庫」入口是否在皮膚工具頁顯示，以及皮膚上傳成功後是否寫入歷史庫。</p>
             <p>關閉後，皮膚工具頁將不再顯示歷史庫入口；同時新上傳成功的皮膚不會寫入歷史庫。</p>
             <p>此開關不會自動刪除已保存的歷史記錄。若需清理，請在歷史庫彈窗中手動逐條刪除。</p>
-        </div>
-    </div>
-
-    <div id="settings-minecraft-friends-presence" class="Task">
-        <h2 aria-controls="aria-settings-minecraft-friends-presence" class="Name">好友狀態通知</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-presence">
-            <p>控制啟動器是否在背景檢查好友動態，並透過<strong>系統通知</strong>提醒您。</p>
-            <p>啟用後，當<strong>目前選中的玩家為微軟正版帳號</strong>時，啟動器會定期在背景查詢好友狀態；若偵測到好友上線、離線或向您傳送邀請等變化，會傳送 macOS 系統通知。</p>
-            <p><strong>使用前提：</strong></p>
-            <ul>
-                <li><p>本開關處於啟用狀態；</p></li>
-                <li><p>側邊欄或玩家列表中已選中一個微軟正版玩家（非離線檔案、非僅接入第三方皮膚站的檔案）；</p></li>
-                <li><p>在<strong>系統設定 → 通知</strong>中已為 Swift Craft Launcher 啟用通知，並將提醒樣式設為<strong>「提醒」</strong>（Alerts），否則可能看不到橫幅或列表提示。</p></li>
-            </ul>
-            <p>關閉後，啟動器不會為好友狀態進行背景輪詢，也不會因此推送系統通知。您仍可透過主介面工具列的<strong>好友</strong>按鈕手動開啟好友面板查看列表。</p>
-            <div class="Alert">
-                <p class="Note"><em>【注】</em>好友狀態通知是<strong>啟動器本機</strong>的提醒功能，與下方「Minecraft 帳號好友」中保存在官方帳號端的開關相互獨立；但若您在帳號端關閉了好友列表等功能，實際可收到的好友相關事件也會相應減少。</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings-minecraft-friends-account" class="Task">
-        <h2 aria-controls="aria-settings-minecraft-friends-account" class="Name">Minecraft 帳號好友</h2>
-        <div class="TaskBody" role="region" aria-hidden="false" id="aria-settings-minecraft-friends-account">
-            <p>用於查看並修改保存在 <strong>Microsoft Minecraft 官方帳號</strong>端的好友相關策略，與遊戲內好友系統保持一致。</p>
-            <p>僅當<strong>目前選中的玩家為線上正版帳號</strong>時，此區域才會顯示。開啟玩家設置頁、切換目前玩家，或點擊<strong>從帳號同步</strong>時，啟動器會從網路拉取最新狀態；修改任一開關後會寫回官方伺服器並再次同步確認。</p>
-            <p><strong>可用選項：</strong></p>
-            <ul>
-                <li><p><strong>啟用好友列表</strong> — 控制帳號是否啟用 Minecraft 好友列表功能；</p></li>
-                <li><p><strong>接受好友邀請</strong> — 控制是否允許其他玩家向您傳送的好友邀請被接受。</p></li>
-            </ul>
-            <p>載入或保存過程中，開關會暫時不可用並顯示進度指示；若權杖失效或網路錯誤，介面會提示錯誤並盡量恢復為伺服器上的最新狀態。</p>
-            <div class="Alert">
-                <p class="Important"><em>【重要】</em>此處修改的是<strong>官方帳號設定</strong>，會影響遊戲與啟動器內好友相關能力，而不僅是啟動器本機的顯示偏好。與「好友狀態通知」不同：後者只決定啟動器是否主動推送系統通知。</p>
-            </div>
         </div>
     </div>
 
